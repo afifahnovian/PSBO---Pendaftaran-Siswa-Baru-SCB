@@ -10,8 +10,8 @@
 >> Web routes buat pindah2 page
 */
 
-Route::get('/', function () { //pergi ke page,pake slash  
-    return view('welcome'); //untuk return page, page itu ada di .blade.php
+Route::get('/', function () {
+    return view('dashboard');
 });
  
 /*
