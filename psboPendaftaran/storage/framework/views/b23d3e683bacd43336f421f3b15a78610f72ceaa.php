@@ -59,7 +59,10 @@
     <body>
         <body id="page-top">
 <<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
+<<<<<<< HEAD
 <<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
+=======
+>>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
         <!-- Logo -->
             <div class="imagelogo"><img src="<?php echo e(url('/images/logo.png')); ?>" style= "width: 80%; height: 80%"></div>
 
@@ -67,15 +70,21 @@
 =======
             <div class="image"><img src="{{url('/images/logo.png')}}" style= "width: 80%; height: 80%"></div>
 >>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
+<<<<<<< HEAD
 =======
             <div class="image"><img src="{{url('/images/logo.png')}}" style= "width: 80%; height: 80%"></div>
 >>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
+=======
+>>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
             <div class="top-right-link">                    
                 <a class="link" href="#tentangSCB" style="padding-right: 20px">Tentang SCB</a>                  
                 <a class="link" href="#kontak">Kontak</a>
             </div>
 <<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
+<<<<<<< HEAD
 <<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
+=======
+>>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
 
         <!-- Title pertama -->
             <div class="top-right-title">
@@ -129,8 +138,11 @@
             </div>
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
+=======
+>>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
                 <div class="top-right-title">
                    <div class="title m-b-md">
                         Penerimaan<br>
@@ -138,9 +150,12 @@
                         SMP Cendekia Baznas</br></br>
                     </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
 >>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
 =======
+=======
+>>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
 >>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
         </body>
     </body>
