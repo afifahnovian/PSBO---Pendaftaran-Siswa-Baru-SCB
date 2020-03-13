@@ -16,7 +16,7 @@ class CreateDataRumahsTable extends Migration
         Schema::create('data_rumahs', function (Blueprint $table) {
             $table->bigIncrements('id');//id datarumah
            
-            $table->string('status_kepemilikan');//sewa pemilikan rumah
+            $table->string('status_kepemilikan_rumah');//sewa pemilikan rumah
             $table->string('tahun_perolehan');//tahun perolehan
             $table->string('kualitas_rumah');//kualitas rumah tinggal e.g layak huni,tidak layak huni
             $table->string('luas_tanah'); //luas tanah rumah
@@ -24,10 +24,9 @@ class CreateDataRumahsTable extends Migration
             $table->string('sumber_air'); //sumber air di rumah e.g : sumur or pdam
             $table->string('daya_listrik');//daya listrik rumah
             $table->integer('harta_tidak_bergerak')->nullable();//contoh : punya sawah,ladang,tanah, punya(1),tidak punya(0)
-
-            //foreign key
-            //$table->foreign('id_calonsiswa')->references('id')->on('calon_siswas')->onDelete('cascade');
-
+            $table->string('nama_harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
+            $table->string('status_kepemilikan_harta')->nullable();//status kepemilikan harta e.g: milik sendiri
+            
             $table->timestamps();
         });
     }

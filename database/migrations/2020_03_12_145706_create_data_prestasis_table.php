@@ -15,9 +15,13 @@ class CreateDataPrestasisTable extends Migration
     {
         Schema::create('data_prestasis', function (Blueprint $table) {
             $table->bigIncrements('id');
-           
-            $table->integer('prestasi')->nullable(); //jika ada prestasi (1), jika tidak (0)
+            $table->string('prestasi')->nullable();
+            $table->string('jenis_lomba')->nullable();
+            $table->string('tingkat_Lomba')->nullable();
+            $table->string('peringkat')->nullable();
+            
             $table->timestamps();
+        
         });
     }
 

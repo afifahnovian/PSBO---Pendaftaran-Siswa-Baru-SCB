@@ -15,8 +15,8 @@ class CreateDataHafalanSiswasTable extends Migration
     {
         Schema::create('data_hafalan_siswas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
             $table->integer('jumlah_hafalan')->nullable();//jumlahhafalan siswa
+            $table->string('nama_juz')->nullable();
             $table->timestamps();
             
         });

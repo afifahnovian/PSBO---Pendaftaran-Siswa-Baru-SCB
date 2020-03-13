@@ -20,8 +20,8 @@ class CreateDataKesehatanSiswasTable extends Migration
             $table->float('berat_badan');// atribut berat badan
             $table->longText('riwayat_penyakit')->nullable();//atribut riwayat penyakit
             $table->string('golongan_darah');//atribut golongan darah
-            $table->integer('BPJS');//status punya bpjs, iya(1), tidak(0)
-            
+            $table->bigInteger('BPJS')->unsigned();//status punya bpjs, iya(1), tidak(2), (3) asuransi lain selain bpjs
+          
             $table->timestamps();
         });
     }
