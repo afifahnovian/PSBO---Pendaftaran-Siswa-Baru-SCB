@@ -58,25 +58,11 @@
     </head>
     <body>
         <body id="page-top">
-<<<<<<< HEAD
-<<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
-        <!-- Logo -->
-            <div class="imagelogo"><img src="<?php echo e(url('/images/logo.png')); ?>" style= "width: 80%; height: 80%"></div>
-
-        <!-- navbar atas -->
-=======
             <div class="image"><img src="{{url('/images/logo.png')}}" style= "width: 80%; height: 80%"></div>
->>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
-=======
-            <div class="image"><img src="{{url('/images/logo.png')}}" style= "width: 80%; height: 80%"></div>
->>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
             <div class="top-right-link">                    
                 <a class="link" href="#tentangSCB" style="padding-right: 20px">Tentang SCB</a>                  
                 <a class="link" href="#kontak">Kontak</a>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
-
         <!-- Title pertama -->
             <div class="top-right-title">
             <div class="title m-b-md">
@@ -127,24 +113,6 @@
             </div>
             </div>
             </div>
-
-=======
-=======
->>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
-                <div class="top-right-title">
-                   <div class="title m-b-md">
-                        Penerimaan<br>
-                        Peserta Didik Baru<br>
-                        SMP Cendekia Baznas</br></br>
-                    </div>
-                </div>
-<<<<<<< HEAD
->>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
-        </body>
-    </body>
-</html><?php /**PATH C:\Users\Arih Ghina Wiranti\Documents\GitHub\PSBO---Pendaftaran-Siswa-Baru-SCB\psboPendaftaran\resources\views/dashboard.blade.php ENDPATH**/ ?>
-=======
         </body>
     </body>
 </html>
->>>>>>> 9632585c06ff731cecd89186c4e4d9be758f604a
