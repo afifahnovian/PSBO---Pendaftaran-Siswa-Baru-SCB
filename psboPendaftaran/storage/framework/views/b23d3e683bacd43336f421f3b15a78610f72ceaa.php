@@ -20,139 +20,57 @@
             .top-right-link {
                 position: absolute;
                 right: 0px;
-                left:900px;
+                left:950px;
                 top: 10px;
                 padding-right: 0.75rem 100;
-            }
-            .top-right-button {
-                position: absolute;
-                right: 0px;
-                left:55px;
-                top: 450px;
-            }
-            .top-right-image1 {
-                position: absolute;
-                right: 0px;
-                left:600px;
-                padding-top: 80px;
-                padding-left: 50px;
-                align-items: right;
-            }
-            .top-right-title2 {
-                position: relative;
-                top: 50px;
-            }
-            .buttom-left-image2 {
-                position: absolute;
-                right: 0px;
-                left:55px;
-                top: 800px;
             }
             .title {
                 font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: bold;
                 font-size: 50px;
-                line-height: 65px;
+                line-height: 70px;
                 display: flex;
                 align-items: center;             
-            }
-            .tittle1 {
-                font-family: 'Open Sans';
-                font-style: normal;
-                font-weight: bold;
-                font-size: 40px;
-                line-height: 50px;
-                display: flex;
-                align-items: center; 
-            }
-            .title2 {
-                font-family: 'Open Sans';
-                font-style: normal;
-                font-weight: bold;
-                font-size: 40px;
-                line-height: 50px;
             }
             .link {
                 font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: normal;
-                font-size: 20px;
+                font-size: 25px;
                 line-height: 76px;
-                align-items: center;  
-                color: #2C786C;
+                align-items: right;  
             }
             .content {
-                text-align: center;
+                text-align: left;
             }
             .m-b-md {
                 margin-bottom: 30px;
             }
-            .imagelogo {
+            .image {
                 position: absolute;
                 width: 237.43px;
                 height: 64px;
                 left: 35px;
                 top: 35px;
             }
-
-            .button{
-                font-size: 18px;
-                width: 269px;
-                height: 72px;
-                left: 62px;
-                line-height: 55px;
-                top: 633px;
-                color : #ffffff; 
-            }
-            .text{
-                font-family: 'Open Sans';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 20px;
-                line-height: 28px;
-                display: flex;
-                align-items: center;
-            }
-            .card {
-                /* Add shadows to create the "card" effect */
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-                transition: 0.3s;
-            }
-
-                /* On mouse-over, add a deeper shadow */
-            .card:hover {
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            }
-
-                /* Add some padding inside the card container */
-            .container {
-                /*padding: 2px 16px;*/
-            }
-
-            .card1 {
-                position: absolute;
-                width: 843px;
-                height: 814px;
-                left: 56px;
-                top: 2183px;
-
-                background: #FFFFFF;
-                box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
-                border-radius: 24px;
-            }
         </style>
     </head>
     <body>
         <body id="page-top">
+<<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
         <!-- Logo -->
             <div class="imagelogo"><img src="<?php echo e(url('/images/logo.png')); ?>" style= "width: 80%; height: 80%"></div>
 
         <!-- navbar atas -->
+=======
+            <div class="image"><img src="{{url('/images/logo.png')}}" style= "width: 80%; height: 80%"></div>
+>>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
             <div class="top-right-link">                    
                 <a class="link" href="#tentangSCB" style="padding-right: 20px">Tentang SCB</a>                  
                 <a class="link" href="#kontak">Kontak</a>
             </div>
+<<<<<<< HEAD:psboPendaftaran/storage/framework/views/b23d3e683bacd43336f421f3b15a78610f72ceaa.php
 
         <!-- Title pertama -->
             <div class="top-right-title">
@@ -205,6 +123,15 @@
             </div>
             </div>
 
+=======
+                <div class="top-right-title">
+                   <div class="title m-b-md">
+                        Penerimaan<br>
+                        Peserta Didik Baru<br>
+                        SMP Cendekia Baznas</br></br>
+                    </div>
+                </div>
+>>>>>>> parent of 9109e43... Add photo:psboPendaftaran/resources/views/dashboard.blade.php
         </body>
     </body>
 </html><?php /**PATH C:\Users\Arih Ghina Wiranti\Documents\GitHub\PSBO---Pendaftaran-Siswa-Baru-SCB\psboPendaftaran\resources\views/dashboard.blade.php ENDPATH**/ ?>
