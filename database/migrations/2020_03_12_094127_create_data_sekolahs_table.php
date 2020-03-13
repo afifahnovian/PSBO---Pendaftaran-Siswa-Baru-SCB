@@ -15,15 +15,14 @@ class CreateDataSekolahsTable extends Migration
     {
         Schema::create('data_sekolahs', function (Blueprint $table) {
             $table->bigIncrements('id');//pk tabel data sekolah
-            $table->bigInteger('id_calonsiswa')->unsigned();// fk idcalonsiswa
+           
             $table->string('asal_sekolah');// atribut asal sekolah
             $table->longText('alamat_sekolah');//atribut alamat sekolah
             $table->string('no_telp_sekolah');//atribut noTelpsekolah
 
             $table->timestamps();
 
-            //foreign key
-            $table->foreign('id_calonsiswa')->references('id')->on('calon_siswas')->onDelete('cascade');
+           
         });
     }
 

@@ -15,13 +15,13 @@ class CreateDataSiswaUmumsTable extends Migration
     {
         Schema::create('data_siswa_umums', function (Blueprint $table) {
             $table->bigIncrements('id');//id table data siswa umum
-            $table->integer('NISN');// atribut NISN
+            $table->string('NISN');// atribut NISN
             $table->string('nama_lengkap'); //atribut nama lengkap
             $table->string('nama_panggilan');//atribut nama panggilan
-            $table->integer('jenis_kelamin'); //atribut jk
+            $table->string('jenis_kelamin'); //atribut jk
             $table->string('tempat_lahir'); // atribut tempatLahir
             $table->date('tanggal_lahir'); //atribut tanggalLahir
-            $table->string('agama'); //atribut agama
+            //$table->string('agama'); //atribut agama
             $table->longText('alamat'); //atribut alamat
            
             

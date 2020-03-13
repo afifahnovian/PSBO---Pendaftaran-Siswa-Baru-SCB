@@ -15,14 +15,11 @@ class CreateDataKeunikanSiswasTable extends Migration
     {
         Schema::create('data_keunikan_siswas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_calonsiswa')->unsigned();//fk id_calonsiswa
+           
             $table->longText('hal_khusus'); //keunikan khusus siswa
             $table->longText('citacita');
             $table->longText('hobi');
             $table->longText('harapan_orgtua');
-            //foreign key
-            $table->foreign('id_calonsiswa')->references('id')->on('calon_siswas')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

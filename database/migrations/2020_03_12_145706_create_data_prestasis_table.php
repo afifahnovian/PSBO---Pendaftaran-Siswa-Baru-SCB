@@ -15,11 +15,8 @@ class CreateDataPrestasisTable extends Migration
     {
         Schema::create('data_prestasis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_calonsiswa')->unsigned();//fk id_calonsiswa
+           
             $table->integer('prestasi')->nullable(); //jika ada prestasi (1), jika tidak (0)
-
-            //foreign key
-            $table->foreign('id_calonsiswa')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

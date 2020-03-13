@@ -15,13 +15,11 @@ class CreatePrestasiMastersTable extends Migration
     {
         Schema::create('prestasi_masters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_dataprestasi')->unsigned();//fk id_dataprestasi
+            
             $table->string('jenis_lomba');
             $table->string('tingkat_Lomba');
             $table->string('peringkat');
-            //foreign key
-            $table->foreign('id_dataprestasi')->references('id')->on('data_prestasis')->onDelete('cascade');
-        
+           
         });
     }
 

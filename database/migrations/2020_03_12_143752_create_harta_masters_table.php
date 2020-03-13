@@ -15,12 +15,11 @@ class CreateHartaMastersTable extends Migration
     {
         Schema::create('harta_masters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_datarumah')->unsigned();//fk id_datarumah
+           
             $table->string('nama_harta'); //nama harta tidak bergerak e.g: Sawah
             $table->string('status_kepemilikan');//status kepemilikan harta e.g: milik sendiri
             
-            //foreign key
-            $table->foreign('id_datarumah')->references('id')->on('data_rumahs')->onDelete('cascade');
+            
         });
     }
 

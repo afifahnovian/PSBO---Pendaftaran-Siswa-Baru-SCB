@@ -15,12 +15,10 @@ class CreateDataHafalanSiswasTable extends Migration
     {
         Schema::create('data_hafalan_siswas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_calonsiswa')->unsigned();//fk id_calonsiswa
+            
             $table->integer('jumlah_hafalan')->nullable();//jumlahhafalan siswa
             $table->timestamps();
-            //foreign key
-            $table->foreign('id_calonsiswa')->references('id')->on('calon_siswas')->onDelete('cascade');
-
+            
         });
     }
 

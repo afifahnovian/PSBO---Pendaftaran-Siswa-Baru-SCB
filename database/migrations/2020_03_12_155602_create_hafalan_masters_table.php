@@ -15,10 +15,9 @@ class CreateHafalanMastersTable extends Migration
     {
         Schema::create('hafalan_masters', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_datahafalansiswa')->unsigned();//fk idhafalansiswa
+            
             $table->longText('nama_juz');
-            //foreignkey
-            $table->foreign('id_datahafalansiswa')->references('id')->on('data_hafalan_siswas')->onDelete('cascade');
+            
         });
     }
 
