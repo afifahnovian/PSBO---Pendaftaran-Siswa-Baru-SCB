@@ -27,6 +27,9 @@ class CreateDataRumahsTable extends Migration
             $table->string('nama_harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
             $table->string('status_kepemilikan_harta')->nullable();//status kepemilikan harta e.g: milik sendiri
             
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

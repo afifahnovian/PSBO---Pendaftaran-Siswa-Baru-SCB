@@ -22,6 +22,9 @@ class CreateDataKesehatanSiswasTable extends Migration
             $table->string('golongan_darah');//atribut golongan darah
             $table->bigInteger('BPJS')->unsigned();//status punya bpjs, iya(1), tidak(2), (3) asuransi lain selain bpjs
           
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -20,6 +20,10 @@ class CreateDataKeunikanSiswasTable extends Migration
             $table->longText('citacita');
             $table->longText('hobi');
             $table->longText('harapan_orgtua');
+
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
         });
     }

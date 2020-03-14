@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDataHafalanSiswasTable extends Migration
+class CreateBerkasDaftarsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,18 @@ class CreateDataHafalanSiswasTable extends Migration
      */
     public function up()
     {
-        Schema::create('data_hafalan_siswas', function (Blueprint $table) {
+        Schema::create('berkas_daftars', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('jumlah_hafalan')->nullable();//jumlahhafalan siswa
-            $table->string('nama_juz')->nullable();
-
+            $table->string('rapor_sd');
+            $table->string('kartu_keluarga');
+            $table->string('ijazah_STTB_STK');
+            $table->string('pasfoto');
+            $table->string('sertifikat'); //one to many
+            
             //foreignkey dari tabel calon siswa
             $table->bigInteger('calonsiswa_id')->unsigned();
-            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade'); 
             $table->timestamps();
-            
         });
     }
 
@@ -33,6 +35,6 @@ class CreateDataHafalanSiswasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data_hafalan_siswas');
+        Schema::dropIfExists('berkas_daftars');
     }
 }
