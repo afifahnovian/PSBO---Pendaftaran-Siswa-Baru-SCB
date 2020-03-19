@@ -10,7 +10,7 @@
         <!-- Styles -->
         <style>
         html, body {
-                background-color: #fff;
+            background-color: #fff;
             }
             .top-right-title {
                 position: absolute;

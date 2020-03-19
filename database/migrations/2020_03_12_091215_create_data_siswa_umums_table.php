@@ -18,7 +18,7 @@ class CreateDataSiswaUmumsTable extends Migration
             $table->string('NISN');// atribut NISN
             $table->string('nama_lengkap'); //atribut nama lengkap
             $table->string('nama_panggilan');//atribut nama panggilan
-            $table->string('jenis_kelamin'); //atribut jk
+            $table->integer('jenis_kelamin'); //atribut jk : 1 lk 2 pr
             $table->string('tempat_lahir'); // atribut tempatLahir
             $table->date('tanggal_lahir'); //atribut tanggalLahir
             //$table->string('agama'); //atribut agama

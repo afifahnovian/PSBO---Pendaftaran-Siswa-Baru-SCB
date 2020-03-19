@@ -26,7 +26,6 @@ class CreateDataRumahsTable extends Migration
             $table->integer('harta_tidak_bergerak')->nullable();//contoh : punya sawah,ladang,tanah, punya(1),tidak punya(0)
             $table->string('nama_harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
             $table->string('status_kepemilikan_harta')->nullable();//status kepemilikan harta e.g: milik sendiri
-            
             $table->timestamps();
         });
     }
