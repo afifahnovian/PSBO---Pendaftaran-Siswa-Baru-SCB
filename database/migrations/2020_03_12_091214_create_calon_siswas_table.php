@@ -15,7 +15,7 @@ class CreateCalonSiswasTable extends Migration
     {
         Schema::create('calon_siswas', function (Blueprint $table) { // inisisasi atribut yang ada di tabel
             //primary key
-            $table->bigIncrements('id'); //id yang auto increment
+            $table->bigIncrements('id'); //id yang auto increment 
             $table->timestamps(); //untuk generate otomatis data (update data realtime)
         });
     }

@@ -15,6 +15,10 @@
 Route::get('/', function () {
     return view('dashboard');
 });
+
+//simpen berkas daftar yang bentuknya image
+// Route::get('/formDaftar', 'BerkasDaftarController@create'); formdaftar nanti diganti karna skrg belum ada frontend page sbg tempat untuk upload gambar
+// Route::post('/confirmation', 'BerkasDaftarController@store'); misalnya abis dari situ semua data pendaftaran disimpen di confirmation page
  
 
 /*

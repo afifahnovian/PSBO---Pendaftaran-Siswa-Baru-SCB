@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=10.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <meta charset="utf-8">
         <title> PPDB Online SMP Cendekia BAZNAS </title>
@@ -51,7 +51,7 @@
                 position: absolute;
                 right: 0px;
                 left:20px;
-                top: 1060px;
+                top: 900px;
             }
             .title {
                 font-family: 'Open Sans';
@@ -139,8 +139,8 @@
                 position: absolute;
                 width: 650px;
                 height: 800px;
-                left: 105px;
-                top: 1800px;
+                left: 30px;
+                top: 1600px;
 
                 background: #FFFFFF;
                 box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
@@ -150,8 +150,8 @@
                 position: absolute;
                 width: 620px;
                 height: 800px;
-                left: 810px;
-                top: 1800px;
+                left: 700px;
+                top: 1600px;
 
                 background: #FFFFFF;
                 box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
@@ -199,37 +199,37 @@
             }
             .img-timeline1 {
                 position: absolute;
-                top: 2870px;
+                top: 2700px;
                 left: 60px;
             }
             .img-timeline2 {
                 position: absolute;
-                top: 2870px;
-                left: 315px;
+                top: 2700px;
+                left: 285px;
             }
             .img-timeline3 {
                 position: absolute;
-                top: 2870px;
-                left: 570px;
+                top: 2700px;
+                left: 510px;
             }
             .img-timeline4 {
                 position: absolute;
-                top: 2870px;
-                left: 815px;
+                top: 2700px;
+                left: 730px;
             }
             .img-timeline5 {
                 position: absolute;
-                top: 2870px;
-                left: 1080px;
+                top: 2700px;
+                left: 965px;
             }
             .img-timeline6 {
                 position: absolute;
-                top: 2850px;
-                left: 1340px;
+                top: 2690px;
+                left: 1200px;
             }
             .line-timeline {
                 position: absolute;
-                top: 3000px;
+                top: 2850px;
                 left: 90px;
             }
             .text-timeline{
@@ -244,33 +244,33 @@
             }
             .text-timeline1 {
                 position: absolute;
-                top: 3050px;
+                top: 2900px;
                 left: 35px;
             }
             .text-timeline2 {
                 position: absolute;
-                top: 3050px;
-                left: 295px;
+                top: 2900px;
+                left: 250px;
             }
             .text-timeline3 {
                 position: absolute;
-                top: 3050px;
-                left: 565px;
+                top: 2900px;
+                left: 510px;
             }
             .text-timeline4 {
                 position: absolute;
-                top: 3050px;
-                left: 820px;
+                top: 2900px;
+                left: 725px;
             }
             .text-timeline5 {
                 position: absolute;
-                top: 3050px;
-                left: 1060px;
+                top: 2900px;
+                left: 940px;
             }
             .text-timeline6 {
                 position: absolute;
-                top: 3050px;
-                left: 1320px;
+                top: 2900px;
+                left: 1160px;
             }
             .cal-timeline{
                 font-family: 'Open Sans';
@@ -284,33 +284,159 @@
             }
             .cal-timeline1 {
                 position: absolute;
-                top: 3150px;
+                top: 3000px;
                 left: 20px;
             }
             .cal-timeline2 {
                 position: absolute;
-                top: 3150px;
-                left: 315px;
+                top: 3000px;
+                left: 280px;
             }
             .cal-timeline3 {
                 position: absolute;
-                top: 3150px;
-                left: 565px;
+                top: 3000px;
+                left: 512px;
             }
             .cal-timeline4 {
                 position: absolute;
-                top: 3150px;
-                left: 785px;
+                top: 3000px;
+                left: 690px;
             }
             .cal-timeline5 {
                 position: absolute;
-                top: 3150px;
-                left: 1050px;
+                top: 3000px;
+                left: 940px;
             }
             .cal-timeline6 {
                 position: absolute;
-                top: 3150px;
-                left: 1340px;
+                top: 3000px;
+                left: 1180px;
+            }
+            .warning-card {
+                position: absolute;
+                width: 1200px;
+                height: 124px;
+                left: 80px;
+                top: 3200px;
+
+                background: #FAF5E4;
+                border-radius: 24px;
+            }
+            .warning-icon {
+                position: absolute;
+                width: 64px;
+                height: 64px;
+                left: 40px;
+                top: 35px;
+            }
+            .bg-footer {
+                position: absolute;
+                width: 1200px;
+                height: 124px;
+                left: 0px;
+                top: 3450px;
+            }
+            .footer {
+                position: absolute;
+                width: 300px;
+                height: 57px;
+                left: -70px;
+                top: 3630px;
+
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+
+                color: #F8B400;
+            }
+            .icon-phone {
+                position: absolute;
+                left: 40px;
+                right: 93.95px;
+                top: 70.93px;
+                bottom: 6.56px;
+            }
+            .icon-phone1 {
+                position: absolute;
+                left: 40px;
+                right: 93.95px;
+                top: 130px;
+                bottom: 6.56px;
+            }
+            .icon-phone2 {
+                position: absolute;
+                left: 40px;
+                right: 93.95px;
+                top: 190px;
+                bottom: 6.56px;
+            }
+            .no-hp {
+                position: absolute;
+                left: 160px;
+                top: 95px;
+                bottom: 6.56px;
+            }
+            .no-hp1 {
+                position: absolute;
+                left: 160px;
+                top: 150px;
+                bottom: 6.56px;
+            }
+            .no-hp2 {
+                position: absolute;
+                left: 160px;
+                top: 210px;
+                bottom: 6.56px;
+            }
+            .icon-web {
+                position: absolute;
+                left: 550px;
+                right: 80px;
+                top: 90px;
+                bottom: 6.56px;
+            }
+            .icon-twitter {
+                position: absolute;
+                left: 620px;
+                right: 80px;
+                top: 90px;
+                bottom: 6.56px;
+            }
+            .icon-line {
+                position: absolute;
+                left: 690px;
+                right: 80px;
+                top: 90px;
+                bottom: 6.56px;
+            }
+            .icon-fb {
+                position: absolute;
+                left: 760px;
+                right: 80px;
+                top: 90px;
+                bottom: 6.56px;
+            }
+            .icon-ig {
+                position: absolute;
+                left: 830px;
+                right: 80px;
+                top: 90px;
+                bottom: 6.56px;
+            }
+            .address {
+                position: absolute;
+                left: 970px;
+                top: 100px;
+                bottom: 6.56px;
+            }
+            .responsive {
+                width: 100%;
+                max-width: 400px;
+                height: auto;
             }
             
         </style>
@@ -346,17 +472,17 @@
             </div>
 
         <!-- gambar paling atas -->
-            <div class="top-right-image1"><img src="{{url('/images/foto3.png')}}" style= "width: 90%; height: 90%"></div>
+           <div class="responsive"><div class="top-right-image1"><img src="{{url('/images/foto3.png')}}" style= "width: 90%; height: 90%"></div></div>
             
         <!-- gambar kedua -->
             <div class="buttom-left-image2"><img src="{{url('/images/foto2.png')}}" style= "width: 45%; height: 45%"></div>
 
         <!-- title 2 --> 
-            <p class="tittle1" style="padding-top: 900px;padding-left: 750px;">Penerimaan Peserta Didik Baru<br>Tahun Pelajaran 2019/2020</p>
+            <p class="tittle1" style="padding-top: 700px;padding-left: 715px;">Penerimaan Peserta Didik Baru<br>Tahun Pelajaran 2019/2020</p>
             
-            <p class="text"style="padding-top: 0.75px;padding-left: 750px">SEKOLAH CENDEKIA BAZNAS (SCB) merupakan sekolah bebas biaya dan berasrama bagi dhuafa untuk putra dan putri Indonesia, yang berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).<br></p>
-            <p class="text"style="padding-top: 5px;padding-left: 750px">SCB memiliki motto membangun karakter-mengoptimalkan potensi. Setiap siswa menempuh pendidikan formal (kurikulum dinas pendidikan), pembinaan karakter islam, qur’an hadist serta pengembangan potensi sesuai minat dan bakat.<br></p>
-            <p class="text"style="padding-top: 5px;padding-left: 750px">SCB membuka pendaftaran calon Peserta Didik Baru Angkatan III Tahun Pelajaran 2019/2020. Masa pendaftaran dimulai 31 Oktober – 28 Desember 2019</p>
+            <p class="text"style="padding-top: 0.75px;padding-left: 715px">SEKOLAH CENDEKIA BAZNAS (SCB) merupakan sekolah bebas biaya dan berasrama bagi dhuafa untuk putra dan putri Indonesia, yang berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).<br></p>
+            <p class="text"style="padding-top: 5px;padding-left: 715px">SCB memiliki motto membangun karakter-mengoptimalkan potensi. Setiap siswa menempuh pendidikan formal (kurikulum dinas pendidikan), pembinaan karakter islam, qur’an hadist serta pengembangan potensi sesuai minat dan bakat.<br></p>
+            <p class="text"style="padding-top: 5px;padding-left: 715px">SCB membuka pendaftaran calon Peserta Didik Baru Angkatan III Tahun Pelajaran 2019/2020. Masa pendaftaran dimulai 31 Oktober – 28 Desember 2019</p>
         
         <!-- title 3 -->
             <div class="content">
@@ -414,32 +540,32 @@
 
         <!-- gambar timeline -->
             <div class="img-timeline1">
-            <img src="{{url('/images/daftar.png')}}" style= "width: 70%; height: 70%">
+            <img src="{{url('/images/daftar.png')}}" style= "width: 70%; height: 70%;">
             </div>
 
             <div class="img-timeline2">
-            <img src="{{url('/images/survei-1.png')}}" style= "width: 70%; height: 70%">
+            <img src="{{url('/images/survei-1.png')}}" style= "width: 70%; height: 70%;">
             </div>
 
             <div class="img-timeline3">
-            <img src="{{url('/images/tes-akademik.png')}}" style= "width: 68%; height: 68%">
+            <img src="{{url('/images/tes-akademik.png')}}" style= "width: 68%; height: 68%;">
             </div>
 
             <div class="img-timeline4">
-            <img src="{{url('/images/survei.png')}}" style= "width: 69%; height: 69%">
+            <img src="{{url('/images/survei.png')}}" style= "width: 69%; height: 69%;">
             </div>
 
             <div class="img-timeline5">
-            <img src="{{url('/images/tes quran.png')}}" style= "width: 68%; height: 68%">
+            <img src="{{url('/images/tes quran.png')}}" style= "width: 68%; height: 68%;">
             </div>
 
             <div class="img-timeline6">
-            <img src="{{url('/images/announce.png')}}" style= "width: 94%; height: 94%">
+            <img src="{{url('/images/announce.png')}}" style= "width: 100%; height: 100%;">
             </div>
 
         <!-- line -->
             <div class= line-timeline>
-                <img src="{{url('/images/line.png')}}" style= "width: 94%; height: 90%">
+                <img src="{{url('/images/line.png')}}" style= "width: 95%; height: 90%;">
             </div>
 
         <!-- teks timeline -->   
@@ -501,6 +627,67 @@
                     <p>13 April 2020</p>
                 </div> 
             </div>
+
+            <!-- warning footer -->
+            <div class="warning-card">
+            <div class="warning-icon"><img src="{{url('/images/alert-2.png')}}"></div>
+            <a class="text-timeline" style="color: #000000; font-weight: normal; padding-left: 125px; padding-top: 40px;">
+            Tidak ada pungutan biaya apapun mulai proses seleksi, kedatangan calon peserta didik, 
+            hingga pendidikan selama berada di SMP Cendekia BAZNAS
+            </div>
+
+            <!-- footer -->
+            <div class="bg-footer"><img src="{{url('/images/ijo.png')}}" style="width: 112.4%; height: 450%;"></div>
+            <div class="footer">
+                <!-- Narahubung -->
+                <a>Narahubung</a>
+                <div class="icon-phone">
+                    <img src="{{url('/images/phone.png')}}" style= "width: 50px; height: 50px;">
+                </div>
+                <div class="cal-timeline no-hp" style= "color: #ffffff">
+                    (0251)&nbsp8591072
+                </div>
+                <div class="icon-phone1">
+                    <img src="{{url('/images/phone.png')}}" style= "width: 50px; height: 50px;">
+                </div>
+                <div class="cal-timeline no-hp1" style= "color: #ffffff">
+                    0857&nbsp8277&nbsp1555&nbsp(Norma)
+                </div>
+                <div class="icon-phone2">
+                    <img src="{{url('/images/phone.png')}}" style= "width: 50px; height: 50px;">
+                </div>
+                <div class="cal-timeline no-hp2" style= "color: #ffffff">
+                    0811&nbsp1372&nbsp017&nbsp(Aiman)
+                </div>
+                
+                <!-- Sosial Media -->
+                <a style="padding-left: 300px;">Sosial&nbsp&nbspMedia</a>
+                <div class="icon-web">
+                    <a href="https://www.cendekiabaznas.sch.id/"><img src="{{url('/images/web.png')}}" style= "width: 50px; height: 50px;"></a>
+                </div>
+                <div class="icon-twitter">
+                    <a href="#"><img src="{{url('/images/twitterlogo.png')}}" style= "width: 50px; height: 50px;"></a>
+                </div>
+                <div class="icon-line">
+                    <a href="#"><img src="{{url('/images/linelogo.png')}}" style= "width: 50px; height: 50px;"></a>
+                </div>
+                <div class="icon-fb">
+                    <a href="#"><img src="{{url('/images/facebooklogo.png')}}" style= "width: 50px; height: 50px;"></a>
+                </div>
+                <div class="icon-ig">
+                    <a href="#"><img src="{{url('/images/instagramlogo.png')}}" style= "width: 50px; height: 50px;"></a>
+                </div>
+
+                <!-- Informasi Sekolah -->
+                <a style="padding-left: 210px;">Informasi&nbsp&nbspSekolah</a>
+                <div class="cal-timeline address" style= "color: #ffffff; align-items:left">
+                    <p style="padding-top: 50px; text-align: left">Sekolah&nbspCendekia&nbspBAZNAS<br>
+                    Jln.&nbspK.H.&nbspUmar&nbspCirangkong,&nbspRT.&nbsp18&nbspRW.&nbsp07,<br> 
+                    Ds.&nbspCemplang,&nbspKec.&nbspCibungbulang,&nbspKab.<br>
+                    Bogor&nbsp16630</p><br>
+                </div>
+
+            </div>      
         </body>
     </body>
 </html>

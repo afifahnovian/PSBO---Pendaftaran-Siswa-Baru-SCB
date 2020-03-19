@@ -20,6 +20,9 @@ class CreateDataPrestasisTable extends Migration
             $table->string('tingkat_Lomba')->nullable();
             $table->string('peringkat')->nullable();
             
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
         
         });

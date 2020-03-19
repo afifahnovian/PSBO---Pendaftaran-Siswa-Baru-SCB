@@ -20,6 +20,9 @@ class CreateDataSekolahsTable extends Migration
             $table->longText('alamat_sekolah');//atribut alamat sekolah
             $table->string('no_telp_sekolah');//atribut noTelpsekolah
 
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
             $table->timestamps();
 
            
