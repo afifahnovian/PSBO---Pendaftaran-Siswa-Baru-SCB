@@ -81,6 +81,7 @@
   </div>
   @endforeach
 @endif
+
 <!-- End -->
 <div class="formulir">
   <!-- ini datasiswa karna nama variabel dari backend namanya data siswa -->

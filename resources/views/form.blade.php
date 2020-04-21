@@ -7,11 +7,14 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" type="text/css" href= "https://fonts.googleapis.com/css?family=Open+Sans">
-
         <!-- Styles -->
-        <style>
-            /* Style inputs, select elements and textareas */
-            input[type=text], select, textarea{
+        <!-- Boostrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+    </head>
+    
+   <style>
+      /* Style inputs, select elements and textareas */
+      input[type=text], select, textarea{
                 width: 100%;
                 padding: 12px;
                 border: 1px solid #ccc;
@@ -19,137 +22,71 @@
                 box-sizing: border-box;
                 resize: vertical;
             }
-
-            /* Style the label to display next to the inputs */
-            label {
-                padding: 12px 12px 12px 0;
-                display: inline-block;
-            }
-
-            /* Style the submit button */
-            input[type=submit] {
-                background-color: #4CAF50;
-                color: white;
-                padding: 12px 20px;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                float: right;
-            }
-
-            /* Floating column for labels: 25% width */
-            .col-25 {
-                float: left;
-                width: 25%;
-                margin-top: 6px;
-            }
-
-            /* Floating column for inputs: 75% width */
-            .col-75 {
-                float: left;
-                width: 75%;
-                margin-top: 6px;
-            }
-
-            /* Clear floats after the columns */
-                .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 600px) {
-            .col-25, .col-75, input[type=submit] {
+      .formulir{
+                margin : 20px;
+                resize: vertical;
+      }
+      @media screen and (max-width: 500px) {
+            .formulir, input[type=submit] {
                 width: 100%;
-                margin-top: 0;
+                margin-top: 0px;
             }
             }
-        </style>
-    </head>
-
+      }
+      .submit{
+                margin: 20px;
+      }
+          
+   </style>
     <!---form--->
 <body>
+
 <div class="formulir">
 <!--form dengan method post-->
   <form method="POST" action="{{url('/form')}}"> 
   <!--utk form yang ada upload fotonya, formatnya gini, biar fotonya di encryp-->
   <!-- <form method="POST" action="{{url('/form')}}" enctype="multipart/form-data"> -->
-  
   <!--wajib cantumin di stiap form utk akses token, biar ga error -->
   @csrf 
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Nama lengkap</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="namalengkap" name="namalengkap" placeholder="Nama">
-      </div>
-    </div>
+  <div class="form-group">
+    <label for="fname">Nama Lengkap</label>
+    <input type="text" class="form-control" id="namalengkap" name="namalengkap" placeholder="Nama">
     
-    <div class="row">
-      <div class="col-25">
-        <label for="panggilan">Nama Panggilan</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="namapanggilan" name="namapanggilan" placeholder="Panggilan">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="jk">Jenis Kelamin</label>
-      </div>
-
-      <div class="col-75">
-        <select id="jk" name="jeniskelamin">
+  </div>
+  <div class="form-group">
+    <label for="panggilan">Nama Panggilan</label>
+    <input type="text" class="form-control" id="namapanggilan" name="namapanggilan" placeholder="Panggilan">
+  </div>
+  <div class="form-group">
+    <label for="jk">Jenis Kelamin</label>
+    <select id="jk" name="jeniskelamin" class="custom-select">
           <option value="1">Laki-laki</option>
           <option value="2">Perempuan</option>
         </select>
-      </div>
-
-    </div>
-    
-    <div class="row">
-      <div class="col-25">
-        <label for="tempatlahir">Tempat Lahir</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="tempatlahir" name="tempatlahir" placeholder="Tempat Lahir">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="tempatlahir">Tanggal Lahir</label>
-      </div>
-      <div class="col-75">
-        <input type="date" id="tgllahir" name="tanggallahir">
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="alamat">Alamat Tempat tinggal</label>
-      </div>
-      <div class="col-75">
-        <textarea id="alamat" name="alamat" placeholder="Alamat Lengkap" style="height:100px"></textarea>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="nisn">NISN</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="nisn" name="nisn" placeholder="NISN">
-      </div>
-    </div>
-
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-
-  </form>
+  </div>
+  <div class="form-group">
+    <label for="tempatlahir">Tempat Lahir</label>
+    <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" placeholder="Tempat lahir">
+  </div>  
+  <div class="form-group">
+    <label for="tempatlahir">Tanggal Lahir</label>
+    <input type="date" class="form-control" id="tgllahir" name="tanggallahir">
+  </div> 
+  <div class="form-group">
+    <label for="alamat">Alamat Lengkap</label>
+    <textarea class="form-control" id="alamat" name="alamat" placeholder="Alamat Lengkap" rows="3"></textarea>
+  </div>  
+  <div class="form-group">
+    <label for="nisn">NISN</label>
+    <input type="text" class="form-control" id="nisn" name="nisn" placeholder="NISN">
+  </div> 
 </div>
+  <div class="submit">
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+<!-- JS --> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
