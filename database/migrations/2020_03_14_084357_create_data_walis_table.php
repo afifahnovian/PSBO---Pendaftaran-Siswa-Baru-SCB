@@ -21,6 +21,7 @@ class CreateDataWalisTable extends Migration
             $table->string('tempat_lahir'); //tempat lahir wali murid
             $table->date('tanggal_lahir'); //tanggal lahir wali murid
             $table->boolean('status_hidup'); //jika di wakilkan selain orangtua, apakah orangtuanya masih hidup atau tidak
+            $table->integer('umur');
             $table->string('pendidikan_terakhir'); //pendidikan terkahir wali murid
             $table->string('pekerjaan'); //pekerjaan wali murid
             $table->integer('penghasilan_pokok'); //pendapatan pokok wali murid

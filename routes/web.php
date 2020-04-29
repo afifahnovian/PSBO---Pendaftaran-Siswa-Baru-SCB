@@ -26,8 +26,13 @@ GET : buat nampilin/ ambil data
 
 //untuk input data umum siswa
 Route::get('/form','DataSiswaUmumController@create');
+Route::get('/form1','DataSiswaUmumController@create1');
+Route::get('/form2','DataSiswaUmumController@create2');
+Route::get('/form3','DataSiswaUmumController@create3');
+Route::get('/form4','DataSiswaUmumController@create4');
+Route::get('/form5-UploadBerkasSMP','DataSiswaUmumController@create5');
 
-// view hasil form
+// view next form step 2
 Route::get('/table','DataSiswaUmumController@view');
 
 //delete data tabel data umum siswa

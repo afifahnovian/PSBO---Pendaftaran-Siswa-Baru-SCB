@@ -24,8 +24,11 @@ class CreateDataRumahsTable extends Migration
             $table->string('sumber_air'); //sumber air di rumah e.g : sumur or pdam
             $table->string('daya_listrik');//daya listrik rumah
             $table->integer('harta_tidak_bergerak')->nullable();//contoh : punya sawah,ladang,tanah, punya(1),tidak punya(0)
-            $table->string('nama_harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
+            $table->string('harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
             $table->string('status_kepemilikan_harta')->nullable();//status kepemilikan harta e.g: milik sendi
+            $table->integer('kendaraan_bermotor')->nullable();
+            $table->string('kendaraan')->nullable(); 
+            $table->string('status_kepemilikan_kendaraan')->nullable();//status kepemilikan harta e.g: milik sendi
             
             //foreignkey dari tabel calon siswa
             $table->bigInteger('calonsiswa_id')->unsigned();

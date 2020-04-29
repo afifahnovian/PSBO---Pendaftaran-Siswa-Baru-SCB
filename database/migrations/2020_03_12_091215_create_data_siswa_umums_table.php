@@ -21,13 +21,10 @@ class CreateDataSiswaUmumsTable extends Migration
             $table->integer('jenis_kelamin'); //atribut jk : 1 lk 2 pr
             $table->string('tempat_lahir'); // atribut tempatLahir
             $table->date('tanggal_lahir'); //atribut tanggalLahir
-            //$table->string('agama'); //atribut agama
             $table->longText('alamat'); //atribut alamat
-           
             //foreignkey dari tabel calon siswa
             $table->bigInteger('calonsiswa_id')->unsigned();
             $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
