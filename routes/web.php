@@ -1,5 +1,10 @@
 <?php
 #use Illuminate\Routing\Route;
+/*
+Catatan : 
+POST : buat save ke db
+GET : buat nampilin/ ambil data
+*/
 
 Route::get('/', function () {
     return view('landing-page');
@@ -24,17 +29,6 @@ Route::get('/formpendaftaran_tahfidz', function () {
     return view('formpendaftaran_tahfidz');
 });
 
-//simpen berkas daftar yang bentuknya image
-// Route::get('/formDaftar', 'BerkasDaftarController@create'); formdaftar nanti diganti karna skrg belum ada frontend page sbg tempat untuk upload gambar
-// Route::post('/confirmation', 'BerkasDaftarController@store'); misalnya abis dari situ semua data pendaftaran disimpen di confirmation page
-
-/*
-Catatan : 
-POST : buat save ke db
-GET : buat nampilin/ ambil data
-*/
-
-
 // view table save data
 Route::get('/table','FormControllerSMP@view');
 
@@ -54,10 +48,21 @@ Route::post('/formpendaftaran_smp','FormControllerSMP@storeData');
 Route::post('/formpendaftaran_tahfidz','FormControllerTahfidz@storeData');
 
 
+//PAGE ADMIN
+Auth::routes();
 
-/*Kalau viewnya dalam folder
-Route::get('/', function () { //pergi ke page,pake slash  
-    return view(view'folderview.welcome'); //untuk return page, page itu ada di .blade.php
+Route::get('/admin', 'HomeController@index')->name('admin');
+Auth::routes();
+
+Route::get('/admin', 'HomeController@index')->name('admin');
+
+Route::group(['middleware' => 'auth'], function () {
+	Route::resource('user', 'UserController', ['except' => ['show']]);
+	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
+	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
-*/
 
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+});
