@@ -5,7 +5,7 @@
 #use Illuminate\Routing\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('landing-page');
 });
 
 Route::get('/form0', function () {
