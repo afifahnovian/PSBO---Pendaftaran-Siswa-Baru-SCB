@@ -5,8 +5,24 @@
         <title>Form Pendaftaran Calon Siswa Baru - @yield('title')</title>
         @include('activation.activation-css')
     </head>
-<body>
-
+<body id="page-top">
     @include('layouts.navbar')
+    <div class="wrapper">
+    <!--Page Content-->
+    <div class="main-content">
+        <div class="header">
+    
+            </div>
+        </div>
+        <div class="content">
+       
+        @yield('content')
+         
+        </div>
+        @yield('scripts')
+    </div>
+    
+    </div>
+
     @include('activation.activation-js')
 </body>

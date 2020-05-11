@@ -6,7 +6,7 @@
 .container{
     margin-left: 75px;
     margin-right: 75px;
-    margin-top : 50px;
+    margin-top : 10px;
     position: relative;
     }
 
@@ -117,6 +117,7 @@
 
 /*progressbar*/
 #progressbar {
+    padding-top: 75px;
     margin-bottom: 20px;
     overflow: hidden;
     /*CSS counters to number the steps*/
