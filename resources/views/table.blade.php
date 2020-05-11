@@ -50,7 +50,7 @@
         <td>{{$siswa->NISN}}</td>
         
         <td> 
-            <div class="row">
+          <div class="row">
             <a href='{{url("/form/update/".$siswa->id)}}' class="btn btn-info" role="button">Edit</a>
             </div>
         </td>

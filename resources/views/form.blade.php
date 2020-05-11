@@ -1,8 +1,11 @@
 @extends('layouts.header')
 @section('title','Data Pengisi Form')
-
+@section('css')
+<link href="custom.css"/>
+@stop
 @section('content')
 <!-- nomor page -->
+
 <div class="stepper" style="text-align:center;">
     <span class="step active">1</span>
     <span class="step">2</span>
@@ -13,9 +16,9 @@
 </div>
 <!-- Page form --> 
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center form_1">
       <div class="col-lg-8 mt-5 mb-5">
-        <form method="POST" action="{{url('/form')}}"> 
+        <form method="POST" action="{{url('/form')}}" id="pendaftaran-form"> 
         <!--utk form yang ada upload fotonya, formatnya gini, biar fotonya di encryp-->
         <!-- <form method="POST" action="{{url('/form')}}" enctype="multipart/form-data"> -->
         <div class="subform">
@@ -23,17 +26,17 @@
             <hr style="margin-left: 25px; margin-right:36px">
             <div class="form-group">
               <label for="#">Nama Lengkap</label>
-              <input type="text" class="form-control"  name="pengisiform" placeholder="Nama Lengkap">
+              <input type="text" class="form-control" id="pengisiform" name="pengisiform" placeholder="Nama Lengkap" maxlength="30" required >
             </div>
 
             <div class="form-group">
               <label for="#">Nomor HP</label>
-              <input type="text" class="form-control" name="nohp" placeholder="Nomor HP">
+              <input type="text" class="form-control" name="nohp" placeholder="Nomor HP" maxlength="13" required>
             </div>
 
             <div class="form-group">
               <label for="#">Email</label>
-              <input type="text" class="form-control" name="email" placeholder="Alamat Email">
+              <input type="text" class="form-control" name="email" placeholder="Alamat Email" maxlength="40" required> 
             </div>
         </div>
       <!-- button -->
@@ -51,6 +54,9 @@
         </div>
 
       </form>
+
+  
+    
     </div>
   </div>
 </div>

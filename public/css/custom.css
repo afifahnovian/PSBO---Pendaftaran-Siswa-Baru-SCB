@@ -5,7 +5,7 @@
     position: relative;
 }
 .navbar {
-    box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 24px #004445(0, 0, 0, 0.25);
     position: fixed;
     top: 0px;
     width: 100%;
@@ -20,35 +20,28 @@ color: #FFFFFF;
 
 /* Make circles that indicate the steps of the form: */
 
-
-.step {
+.nav-item-num {
     height: 50px;
     width: 50px;
     margin: 0 15px;
-    margin-top: 50px;
-    padding: 10px;
+    padding: 2px;
     background-color: #C4C4C4;
     border: none;  
     border-radius: 50%;
-    display: inline-block;
     opacity: 0.5;
     color: #000;
     font-size: 1.25rem;
     color:white ;
-  }
-  
-  .step.active {
+}
+
+.nav-item-num-active {
     opacity: 1;
     color: #fff;
     background-color: #F8B400;
-  }
-  
-  /* Mark the steps that are finished and valid: */
-  .step.finish {
-    opacity: 0.75;
-    background-color: #4b4267;
-    color: #fff;
-  }
+}
+.nav-link{
+    color: #004445;
+}
 
 /*form - kategori mahasiswa*/
 a.card-link {  /* This is the link of the entire card */
@@ -64,58 +57,6 @@ a.card-link {  /* This is the link of the entire card */
 display: flex;
 }
 
-.column-choice1 {
-flex: 50%;
-margin-top: 165px;
-margin-left: 250px;
-margin-right: 120px;
-
-}
-.column-choice2{
-flex: 50%;
-margin-top : 165px;
-margin-left: 120px;
-margin-right: 250px;
-
-}
-.card-choice1  {
-position: absolute;
-width: 23%;
-height: 120%;
-background: #FFFFFF;
-box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
-border-radius: 24px;
-}
-.card-choice2  {
-position: absolute;
-width: 23%;
-height: 120%;
-background: #FFFFFF;
-box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
-border-radius: 24px;
-}
-.card-img1{
-position: absolute;
-margin: 78px;
-margin-top: 60px;
-align-content: center;        
-}
-.card-img2{
-position: absolute;
-margin: 82px;
-margin-top: 60px;
-align-content: center;   
-}
-.card-title1{
-position: absolute;
-margin: 75px;
-margin-top: 180px;
-}
-.card-title2{
-position: absolute;
-margin: 70px;
-margin-top: 180px;
-}
 .row-title{
 position: absolute;
 align-content: center;
@@ -134,19 +75,7 @@ color: #004445;
         box-sizing: border-box;
         resize: vertical;
     }
-.form{
-    display: block;
-}
-.container{
-margin left: 125px;
-margin right: 125px;
-margin top : 50px;
-position: relative;
-}
-.form-group{
-margin-left: 25px;
-margin-right: 36px;
-}
+
 .subtitle{
 color: #004445;
 font-display: bold;
@@ -155,8 +84,6 @@ margin-left: 25px;
 
 .sub subtitle{
     color: #004445;
-    font-display: bold;
-    margin-left: 25px;
     }
 .nextprev{
     margin-top:50px ;
