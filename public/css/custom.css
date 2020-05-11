@@ -4,55 +4,14 @@
     width: 100%;
     position: relative;
 }
-.navbar {
-    box-shadow: 0px 2px 24px #004445(0, 0, 0, 0.25);
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    margin: 0%;
-}
  a.link{
 color: #FFFFFF;
 }
 
-/* Stepper Styling */
-/* Steps */
-
-/* Make circles that indicate the steps of the form: */
-
-.nav-item-num {
-    height: 50px;
-    width: 50px;
-    margin: 0 15px;
-    padding: 2px;
-    background-color: #C4C4C4;
-    border: none;  
-    border-radius: 50%;
-    opacity: 0.5;
-    color: #000;
-    font-size: 1.25rem;
-    color:white ;
-}
-
-.nav-item-num-active {
-    opacity: 1;
-    color: #fff;
-    background-color: #F8B400;
-}
 .nav-link{
     color: #004445;
 }
 
-/*form - kategori mahasiswa*/
-a.card-link {  /* This is the link of the entire card */
-    position: absolute;
-    width: 23%;
-    height: 50%;
-    z-index: 1;
-    &:hover ~ .card-title {  /* Hints by underlining title that the card is clickable */
-        text-decoration: underline;
-    }
-}
 .row-choice {
 display: flex;
 }
@@ -64,8 +23,6 @@ margin-top : 100px;
 margin-left: 550px;
 color: #004445; 
 }
-
-/* form 1 */
      /* Style inputs, select elements and textareas */
      input[type=text], select, textarea{
         width: 100%;
@@ -75,34 +32,6 @@ color: #004445;
         box-sizing: border-box;
         resize: vertical;
     }
-
-.subtitle{
-color: #004445;
-font-display: bold;
-margin-left: 25px;
-}
-
-.sub subtitle{
-    color: #004445;
-    }
-.nextprev{
-    margin-top:50px ;
-}
-.next{
-margin-right: 25px;
-}
-.prev{
-    margin-left: 25px;
-}
-
-.btn btn-fill{
-    background : #2C786C;
-}
-.btn btn-outline{
-
-}
-
-
 
 @media screen and (max-width: 500px) {
     .formulir, input[type=submit] {

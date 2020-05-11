@@ -15,7 +15,7 @@
                         </div>
                         <!--Button-->
                         <div class="text-left mt-4">
-                        <a class="btn btn-xl btn-outline-light1" href="{{url('/form0')}}">Daftar Sekarang</a>
+                        <a class="btn btn-xl btn-outline-light1" href="{{url('/kategorisiswa')}}">Daftar Sekarang</a>
                     </div>
                     </div>
                     <!-- Portfolio Item 2-->
