@@ -7,11 +7,7 @@ GET : buat nampilin/ ambil data
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('home');
-=======
     return view('landing-page');
->>>>>>> e530a2fe06647e339d3944d3473d0cee99ddf7c7
 });
 
 Route::get('/syarat-smp', function () {
@@ -67,7 +63,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
-<<<<<<< HEAD
 //PAGE ADMIN
 Auth::routes();
 
@@ -83,8 +78,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
-=======
->>>>>>> e530a2fe06647e339d3944d3473d0cee99ddf7c7
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
 });
