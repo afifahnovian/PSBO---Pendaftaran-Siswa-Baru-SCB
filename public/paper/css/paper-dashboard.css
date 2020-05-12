@@ -4717,7 +4717,7 @@ License - nucleoapp.com/license/
   top: 0;
   height: 100%;
   bottom: 0;
-  width: 260px;
+  width: 300px;
   left: 0;
   z-index: 1030;
   border-right: 1px solid #ddd;
@@ -4728,7 +4728,7 @@ License - nucleoapp.com/license/
   position: relative;
   height: calc(100vh - 75px);
   overflow: auto;
-  width: 260px;
+  width: 300px;
   z-index: 4;
   padding-bottom: 100px;
 }
@@ -5135,7 +5135,7 @@ License - nucleoapp.com/license/
 .main-panel {
   position: relative;
   float: right;
-  width: calc(100% - 260px);
+  width: calc(100% - 300px);
   background-color: #f4f3ef;
   -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -5604,6 +5604,10 @@ License - nucleoapp.com/license/
 
 .card .card-body {
   padding: 15px 15px 10px 15px;
+}
+
+.card .cars-dashboard{
+  height: 150px
 }
 
 .card .card-body.table-full-width {

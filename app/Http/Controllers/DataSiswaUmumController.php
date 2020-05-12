@@ -17,26 +17,7 @@ class DataSiswaUmumController extends Controller
         $datakesehatan = DataKesehatanSiswa::all();
         return view('/table', compact('datasiswa','pengisiform','datakesehatan')); 
     }
-    //nampilin halaman input form
-    public function create(){ // untuk pergi view data siswa umum
-        return view('form');
-    }
-    public function create1(){ // untuk pergi view data siswa umum
-        return view('form1');
-    }
-    public function create2(){ // untuk pergi view data siswa umum
-        return view('form2');
-    }
-    public function create3(){ // untuk pergi view data siswa umum
-        return view('form3');
-    }
-    public function create4(){ // untuk pergi view data siswa umum
-        return view('form4');
-    }
-    public function create5(){ // untuk pergi view data siswa umum
-        return view('form5-UploadBerkasSMP');
-    }
-
+    
     //delete data pada form
     public function deleteData($id){
         $datasiswa= DataSiswaUmum::find($id);
