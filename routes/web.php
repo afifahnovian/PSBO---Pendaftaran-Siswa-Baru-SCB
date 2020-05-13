@@ -48,20 +48,6 @@ Route::post('/formpendaftaran_smp','FormControllerSMP@storeData');
 Route::post('/formpendaftaran_tahfidz','FormControllerTahfidz@storeData');
 
 
-//PAGE ADMIN
-Auth::routes();
-
-Route::get('/admin', 'HomeController@index')->name('admin');
-Auth::routes();
-
-Route::get('/admin', 'HomeController@index')->name('admin');
-
-Route::group(['middleware' => 'auth'], function () {
-	Route::resource('user', 'UserController', ['except' => ['show']]);
-	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
-	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
-});
 
 //PAGE ADMIN
 Auth::routes();

@@ -16,16 +16,16 @@
                             <table class="table">
                                 <thead class=" text-primary">
                                     <th>
-                                        Name
+                                        Nama
                                     </th>
                                     <th>
-                                        Country
+                                        Jenis Kelamin
                                     </th>
                                     <th>
-                                        City
+                                        Asal Daerah
                                     </th>
-                                    <th class="text-right">
-                                        Salary
+                                    <th>
+                                        Asal Sekolah
                                     </th>
                                 </thead>
                                 <tbody>
@@ -39,11 +39,16 @@
                                         <td>
                                             Oud-Turnhout
                                         </td>
+                                        <td>
+                                            fffffff
+                                        </td>
                                         <td class="text-right">
-                                            $36,738
+                                            <a href="{{ route('page.index', 'individu') }}" class="btn btn-sm btn-primary">
+                                                detail
+                                            </a>
                                         </td>
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>
                                             Minerva Hooper
                                         </td>
@@ -53,80 +58,15 @@
                                         <td>
                                             Sinaai-Waas
                                         </td>
-                                        <td class="text-right">
-                                            $23,789
-                                        </td>
-                                    </tr>
-                                    <tr>
                                         <td>
-                                            Sage Rodriguez
-                                        </td>
-                                        <td>
-                                            Netherlands
-                                        </td>
-                                        <td>
-                                            Baileux
+                                            ffffffff
                                         </td>
                                         <td class="text-right">
-                                            $56,142
+                                            <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">
+                                                detail
+                                            </a>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Philip Chaney
-                                        </td>
-                                        <td>
-                                            Korea, South
-                                        </td>
-                                        <td>
-                                            Overland Park
-                                        </td>
-                                        <td class="text-right">
-                                            $38,735
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Doris Greene
-                                        </td>
-                                        <td>
-                                            Malawi
-                                        </td>
-                                        <td>
-                                            Feldkirchen in Kärnten
-                                        </td>
-                                        <td class="text-right">
-                                            $63,542
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Mason Porter
-                                        </td>
-                                        <td>
-                                            Chile
-                                        </td>
-                                        <td>
-                                            Gloucester
-                                        </td>
-                                        <td class="text-right">
-                                            $78,615
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Jon Porter
-                                        </td>
-                                        <td>
-                                            Portugal
-                                        </td>
-                                        <td>
-                                            Gloucester
-                                        </td>
-                                        <td class="text-right">
-                                            $98,615
-                                        </td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

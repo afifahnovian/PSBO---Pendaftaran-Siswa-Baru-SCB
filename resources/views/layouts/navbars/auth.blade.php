@@ -117,18 +117,12 @@
                     </ul>
                 </div>
             </li>
-            <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
+            <li class="{{ $elementActive == 'user' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'user') }}">
                     <i class="nc-icon nc-badge"></i>
                     <p>{{ __('Admin Management') }}</p>
                 </a>
             </li>
-            <!-- <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'icons') }}">
-                    <i class="nc-icon nc-diamond"></i>
-                    <p>{{ __('Icons') }}</p>
-                </a>
-            </li> -->
             <!-- <li class="{{ $elementActive == 'notifications' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'notifications') }}">
                     <i class="nc-icon nc-bell-55"></i>
