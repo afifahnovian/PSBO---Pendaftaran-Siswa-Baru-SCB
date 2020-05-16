@@ -15,8 +15,10 @@ class CreateCalonSiswasTable extends Migration
     {
         Schema::create('calon_siswas', function (Blueprint $table) { // inisisasi atribut yang ada di tabel
             //primary key
-            $table->bigIncrements('id'); //id yang auto increment 
-            $table->timestamps(); //untuk generate otomatis data (update data realtime)
+            $table->bigIncrements('id'); 
+            $table->string('status_siswa')->default('Pertimbangan'); // set default : pertimbangan , Lulus untuk siswa lulus, tidak lulus untuk siswa tak lulus
+            $table->string('tipe_siswa');// smp dan tahfidz
+            $table->timestamps(); 
         });
     }
 

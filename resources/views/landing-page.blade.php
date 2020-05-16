@@ -9,6 +9,12 @@
             <div class="row">
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5" style = margin-top:10rem;>
+                        @if(session('success'))
+                            <div class="alert alert-success" role="alert">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <p class="mb-0">{{session('success')}}</p>
+                        </div>
+                        @endif
                     <div class="mx-auto">
                         <h2>Penerimaan <br>
                             Peserta Didik Baru <br> 
@@ -50,34 +56,34 @@
     <!-- persyaratan pendaftaran-->
     <h3 class="page-section-heading1 text-center text-secondary">Persyaratan Pendaftaran</h3>
 
-    <section class="page-section portfolio" id="portfolio">
+   
         <div class="container">
             <!-- Portfolio Grid Items-->
-            <div class="row">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto">
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"></i></div>
+            <div class="row" style="align-content: center; padding-top:25px">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-5 col-lg-3.5 mb-4" style="margin-left: 105px">
+                        <div class="portfolio-item mx-auto" >
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"></i></div>
+                            </div>
+                            <a class="link" href="{{url('/syarat-smp')}}"><img class="img-fluid" style="align:center;" src="assets/img/siswa-smp.png" alt="" /></a>
                         </div>
-                        <a class="" href="#"><img class="img-fluid" style="align:center;" src="assets/img/siswa-smp.png" alt="" /></a>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-5 col-lg-3.5 mb-4" >
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"></i></div>
+                            </div>
+                            <a class="link" href="{{url('/syarat-tahfidz')}}"><img class="img-fluid" src="assets/img/siswa-tahfiz.png" alt="" /></a>
+                        </div>
                     </div>
                 </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
-                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            <div class="portfolio-item-caption-content text-center text-white"></i></div>
-                        </div>
-                        <a class="" href="#"><img class="img-fluid" src="assets/img/siswa-tahfiz.png" alt="" /></a>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+    
 
     <!-- Alur dan Timeline -->
-    <h3 class="page-section-heading1 text-center text-secondary mb-0">Alur dan Timeline</h3>
+    <h3 class="page-section-heading1 text-center text-secondary mb-0" style="padding-top: 45px">Alur dan Timeline</h3>
     <br><br>
     <img class="img-fluid1" src="assets/img/alur timeline.png" alt="" />
 
@@ -132,7 +138,7 @@
     </section>
 
     <!-- Kotak Kuning -->
-    <section class="page-section portfolio" id="portfolio">
+    <section class="page-section portfolio" id="portfolio" >
         <div class="container">
             <!-- Portfolio Grid Items-->
             <div class="row">
@@ -140,7 +146,7 @@
                 <div class="col-md-6-1 col-lg-4-3 container-1 mb-5 bg-kotak-kuning" style="border-radius: 15px;">
                     <div class="mx-auto-1">
                         <div class="row-1">
-                            <img class="img-fluid2" src="assets/img/alert 2.png" style="margin-bottom:20px;" alt="" />
+                            <img class="img-fluid2" src="assets/img/alert 2.png" alt="" />
                             <p class="col-lg-4-4 mx-auto-1" style="margin-top:0rem;">Tidak ada pungutan biaya apapun mulai proses seleksi, kedatangan calon peserta didik, hingga pendidikan selama berada di SMP Cendekia BAZNAS.</p>
                         </div>
                     </div>
@@ -149,45 +155,7 @@
         </div>
     </section>
 
-    <!-- Footer-->
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Narahubung-->
-                <div class="col-lg-4-2 mb-5 mb-lg-0 container">
-                    <h4 style ="color:#f8b400;">Narahubung</h4><br>
-                    <footer class="text-left">
-                        <ul style="list-style-type:none;">
-                            <li><a class="btn1 btn-social mx-3 mb-2"><i class="fas fa-fw fa-phone-alt" style ="color:#004445;" ></i></a><span class="lead mb-0" style="font-size:110%;">(0521) 8591072</span></li>
-                            <li><a class="btn1 btn-social mx-3 mb-2"><i class="fas fa-fw fa-phone-alt" style ="color:#004445;"></i></a><span class="lead mb-0" style="font-size:110%;">0857 8277 1555 (Norma)</span></li>
-                            <li><a class="btn1 btn-social mx-3 mb-2"><i class="fas fa-fw fa-phone-alt" style ="color:#004445;"></i></a><span class="lead mb-0" style="font-size:110%;">0811 1372 017 (Aiman)</span></li>
-                        </ul>
-                    </nav>
-                    </footer>
-                </div>
-                <!-- Footer Sosisal media-->
-                <div class="col-lg-4-2 mb-5 mb-lg-0 container">
-                    <h4 style ="color:#f8b400;">Sosial Media</h4><br>
-                    <div class="row" style="display:block;margin-left:auto;margin-right:auto;width:100%">
-                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fas fa-fw fa-globe" style ="color:#f8b400;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-twitter" style ="color:#f8b400;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-line" style ="color:#f8b400;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-facebook-f" style ="color:#f8b400;"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#"><i class="fab fa-fw fa-instagram" style ="color:#f8b400;"></i></a>
-                    </div>
-                </div>
-                <!-- Footer Informasi Sekolah-->
-                <div class="col-lg-4-2">
-                    <h4 style ="color:#f8b400;">Informasi Sekolah</h4><br>
-                    <p class="lead mb-0" style="font-size:110%;">SMP Cendekia BAZNAS<br> Jln. K.H. Umar Cirangkong, RT. 18 RW. 07, Ds. Cemplang, Kec. Cibungbulang, Kab. Bogor 16630</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-    <div class="scroll-to-top d-lg-none position-fixed">
-        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-    </div>
-
+    <!-- Footer -->
+    @include('layouts.footer')
 @endsection
    <!-- Navigation-->

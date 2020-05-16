@@ -18,6 +18,10 @@ class CreateDataPengisiFormsTable extends Migration
             $table->string('pengisiform');
             $table->string('nohp');
             $table->string('email')->unique();
+
+            //foreignkey dari tabel calon siswa
+            $table->bigInteger('calonsiswa_id')->unsigned();
+            $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade'); 
             $table->timestamps();
         });
     }

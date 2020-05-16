@@ -15,9 +15,8 @@ class CreateDataPrestasisTable extends Migration
     {
         Schema::create('data_prestasis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('prestasi')->nullable();
             $table->string('jenis_lomba')->nullable();
-            $table->string('tingkat_Lomba')->nullable();
+            $table->string('tingkat_lomba')->nullable();
             $table->string('peringkat')->nullable();
             
             //foreignkey dari tabel calon siswa

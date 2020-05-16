@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\DataKesehatan;
+use App\CalonSiswa;
 use Illuminate\Http\Request;
 use App\DataSiswaUmum; //model yg disimpan
 use App\DataKesehatanSiswa;
@@ -27,53 +27,17 @@ class DataSiswaUmumController extends Controller
 
     //save data yang diinput ke database
     public function storeData(Request $request){ //untuk input data pada form, request diperlukan karna dia menerima data
-        $this->validate($request,[ // untuk constraint
-            //tulis nama sesuai 'name' di file blade
+        $this->validate($request,[ 
             /* Pengisi Form*/
-            'pengisiform'=>'required|max:20',
-            'nohp'=>'required',
-            'email'=>'required',
-            /*Data siswa umum*/
-            'nisn'=>'required|max:20',
-            'namalengkap'=>'required',
-            'namapanggilan'=>'required',
-            'jeniskelamin'=>'required',
-            'tempatlahir'=>'required',
-            'tanggallahir'=>'required',
-            'alamat'=>'required',
-            /*Data Kesehatan Siswa*/
-            'tinggibadan'=>'required | max:3',
-            'beratbadan'=>'required | max 3',
-            'riwayatpenyakit'=>'required',
-            'golongandarah'=>'required',
-            'BPJS'=>'required'
+            'tipe_siswa'=>'required'
         ]);
         /* data pengisi form */
-        $pengisiform = new DataPengisiForm();
+        $tipesiswa = new CalonSiswa();
         $pengisiform->pengisiform = $request->pengisiform;
-        $pengisiform->nohp = $request->nohp;
-        $pengisiform->email = $request->email;
-        /*data mahasiswa umum*/
-        $datasiswa = new DataSiswaUmum(); //objek datasiswa
-        $datasiswa->NISN = $request->nisn;
-        $datasiswa->nama_lengkap = $request->namalengkap;
-        $datasiswa->nama_panggilan = $request->namapanggilan;
-        $datasiswa->jenis_kelamin = $request->jeniskelamin;
-        $datasiswa->tempat_lahir = $request->tempatlahir;
-        $datasiswa->tanggal_lahir = $request->tanggallahir;
-        $datasiswa->alamat = $request->alamat;
-        /* data kesehatan siswa */
-        $datakesehatan = new DataKesehatanSiswa();
-        $datakesehatan->tinggi_badan = $request->tinggibadan;
-        $datakesehatan->berat_badan = $request->beratbadan;
-        $datakesehatan->riwayat_penyakit = $request->riwayatpenyakit;
-        $datakesehatan->golongan_darah = $request->golongandarah;
-        $datakesehatan->BPJS = $request->BPJS;
+
         //save objek siswa ke database
-        $datasiswa->save();
-        $datakesehatan->save();
-        $pengisiform->save();
-        return redirect('/form1'); // langsung
+        $tipesiswa->save();
+        return redirect('/formpendaftaran_smp'); // langsung
     }
 
     //update data 
@@ -82,7 +46,7 @@ class DataSiswaUmumController extends Controller
         // return $datasiswa;
         return view('edit',compact('datasiswa'));//return ke view edit
     }
-
+    
     //edit data pada form
     public function edit(Request $request,$id){
         $this->validate($request,[ // untuk constraint

@@ -5,6 +5,15 @@ Catatan :
 POST : buat save ke db
 GET : buat nampilin/ ambil data
 */
+//delete data tabel data umum siswa
+//Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
+
+//edit data tabel data umum siswa
+//Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
+
+//update data tabel data umum siswa
+//Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data
+
 
 Route::get('/', function () {
     return view('landing-page');
@@ -22,30 +31,20 @@ Route::get('/kategorisiswa', function () {
     return view('kategorisiswa');
 });
 
-Route::get('/formpendaftaran_smp', function () {
-    return view('formpendaftaran_smp');
+Route::get('/kontakppdb', function () {
+    return view('kontakppdb');
 });
-Route::get('/formpendaftaran_tahfidz', function () {
-    return view('formpendaftaran_tahfidz');
-});
-
 // view table save data
-Route::get('/table','FormControllerSMP@view');
+//Route::get('/table','FormControllerSMP@viewData');
 
-//delete data tabel data umum siswa
-Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
-
-//edit data tabel data umum siswa
-Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
-
-//update data tabel data umum siswa
-Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data
-
-//input data di form yang disimpan ke database 
+Route::get('/kategorisiswa/{tipesiswa}','FormControllerSMP@storeTipeSiswaSMP');
+Route::get('/formpendaftaran_smp', 'FormControllerSMP@createForm');
 Route::post('/formpendaftaran_smp','FormControllerSMP@storeData');
 
-//input data di form yang disimpan ke database
+Route::get('/kategorisiswa/{tipesiswa}','FormControllerTahfidz@storeTipeSiswaTahfidz');
+Route::get('/formpendaftaran_tahfidz', 'FormControllerTahfidz@createForm');
 Route::post('/formpendaftaran_tahfidz','FormControllerTahfidz@storeData');
+
 
 
 //PAGE ADMIN

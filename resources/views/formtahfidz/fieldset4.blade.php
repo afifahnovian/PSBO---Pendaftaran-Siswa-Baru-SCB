@@ -1,5 +1,5 @@
         <!-- Fieldset 4-->
-<fieldset  id="fieldform4">
+        <fieldset  id="fieldform4">
     <!-- Ayah Kandung -->
     <div class="subform">
         <input type hidden name= "wali_type_ayah" value = "ayah kandung">

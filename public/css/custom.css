@@ -19,6 +19,20 @@ margin-top : 100px;
 margin-left: 550px;
 color: #004445; 
 }
+
+.kontak{
+    font-size: 20px;
+}
+#kontakppdb {
+    width: 5.875em;
+}
+#kontakppdb {
+    display: inline-block;
+    font-size: large;
+    height: 2.5em;
+    overflow: visible;
+    vertical-align: -1em;
+}
      /* Style inputs, select elements and textareas */
      input[type=text], select, textarea{
         width: 100%;

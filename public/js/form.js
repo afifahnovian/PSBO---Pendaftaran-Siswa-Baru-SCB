@@ -3,11 +3,19 @@
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
+var nonvalid;
 
 $(".next").click(function(){
+	nonvalid = false;
+	$("#fieldform"+this.id+" :input").each(function(){
+		if(!($(this).valid())){
+			nonvalid = true;
+		}
+	})
+	// break if nonvalid
+	if(nonvalid) return false;
 	if(animating) return false;
 	animating = true;
-	
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
 	
@@ -27,9 +35,9 @@ $(".next").click(function(){
 			//3. increase opacity of next_fs to 1 as it moves in
 			opacity = 1 - now;
 			current_fs.css({
-        'transform': 'scale('+scale+')',
-        'position': 'absolute'
-      });
+		'transform': 'scale('+scale+')',
+		'position': 'absolute'
+	});
 			next_fs.css({'left': left, 'opacity': opacity});
 		}, 
 		duration: 800, 
@@ -77,6 +85,29 @@ $(".previous").click(function(){
 	});
 });
 
-$(".submit").click(function(){
-	return false;
-})
+// $(".submit").click(function(){
+// 	return true;
+// })
+
+// multiform add dynamically
+var room = 1;
+function prestasi_fields() {
+    room++;
+    var objTo = document.getElementById('prestasi_fields')
+    var divtest = document.createElement("div");
+	divtest.setAttribute("class", "form-group removeclass"+room);
+	var rdiv = 'removeclass'+room;
+	divtest.innerHTML = '<div class="form-row"><div class="col-sm-4 nopadding"><div class="form-group"><input type="text" class="form-control" id="jenis_lomba" name="jenis_lomba" value="" placeholder="Jenis Lomba"></div></div><div class="col-sm-4 nopadding"><div class="form-group"><div class="input-group"><select class="form-control" id="tingkat_Lomba" name="tingkat_Lomba"><option value="">Tingkat Lomba</option><option value="sekolah">Sekolah</option><option value="kecamatan">Kecamatan</option><option value="kabupaten">Kabupaten</option><option value="provinsi">Provinsi</option><option value="nasional">Nasional</option></select></div></div></div><div class="col-sm-3 nopadding"><div class="form-group"><input type="text" class="form-control" id="peringkat" name="peringkat" value="" placeholder="Peringkat"></div></div><div class="col-sm-1" style="float: right"><div class="input-group-btn"><div class="input-group-btn"> <button class="btn btn-danger" type="button" onclick="remove_education_fields('+ room +');"><span class="fas fa-minus" aria-hidden="true></span> </button></div></div><div class="clear"></div></div>'
+	objTo.appendChild(divtest)
+}
+
+function remove_prestasi_fields(rid) {
+	$('.removeclass'+rid).remove();
+}
+
+// naming file
+$(".custom-file-input").on("change", function() {
+	var fileName = $(this).val().split("\\").pop();
+	$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+  });
+

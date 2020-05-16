@@ -42,6 +42,10 @@ class CalonSiswa extends Model
         return $this->hasOne('App\DataWali');
     }
 
+    public function DataPengisiForm(){
+        return $this->hasOne('App\DataPengisiForm');
+    }
+
     public function BerkasDaftar(){
         return $this->hasOne('App\BerkasDaftar');
     }

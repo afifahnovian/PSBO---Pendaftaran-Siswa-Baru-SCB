@@ -18,10 +18,12 @@ class CreateDataSiswaUmumsTable extends Migration
             $table->string('NISN');// atribut NISN
             $table->string('nama_lengkap'); //atribut nama lengkap
             $table->string('nama_panggilan');//atribut nama panggilan
-            $table->integer('jenis_kelamin'); //atribut jk : 1 lk 2 pr
+            $table->string('jenis_kelamin'); //atribut jk 
             $table->string('tempat_lahir'); // atribut tempatLahir
             $table->date('tanggal_lahir'); //atribut tanggalLahir
             $table->longText('alamat'); //atribut alamat
+            $table->string('kota_kabupaten');
+            $table->string('provinsi');  
             //foreignkey dari tabel calon siswa
             $table->bigInteger('calonsiswa_id')->unsigned();
             $table->foreign('calonsiswa_id')->references('id')->on('calon_siswas')->onDelete('cascade');

@@ -114,7 +114,9 @@
 .subform{
     padding-top: 30px;
 }
-
+.fileUpload{
+    margin-top: 20px;
+}
 /*progressbar*/
 #progressbar {
     padding-top: 75px;
@@ -179,7 +181,9 @@
     color: white;
 }
 
-
+.error{
+    color: red;
+}
 @media screen and (max-width: 500px) {
     .formulir, input[type=submit] {
         width: 100%;

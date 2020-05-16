@@ -19,8 +19,8 @@ class CreateBerkasDaftarsTable extends Migration
             $table->string('kartu_keluarga');
             $table->string('ijazah_STTB_STK');
             $table->string('pasfoto');
-            $table->string('sertifikat'); //one to many
-            $table->string('pernyataan_tahfidz');
+            $table->string('sertifikat')->nullable(); 
+            $table->string('pernyataan_tahfidz')->nullable();
             
             //foreignkey dari tabel calon siswa
             $table->bigInteger('calonsiswa_id')->unsigned();

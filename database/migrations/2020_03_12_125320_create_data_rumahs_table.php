@@ -23,10 +23,8 @@ class CreateDataRumahsTable extends Migration
             $table->string('MCK'); // keadaan mandi cuci kakus e.g : kepemilikan sndiri di dalam rumah, or diluar rumah or berbagi pakai
             $table->string('sumber_air'); //sumber air di rumah e.g : sumur or pdam
             $table->string('daya_listrik');//daya listrik rumah
-            $table->integer('harta_tidak_bergerak')->nullable();//contoh : punya sawah,ladang,tanah, punya(1),tidak punya(0)
             $table->string('harta')->nullable(); //nama harta tidak bergerak e.g: Sawah
             $table->string('status_kepemilikan_harta')->nullable();//status kepemilikan harta e.g: milik sendi
-            $table->integer('kendaraan_bermotor')->nullable();
             $table->string('kendaraan')->nullable(); 
             $table->string('status_kepemilikan_kendaraan')->nullable();//status kepemilikan harta e.g: milik sendi
             
