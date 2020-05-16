@@ -15,7 +15,7 @@ class CalonSiswa extends Migration
     {
         Schema::table('calon_siswas', function (Blueprint $table) { 
         $table->string('status_siswa'); //baru bisa diisi setelah proses seleksi, makanya bukan foreign key, nilai defaultnya: belum, trus bisa diubah ke lolos atau tidak lolos
-        $table->string('tipe_siswa'); //nilai defaulnya siswa biasa, baru nanti diubah ke siswa tahfiz
+        $table->string('tipe_siswa'); //di get di bagian sebelum isi form
         $table->bigInteger('id_datasiswaumum')->unsigned();
         $table->bigInteger('id_datasekolah')->unsigned();
         $table->bigInteger('id_datakesehatan')->unsigned();

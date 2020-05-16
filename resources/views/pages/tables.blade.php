@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Simple Table</h4>
+                        <h4 class="card-title"> Semua Calon Siswa</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -27,20 +27,70 @@
                                     <th>
                                         Asal Sekolah
                                     </th>
+                                    <th>
+                                        Status
+                                    </th>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>
-                                            Dakota Rice
+                                            Dakota
                                         </td>
                                         <td>
-                                            Niger
+                                            Perempuan
                                         </td>
                                         <td>
-                                            Oud-Turnhout
+                                            Jakarta
                                         </td>
                                         <td>
-                                            fffffff
+                                            SDN 1 Pagi
+                                        </td>
+                                        <td>
+                                            Lolos
+                                        </td>
+                                        <td class="text-right">
+                                            <a href="{{ route('page.index', 'individu') }}" class="btn btn-sm btn-primary">
+                                                detail
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Dakota
+                                        </td>
+                                        <td>
+                                            Perempuan
+                                        </td>
+                                        <td>
+                                            Jakarta
+                                        </td>
+                                        <td>
+                                            SDN 1 Pagi
+                                        </td>
+                                        <td>
+                                            Lolos
+                                        </td>
+                                        <td class="text-right">
+                                            <a href="{{ route('page.index', 'individu') }}" class="btn btn-sm btn-primary">
+                                                detail
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Dakota
+                                        </td>
+                                        <td>
+                                            Perempuan
+                                        </td>
+                                        <td>
+                                            Jakarta
+                                        </td>
+                                        <td>
+                                            SDN 1 Pagi
+                                        </td>
+                                        <td>
+                                            Tidak Lolos
                                         </td>
                                         <td class="text-right">
                                             <a href="{{ route('page.index', 'individu') }}" class="btn btn-sm btn-primary">

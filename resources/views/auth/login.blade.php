@@ -10,6 +10,9 @@
                 <form class="form" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="card card-login">
+                        <div class="card-header">
+                            <img class="img-responsive" src="assets/img/logo.png" alt="logo" style="width:200px;" />
+                        </div>
                         <div class="card-header ">
                             <div class="card-header ">
                                 <h3 class="header text-center">{{ __('Login') }}</h3>
@@ -65,12 +68,12 @@
                         </div>
                     </div>
                 </form>
-                <a href="{{ route('password.request') }}" class="btn btn-link">
+                <a  href="{{ route('password.request') }}" class="btn btn-link">
                     {{ __('Forgot password') }}
                 </a>
-                <a href="{{ route('register') }}" class="btn btn-link float-right">
+                <!-- <a href="{{ route('register') }}" class="btn btn-link float-right">
                     {{ __('Create Account') }}
-                </a>
+                </a> -->
             </div>
         </div>
     </div>

@@ -32,13 +32,13 @@
                             @ {{ __(auth()->user()->name)}}
                             </p>
                         </div>
-                        <p class="description text-center">
+                        <!-- <p class="description text-center">
                             {{ __('I like the way you work it') }}
                             <br> {{ __('No diggity') }}
                             <br> {{ __('I wanna bag it up') }}
-                        </p>
+                        </p> -->
                     </div>
-                    <div class="card-footer">
+                    <!-- <div class="card-footer">
                         <hr>
                         <div class="button-container">
                             <div class="row">
@@ -62,7 +62,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card">
                     <div class="card-header">
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-7 col-7">
-                                        {{ __('DJ Khaled') }}
+                                        {{ __(' Khaled') }}
                                         <br />
                                         <span class="text-muted">
                                             <small>{{ __('Offline') }}</small>
