@@ -275,6 +275,7 @@ class FormControllerSMP extends Controller
         $dataibu->jumlah_tanggungan     = $request->jumlah_tanggungan_ibu;
         $dataibu->kesehatan             = $request->kesehatanibu;
         $dataibu->save();
+        
         // data rumah
         $datarumah                                  = new DataRumah();
         $datarumah->calonsiswa_id                   = CalonSiswa::max('id');
@@ -313,6 +314,8 @@ class FormControllerSMP extends Controller
         $calonsiswa1->save();
         return redirect('/formpendaftaran_smp');
     }
+
+    
 
 
 }

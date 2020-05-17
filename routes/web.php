@@ -35,7 +35,7 @@ Route::get('/kontakppdb', function () {
     return view('kontakppdb');
 });
 // view table save data
-//Route::get('/table','FormControllerSMP@viewData');
+// Route::get('/table','FormControllerSMP@viewData');
 
 Route::get('/formpendaftaran_smp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
 Route::get('/formpendaftaran_tahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');

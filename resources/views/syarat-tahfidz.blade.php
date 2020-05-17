@@ -80,6 +80,6 @@
     </header>
 </div>
  <!-- footer -->
- @include('layouts.footer')
+ @include('layouts.footer-upfront')
  
 @endsection

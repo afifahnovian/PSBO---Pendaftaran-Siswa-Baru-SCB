@@ -156,6 +156,6 @@
     </section>
 
     <!-- Footer -->
-    @include('layouts.footer')
+    @include('layouts.footer-upfront')
 @endsection
    <!-- Navigation-->
