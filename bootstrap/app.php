@@ -14,8 +14,8 @@
 //  $app->withEloquent();
 
 //Generate Province 
-//$app->register(Laravolt\Indonesia\ServiceProvider::class);
-//$app->configure('laravolt');
+// $app->register(Laravolt\Indonesia\ServiceProvider::class);
+// $app->configure('laravolt');
 
 // class aliases
 class_alias(Laravolt\Indonesia\Facade::class, 'Indonesia');
@@ -50,6 +50,8 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+
 
 /*
 |--------------------------------------------------------------------------
