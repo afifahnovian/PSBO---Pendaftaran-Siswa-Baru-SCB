@@ -100,7 +100,6 @@
                 left: 35px;
                 top: 35px;
             }
-
             .button{
                 font-size: 18px;
                 width: 269px;
@@ -124,24 +123,20 @@
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
                 transition: 0.3s;
             }
-
                 /* On mouse-over, add a deeper shadow */
             .card:hover {
                 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             }
-
                 /* Add some padding inside the card container */
             .container {
                 /*padding: 2px 16px;*/
             }
-
             .card1left {
                 position: absolute;
                 width: 650px;
                 height: 800px;
                 left: 30px;
                 top: 1600px;
-
                 background: #FFFFFF;
                 box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
                 border-radius: 24px;
@@ -152,7 +147,6 @@
                 height: 800px;
                 left: 700px;
                 top: 1600px;
-
                 background: #FFFFFF;
                 box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.16);
                 border-radius: 24px;
@@ -163,7 +157,6 @@
                 height: 136px;
                 left: 220px;
                 top: 20px;
-
                 transform: matrix(-1, 0, 0, 1, 0, 0);
             }
             .card-title {
@@ -172,13 +165,11 @@
                 height: 51px;
                 left: 250px;
                 top: 110px;
-
                 font-family: 'Open Sans';
                 font-style: bold;
                 font-weight: 500;
                 font-size: 30px;
                 line-height: 51px;
-
                 display: flex;
                 align-items: center;
             }
@@ -188,7 +179,6 @@
                 height: 48px;
                 left: 47px;
                 top: 360px;
-
                 font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: normal;
@@ -318,7 +308,6 @@
                 height: 124px;
                 left: 80px;
                 top: 3200px;
-
                 background: #FAF5E4;
                 border-radius: 24px;
             }
@@ -342,7 +331,6 @@
                 height: 57px;
                 left: -70px;
                 top: 3630px;
-
                 font-family: 'Open Sans';
                 font-style: normal;
                 font-weight: bold;
@@ -350,7 +338,6 @@
                 display: flex;
                 align-items: center;
                 text-align: center;
-
                 color: #F8B400;
             }
             .icon-phone {
@@ -689,5 +676,6 @@
 
             </div>      
         </body>
-    </body>
+    <
+/body>
 </html>
