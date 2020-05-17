@@ -41,11 +41,27 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="kotakab">Kota/Kabupaten</label>
-                <input type="text" class="form-control" name="kota_kabupaten" style="float:left;"  placeholder="Kota/Kabupaten" required>
+                <select name="kota_kabupaten" id="kotakab">
+                    <option value="">Pilih</option>
+                    @foreach ($kab_array as $data)
+                    <option value="{{$data->id}}" >
+                        {{$data -> name}}
+                    </option>
+                    @endforeach
+                </select>
+                <!-- <input type="text" class="form-control" name="kota_kabupaten" style="float:left;"  placeholder="Kota/Kabupaten" required> -->
             </div>
             <div class="form-group col-md-6" style="float:right;" >
                 <label for="provinsi">Provinsi</label>
-                <input type="text" class="form-control" name="provinsi">
+                <select name="provinsi" id="provinsi">
+                    <option value="">Pilih</option>
+                    @foreach ($prov_array as $data)
+                    <option value="{{$data->id}}" >
+                        {{$data -> name}}
+                    </option>
+                    @endforeach
+                </select>
+                <!-- <input type="text" class="form-control" name="provinsi"> -->
             </div>
         </div>
 

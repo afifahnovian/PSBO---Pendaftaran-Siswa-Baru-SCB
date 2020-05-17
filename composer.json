@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "azishapidin/indoregion": "^2.2",
         "fideloper/proxy": "^4.0",
         "laravel-frontend-presets/paper": "^1.0",
         "laravel/framework": "^6.2",

@@ -37,11 +37,13 @@ Route::get('/kontakppdb', function () {
 // view table save data
 //Route::get('/table','FormControllerSMP@viewData');
 
-Route::get('/kategorisiswa/{tipesiswa}','FormControllerSMP@storeTipeSiswaSMP');
+Route::get('/formpendaftaran_smp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
+Route::get('/formpendaftaran_tahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');
+
 Route::get('/formpendaftaran_smp', 'FormControllerSMP@createForm');
 Route::post('/formpendaftaran_smp','FormControllerSMP@storeData');
 
-Route::get('/kategorisiswa/{tipesiswa}','FormControllerTahfidz@storeTipeSiswaTahfidz');
+
 Route::get('/formpendaftaran_tahfidz', 'FormControllerTahfidz@createForm');
 Route::post('/formpendaftaran_tahfidz','FormControllerTahfidz@storeData');
 

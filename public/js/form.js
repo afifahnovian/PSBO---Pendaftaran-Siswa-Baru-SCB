@@ -111,3 +111,19 @@ $(".custom-file-input").on("change", function() {
 	$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
   });
 
+//   //autocomplete
+//   $('#txtProvinces').typeahead({
+// 	source: function (query, result) {
+// 		$.ajax({
+// 			url: "ProvinsiIndo.php",
+// 			data: 'query=' + query,            
+// 			dataType: "json",
+// 			type: "POST",
+// 			success: function (kabupaten) {
+// 				result($.map(kabupaten, function (name) {
+// 					return name;
+// 				}));
+// 			}
+// 		});
+// 	}
+// });

@@ -2,7 +2,6 @@
 @section('title',' Form Pendaftaran')
 @section('content')
 <!-- MultiStep Form -->
-  
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-8 mt-5 mb-5">

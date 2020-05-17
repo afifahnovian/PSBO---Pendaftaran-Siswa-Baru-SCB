@@ -10,7 +10,7 @@
                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center" style="align-content: center">
                     <div class="portfolio-item-caption-content text-center text-white"></i></div>
                 </div>
-                <a href="/kategorisiswa/SMP"><img class="img-fluid" src="assets/img/siswa-smp.png" alt="" /></a>
+                <a href="/formpendaftaran_smp/SMP"><img class="img-fluid" src="assets/img/siswa-smp.png" alt="" /></a>
             
             </div>
         </div>
@@ -20,7 +20,7 @@
                 <div class="portfolio-item-caption d-flex align-items-center justify-content-center" style="align-content: center">
                     <div class="portfolio-item-caption-content text-center text-white"></i></div>
                 </div>
-                <a href="/kategorisiswa/Tahfidz"><img class="img-fluid" src="assets/img/siswa-tahfiz.png" alt="" /></a>
+                <a href="/formpendaftaran_tahfidz/Tahfidz"><img class="img-fluid" src="assets/img/siswa-tahfiz.png" alt="" /></a>
             </div>
         </div>
     </div> 
