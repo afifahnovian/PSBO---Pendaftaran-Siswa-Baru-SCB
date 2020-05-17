@@ -23,10 +23,10 @@ class FormControllerTahfidz extends Controller
         return view('/formpendaftaran_tahfidz');
     }
 
-    public function storeTipeSiswaTahfidz($tipesiswa){
-        $calonsiswa = new CalonSiswa;
-        $calonsiswa->tipe_siswa = $tipesiswa;
-        $calonsiswa->save();
+    public function storeTipeSiswaTahfidz($tipesiswa2){
+        $calonsiswa2 = new CalonSiswa;
+        $calonsiswa2->tipe_siswa = $tipesiswa2;
+        $calonsiswa2->save();
         return redirect('/formpendaftaran_tahfidz');
     }
 

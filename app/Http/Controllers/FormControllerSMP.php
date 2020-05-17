@@ -15,6 +15,7 @@ use App\DataWali;
 use App\CalonSiswa;
 use App\DataOrangtua;
 
+
 class FormControllerSMP extends Controller
 {
     public function viewData(){
@@ -162,6 +163,7 @@ class FormControllerSMP extends Controller
         $datapengisiform->save();
     
         /*data mahasiswa umum*/
+        
         $datasiswa                      = new DataSiswaUmum(); //objek datasiswa
         $datasiswa->calonsiswa_id       = CalonSiswa::max('id');
         $datasiswa->NISN                = $request->nisn;
@@ -172,6 +174,7 @@ class FormControllerSMP extends Controller
         $datasiswa->tanggal_lahir       = $request->tanggallahir;
         $datasiswa->alamat              = $request->alamat;
         $datasiswa->kota_kabupaten      = $request->kota_kabupaten;
+        // Get semua data
         $datasiswa->provinsi            = $request->provinsi;
         $datasiswa->save();
         
@@ -304,10 +307,10 @@ class FormControllerSMP extends Controller
         return redirect('/')->with('success', 'Pendaftaran Terkirim');
     }
 
-    public function storeTipeSiswaSMP($tipesiswa){
-        $calonsiswa                = new CalonSiswa;
-        $calonsiswa->tipe_siswa    = $tipesiswa;
-        $calonsiswa->save();
+    public function storeTipeSiswaSMP($tipesiswa1){
+        $calonsiswa1                = new CalonSiswa;
+        $calonsiswa1->tipe_siswa    = $tipesiswa1;
+        $calonsiswa1->save();
         return redirect('/formpendaftaran_smp');
     }
 

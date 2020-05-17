@@ -10,14 +10,16 @@
 | the IoC container for the system binding all of the various parts.
 |
 */
-// $app->withFacades();
-// $app->withEloquent();
+//  $app->withFacades();
+//  $app->withEloquent();
 
-// //Generate Province 
-// $app->register(Laravolt\Indonesia\ServiceProvider::class);
-// $app->configure('laravolt');
-// // class aliases
-// class_alias(Laravolt\Indonesia\Facade::class, 'Indonesia');
+//Generate Province 
+//$app->register(Laravolt\Indonesia\ServiceProvider::class);
+//$app->configure('laravolt');
+
+// class aliases
+class_alias(Laravolt\Indonesia\Facade::class, 'Indonesia');
+
 
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
