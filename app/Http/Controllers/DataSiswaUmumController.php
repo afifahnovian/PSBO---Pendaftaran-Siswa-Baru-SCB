@@ -73,4 +73,5 @@ class DataSiswaUmumController extends Controller
         return redirect('/table')->with('info','Data berhasil di perbaharui');// delete data dengan adanya pop up message
     }
    
+    
 }

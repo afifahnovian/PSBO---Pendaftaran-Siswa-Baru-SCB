@@ -110,79 +110,70 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
             <div class="col-md-12">
                 <div class="card ">
                     <div class="card-header ">
-                        <h5 class="card-title">Users Behavior</h5>
-                        <p class="card-category">24 Hours performance</p>
+                        <h5 class="card-title">Persebaran Siswa Cendekia Basnaz</h5>
+                        <p class="card-category">Berdasarkan Provinsi</p>
                     </div>
                     <div class="card-body ">
-                        <canvas id=chartHours width="400" height="100"></canvas>
+                        <canvas>
+                            <div class="piechart" id="piechart" style="width: 750px; height: 450px"></div>
+                        </canvas>
+                         <!-- <div id="pie_chart" style width="750" height="450"></div> -->
                     </div>
                     <div class="card-footer ">
                         <hr>
                         <div class="stats">
-                            <i class="fa fa-history"></i> Updated 3 minutes ago
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div class="card ">
-                    <div class="card-header ">
-                        <h5 class="card-title">Email Statistics</h5>
-                        <p class="card-category">Last Campaign Performance</p>
-                    </div>
-                    <div class="card-body ">
-                        <canvas id="chartEmail"></canvas>
-                    </div>
-                    <div class="card-footer ">
-                        <div class="legend">
-                            <i class="fa fa-circle text-primary"></i> Opened
-                            <i class="fa fa-circle text-warning"></i> Read
-                            <i class="fa fa-circle text-danger"></i> Deleted
-                            <i class="fa fa-circle text-gray"></i> Unopened
-                        </div>
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-calendar"></i> Number of emails sent
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="card card-chart">
-                    <div class="card-header">
-                        <h5 class="card-title">NASDAQ: AAPL</h5>
-                        <p class="card-category">Line Chart with Points</p>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="speedChart" width="400" height="100"></canvas>
-                    </div>
-                    <div class="card-footer">
-                        <div class="chart-legend">
-                            <i class="fa fa-circle text-info"></i> Tesla Model S
-                            <i class="fa fa-circle text-warning"></i> BMW 5 Series
-                        </div>
-                        <hr />
-                        <div class="card-stats">
-                            <i class="fa fa-check"></i> Data information certified
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+        </div>
+        <!-- Chart -->
+       <!-- <div class="row">
+           <div class="col-md-12">
+               <div class="card">
+                   <div class="card-header">
+                       <h5 class="card-title"> Persebaran Siswa Cendekia Basnaz</h5>
+                       <p class="card-category"> Berdasarkan Provinsi</p>
+                   </div>
+                   <div class="card-body">
+                        <figure class="highcharts-figure">
+                        <div id="ChartProvinsi"></div>
+                        </figure>
+                   </div>
+               </div>
+           </div>
+       </div> -->
     </div>
 @endsection
 
 @push('scripts')
     <script>
-        $(document).ready(function() {
-            // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-            demo.initChartsPages();
-        });
+        // $(document).ready(function() {
+        //     // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+        //     // demo.initChartsPages();
+        // });
+        
+        // var analytics = @json($provinsi);
+        var analytics = <?php echo $provinsi; ?>;
+
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart()
+            {
+                var data = google.visualization.arrayToDataTable(analytics);
+                var options = {
+                title : 'Persebaran Siswa Sekolah Cendekia Basnaz'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+            }
+
     </script>
 @endpush

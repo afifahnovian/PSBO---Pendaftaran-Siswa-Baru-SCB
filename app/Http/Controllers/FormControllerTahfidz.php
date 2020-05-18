@@ -16,6 +16,8 @@ use App\DataWali;
 use App\CalonSiswa;
 use App\DataOrangtua;
 use Illuminate\Http\Request;
+use File;
+use Illuminate\Support\Facades\Storage;
 
 class FormControllerTahfidz extends Controller
 {
@@ -57,9 +59,9 @@ class FormControllerTahfidz extends Controller
             'asal_sekolah'              =>'required',
             'alamat_sekolah'            =>'required',
             'no_telp_sekolah'           =>'required | max:12',
-            /* Data hafalan */
-            'jumlahhafalan'              =>'required',
-            'namajuz'                    =>'required',
+            // /* Data hafalan */
+            // 'jumlahhafalan'              =>'required',
+            // 'namajuz'                    =>'required',
             /*Data rumah */
             'status_kepemilikan_rumah'  =>'required',
             'tahun_perolehan'           =>'required',
@@ -114,55 +116,77 @@ class FormControllerTahfidz extends Controller
             'kartu_keluarga'            =>'required|image|max : 2048',
             'ijazah_STTB_STK'           =>'required|max : 2048',
             'pasfoto'                   =>'required|image|max : 2048',
-            'pernyataantahfidz'         =>'required|max : 2048'
+            'pernyataan_tahfidz'         =>'required|max : 2048'
             
         ]);
         /*Berkas */
         $berkastahfidz                      = new BerkasDaftar();
         $berkastahfidz->calonsiswa_id       = CalonSiswa::max('id');//manggil id calonsiswa
-        $berkastahfidz->rapor_sd            = $request->rapor_sd;
-        $berkastahfidz->kartu_keluarga      = $request->kartu_keluarga;
-        $berkastahfidz->ijazah_STTB_STK     = $request->ijazah_STTB_STK;
-        $berkastahfidz->pasfoto             = $request->pasfoto;
-        $berkastahfidz->sertifikat          = $request->sertifikat;
-        $berkastahfidz->pernyataan_tahfidz  = $request->pernyataantahfidz;
         
         /*Validasi file upload */
         if ($request->hasFile('rapor_sd')) //name di form
         {
+            $file = $request->rapor_sd;
+            $filename = $file->getClientOriginalName(); //untuk nama original dari user
+            $path = "berkastahfidz/raporSD/"; //path storage public
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file)); //simpan sebagai nama user input file
             $filerapor                          = $request->rapor_sd; //name form
-            $berkastahfidz->rapor_sd            = 'berkastahfidz/raporSD'.$filerapor->getClientOriginalName();
+            $berkastahfidz->rapor_sd            = 'berkastahfidz/raporSD/'.$filerapor->getClientOriginalName();
         }
         if ($request->hasFile('ijazah_STTB_STK')) //name di form
         {
+            $file = $request->ijazah_STTB_STK;
+            $filename = $file->getClientOriginalName();
+            $path = "berkastahfidz/ijazah/";
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file));
             $fileijazah                         = $request->ijazah_STTB_STK; //name form
-            $berkastahfidz->ijazah_STTB_STK     = 'berkastahfidz/ijazah'.$fileijazah->getClientOriginalName();
+            $berkastahfidz->ijazah_STTB_STK     = 'berkastahfidz/ijazah/'.$fileijazah->getClientOriginalName();
         }
 
         if ($request->hasFile('sertifikat')) //name di form
         {
+            $file = $request->sertifikat;
+            $filename = $file->getClientOriginalName();
+            $path = "berkastahfidz/sertifikat/";
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file));
             $filesertifikat                     = $request->sertifikat; //name form
-            $berkastahfidz->sertifikat          = 'berkastahfidz/sertifikat'.$filesertifikat->getClientOriginalName();
-        }
-        
-        if ($request->hasFile('pernyataantahfidz')) //name di form
-        {
-            $filetahfidz                        = $request->pernyataantahfidz; //name form
-            $berkastahfidz->pernyataantahfidz   = 'berkastahfidz/sertifikat'.$filetahfidz->getClientOriginalName();
+            $berkastahfidz->sertifikat          = 'berkastahfidz/sertifikat/'.$filesertifikat->getClientOriginalName();
         }
 
         if ($request->hasFile('kartu_keluarga'))
         {
+            $file = $request->kartu_keluarga;
+            $filename = $file->getClientOriginalName();
+            $path = "berkastahfidz/KK/";
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file));
             $fileKK                             = $request->kartu_keluarga;
-            //$kartu_keluarga               = Image::make($fileKK)->resize(1920, 1280)->save('berkastahfidz/'.$fileKK->getClientOriginalName());
-            $berkastahfidz->kartu_keluarga      = 'berkastahfidz/KK'.$fileKK->getClientOriginalName();
+            $berkastahfidz->kartu_keluarga      = 'berkastahfidz/KK/'.$fileKK->getClientOriginalName();
         }
 
         if ($request->hasFile('pasfoto'))
         {
+            $file = $request->pasfoto;
+            $filename = $file->getClientOriginalName();
+            $path = "berkastahfidz/pasfoto/";
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file));
             $filefoto                           = $request->pasfoto;
-            //$pasfoto                      = Image::make($filefoto)->resize(1920, 1280)->save('berkastahfidz/'.$filefptp->getClientOriginalName());
-            $berkastahfidz->pasfoto             = 'berkastahfidz/Foto'.$filefoto->getClientOriginalName();
+            $berkastahfidz->pasfoto             = 'berkastahfidz/pasfoto/'.$filefoto->getClientOriginalName();
+        }
+
+        if ($request->hasFile('pernyataan_tahfidz')) //name di form
+        {
+            $file = $request->pernyataan_tahfidz;
+            $filename = $file->getClientOriginalName();
+            $path = "berkastahfidz/tahfidz/";
+
+            Storage::disk('local')->put($path.$filename,file_get_contents($file));
+            $filetahfidz                            = $request->pernyataan_tahfidz; //name form
+            $berkastahfidz->pernyataan_tahfidz      = 'berkastahfidz/tahfidz/'.$filetahfidz->getClientOriginalName();
         }
         
         $berkastahfidz->save();
@@ -225,6 +249,7 @@ class FormControllerTahfidz extends Controller
         
         /*data hafalan */
         $datahafalan                        = new DataHafalanSiswa();
+        $datahafalan->calonsiswa_id         = CalonSiswa::max('id');
         $datahafalan->jumlah_hafalan        = $request->jumlahhafalan;
         $datahafalan->nama_juz              = $request->namajuz;
         $datahafalan->save();

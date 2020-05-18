@@ -4,12 +4,14 @@
     <!-- bagian atas Section-->
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
+            <div class="row" style="margin-top: 100px">
             @if(session('success'))
-                <div class="alert alert-success" role="alert">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <p class="mb-0">{{session('success')}}</p>
+                    <div class="alert alert-success" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{session('success')}}</p>
+                </div>
+                @endif
             </div>
-            @endif
             <!-- Portfolio Grid Items-->
             <div class="row">
                 <!-- Portfolio Item 1-->

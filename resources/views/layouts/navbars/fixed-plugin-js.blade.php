@@ -1,5 +1,5 @@
 
-<script>
+<!-- <script>
     $(document).ready(function () {
         $('#facebook').sharrre({
             share: {
@@ -74,7 +74,7 @@
             console.log('Facebook Track Error:', err);
         }
     });
-</script>
+</script> -->
 <script>
     $(document).ready(function () {
         $sidebar = $('.sidebar');

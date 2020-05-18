@@ -1,10 +1,4 @@
 <?php
-#use Illuminate\Routing\Route;
-/*
-Catatan : 
-POST : buat save ke db
-GET : buat nampilin/ ambil data
-*/
 //delete data tabel data umum siswa
 //Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
 
@@ -35,18 +29,16 @@ Route::get('/kontakppdb', function () {
     return view('kontakppdb');
 });
 // view table save data
-Route::get('/table','FormControllerSMP@viewData');
+// Route::get('/table','FormControllerSMP@viewData');
 
-Route::get('/formpendaftaran_smp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
-Route::get('/formpendaftaran_tahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');
+Route::get('/kategorisiswasmp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
+Route::get('/kategorisiswatahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');
 
 Route::get('/formpendaftaran_smp', 'FormControllerSMP@createForm');
-Route::post('/formpendaftaran_smp','FormControllerSMP@storeData');
-
+Route::post('/formpendaftaran_smp/post','FormControllerSMP@storeData');
 
 Route::get('/formpendaftaran_tahfidz', 'FormControllerTahfidz@createForm');
-Route::post('/formpendaftaran_tahfidz','FormControllerTahfidz@storeData');
-
+Route::post('/formpendaftaran_tahfidz/post','FormControllerTahfidz@storeData');
 
 
 //PAGE ADMIN
@@ -55,7 +47,8 @@ Auth::routes();
 Route::get('/admin', 'HomeController@index')->name('admin');
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/pages/dashboard', 'HomeController@index')->name('admin');
+// Route::get('/dashboard', 'HomeController@index')->name('admin');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
