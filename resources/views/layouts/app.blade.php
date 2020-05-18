@@ -114,7 +114,9 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="{{ asset('paper') }}/demo/demo.js"></script> 
     <!-- Sharrre libray -->
     <script src="../assets/demo/jquery.sharrre.js"></script>
-    
+        <!-- jquery  -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
     
     @stack('scripts')
 

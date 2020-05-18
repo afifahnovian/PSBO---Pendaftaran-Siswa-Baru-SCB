@@ -525,23 +525,30 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card slide slide_1">
-                    <div class="slide-content">
-                        <div class="card-header">
-                            <h4 class="card-title"> {{__('Penentuan Status Siswa')}} </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="status">Status Siswa</label>
-                                <select id="status" name="status" class="custom-select">
-                                        <option value="pertimbangkan">Pertimbangkan</option>
-                                        <option value="lolos">Lolos</option>
-                                        <option value="tidak lolos">Tidak Lolos</option>
-                                </select>
+                <form id="editstatus">
+                    <div class="card">
+                        {{ csrf_field() }}
+                        {{ method_field('PUT') }}
+                        <div class="slide-content">
+                            <div class="card-header">
+                                <h4 class="card-title"> {{__('Penentuan Status Siswa')}} </h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="status">Status Siswa</label>
+                                    <select id="status" name="status" class="custom-select">
+                                            <option value="pertimbangkan">Pertimbangkan</option>
+                                            <option value="lolos">Lolos</option>
+                                            <option value="tidak lolos">Tidak Lolos</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit">simpan</button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         </div>
