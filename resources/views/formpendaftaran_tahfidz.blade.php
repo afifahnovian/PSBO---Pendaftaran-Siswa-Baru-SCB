@@ -12,29 +12,34 @@
                         <li></li>
                         <li></li>
                    </ul>
-            <form id="msform" method="POST" action="{{url('/formpendaftaran_tahfidz')}} enctype="multipart/form-data">
+            
+           <form id="msform" role="form" method="POST" action="{{url('/formpendaftaran_tahfidz/post')}}" enctype="multipart/form-data">
+                
                 @if(count($errors)>0)
                     @foreach($errors->all() as $error)
-                    <div class="alert alert-danger" role="alert">
-                        {{$error}}
-                    </div>
+                        <div class="alert alert-danger" role="alert">
+                            {{$error}}
+                        </div>
                     @endforeach
                 @endif
-                
-                @csrf
 
-                @include('formtahfidz.fieldset1')
+                @csrf   
 
-                @include('formtahfidz.fieldset2')
+                @include('formtahfidz.fieldset_1')
                 
-                @include('formtahfidz.fieldset3')
+                @include('formtahfidz.fieldset_2')
+
+                @include('formtahfidz.fieldset_3')
+
+                @include('formtahfidz.fieldset_4')
+
+                @include('formtahfidz.fieldset_5')
+
+                @include('formtahfidz.fieldset_6')
+
                 
-                @include('formtahfidz.fieldset4')
-                
-                @include('formtahfidz.fieldset5')
-                
-                @include('formtahfidz.fieldset6')
             </form>
+            
         </div>
     </div>
 </div>

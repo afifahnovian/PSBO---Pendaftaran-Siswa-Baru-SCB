@@ -25,7 +25,6 @@ class ProvinsiIndo extends ServiceProvider
     {
         view()->composer('*', function($view){
             $view->with('prov_array', Provinsi::all());
-
         });
     }
 }

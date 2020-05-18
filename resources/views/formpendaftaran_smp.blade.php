@@ -13,7 +13,7 @@
                     <li></li>
                     <li></li>
                 </ul>
-            <form id="msform" role="form" method="POST" action="{{url('/formpendaftaran_smp')}}" enctype="multipart/form-data">
+            <form id="msform" role="form" method="POST" action="{{url('/formpendaftaran_smp/post')}}" enctype="multipart/form-data">
                 @if(count($errors)>0)
                     @foreach($errors->all() as $error)
                     <div class="alert alert-danger" role="alert">
@@ -23,7 +23,6 @@
                 @endif
 
                 @csrf
-                <!-- progressbar -->
                 <!-- form halaman 1-->
                 @include('formsmp.fieldset1')
                 <!-- form halaman 2-->
@@ -34,8 +33,9 @@
                 @include('formsmp.fieldset4')
                 <!-- form halaman 5-->
                 @include('formsmp.fieldset5')
-                <!-- form halaman 6-->
+                <!-- form halaman 6 -->
                 @include('formsmp.fieldset6')
+                
             </form>
         </div>
     </div>

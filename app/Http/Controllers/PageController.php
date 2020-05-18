@@ -14,6 +14,8 @@ use App\DataKeunikanSiswa;
 use App\DataWali;
 use App\CalonSiswa;
 use App\DataOrangtua;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use DB;
 
 class PageController extends Controller
 {

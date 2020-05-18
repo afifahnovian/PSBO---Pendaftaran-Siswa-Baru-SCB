@@ -40,7 +40,7 @@
         <div class="fileUpload">
             <label for="pernyataan_tahfidz">Surat Pernyataan Tahfidz</label>
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile" name="pernyataantahfidz" accept="application/pdf" required>
+                <input type="file" class="custom-file-input" id="customFile" name="pernyataan_tahfidz" accept="application/pdf" required>
                 <label class="custom-file-label" for="customFile">Pilih berkas ...</label>
             </div>
         </div>

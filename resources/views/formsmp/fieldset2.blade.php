@@ -44,7 +44,7 @@
                 <select name="kota_kabupaten" id="kotakab">
                     <option value="">Pilih</option>
                     @foreach ($kab_array as $data)
-                    <option value="{{$data->id}}" >
+                    <option value="{{$data->name}}" >
                         {{$data -> name}}
                     </option>
                     @endforeach
@@ -56,7 +56,7 @@
                 <select name="provinsi" id="provinsi">
                     <option value="">Pilih</option>
                     @foreach ($prov_array as $data)
-                    <option value="{{$data->id}}" >
+                    <option value="{{$data->name}}" >
                         {{$data -> name}}
                     </option>
                     @endforeach
