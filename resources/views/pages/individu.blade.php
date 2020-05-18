@@ -6,7 +6,6 @@
 @section('content')
     <div class="content">
         <div class="row ">
-            <div class="col-md-2"></div>
             <div class="col-md-8" id="slider">
                 <div id="slides">
                     <div id="overflow">
@@ -425,8 +424,65 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  
                             <div class="card slide slide_6">
+                                <div class="slide-content">
+                                    <div class="card-header">
+                                        <h4 class="card-title"> {{__('Data Sekolah Sebelumnya')}} </h4>
+                                    </div>
+                                    <div class="card-body">   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Kebutuhan Hidup')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('kebutuhan_hidup')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Kebutuhan Rumah Tangga')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('Kebutuhan_RT')->first() }}  </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Tanggungan Pendidikan')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_pendidikan')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Tanggungan Kesehatan')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_kesehatan')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Tanggungan Hutang')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_hutang')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Tanggungan Listrik')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_listrik')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Tanggungan Telepon')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_telepon')->first() }} </p>
+                                            </div>
+                                        </div>   
+                                        <div class="row">
+                                            <label class="col-md-3 col-form-label"> {{__('Total Pengeluaran')}} </label>
+                                            <div class="col-md-9">
+                                                <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('total_pengeluaran')->first() }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card slide slide_7">
                                 <div class="slide-content">
                                     <div class="card-header">
                                         <h4 class="card-title"> {{__('Berkas Calon Siswa')}} </h4>
@@ -468,7 +524,24 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
+                <div class="card slide slide_1">
+                    <div class="slide-content">
+                        <div class="card-header">
+                            <h4 class="card-title"> {{__('Penentuan Status Siswa')}} </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="status">Status Siswa</label>
+                                <select id="status" name="status" class="custom-select">
+                                        <option value="pertimbangkan">Pertimbangkan</option>
+                                        <option value="lolos">Lolos</option>
+                                        <option value="tidak lolos">Tidak Lolos</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         </div>

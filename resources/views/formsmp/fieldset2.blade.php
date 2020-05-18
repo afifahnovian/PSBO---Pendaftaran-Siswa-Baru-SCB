@@ -18,8 +18,8 @@
             <label for="jk">Jenis Kelamin</label>
             <select id="jk" name="jeniskelamin" class="custom-select">
                     <option value="">Pilih...</option>
-                    <option value="LK">Laki-laki</option>
-                    <option value="PR">Perempuan</option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
             </select>
         </div>
 
