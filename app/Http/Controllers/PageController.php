@@ -41,9 +41,9 @@ class PageController extends Controller
                 $calonsiswas = CalonSiswa::all();
                 return view('pages.tables')->with('calonsiswas', $calonsiswas);
             }
-            elseif($page ==! "individu") {
+            // elseif($page ==! "individu") {
             return view("pages.{$page}");
-            }
+            // }
         }
         return abort(404);
     }
@@ -53,9 +53,4 @@ class PageController extends Controller
         $calonsiswa = CalonSiswa::find($id);
         return view('pages.individu')->with('calonsiswa', $calonsiswa);
     }
-
-    // public function ShowCalonSiswa(){
-    //     $calonsiswas = CalonSiswa::orderBy('created_at');
-    //     return view('index')->with('calonsiswas', $calonsiswas);
-    // }
 }

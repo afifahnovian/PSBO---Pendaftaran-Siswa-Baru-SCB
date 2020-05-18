@@ -66,6 +66,5 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
-    // Route::get('dashboard', 'PageController@Dashboard');
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
 });

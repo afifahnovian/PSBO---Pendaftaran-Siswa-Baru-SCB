@@ -617,3 +617,9 @@
     }
   };
 })(jQuery, window, document);
+
+  /* Status Calon Siswa Editable
+  ================================================== */
+  $(document).ready(function() {
+    $('#username').editable();
+});

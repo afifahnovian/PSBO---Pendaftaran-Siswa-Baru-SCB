@@ -35,19 +35,19 @@
                                     @foreach($calonsiswas as $calonsiswa)
                                         <tr>
                                             <td>
-                                            {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_panggilan')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_panggilan')->first() }}
                                             </td>
                                             <td>
-                                            {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('jenis_kelamin')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('jenis_kelamin')->first() }}
                                             </td>
                                             <td>
-                                            {{ App\DataSekolah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('asal_sekolah')->first() }}
+                                                {{ App\DataSekolah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('asal_sekolah')->first() }}
                                             </td>
                                             <td>
-                                            {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('provinsi')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('provinsi')->first() }}
                                             </td>
                                             <td>
-                                            {{ $calonsiswa->status_siswa }}
+                                                {{ $calonsiswa->status_siswa }}
                                             </td>
                                             <td class="text-right">
                                                 <a href="/pages/individu/{{$calonsiswa->id}}" class="btn btn-sm btn-primary">
