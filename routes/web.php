@@ -35,7 +35,7 @@ Route::get('/kontakppdb', function () {
     return view('kontakppdb');
 });
 // view table save data
-// Route::get('/table','FormControllerSMP@viewData');
+Route::get('/table','FormControllerSMP@viewData');
 
 Route::get('/formpendaftaran_smp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
 Route::get('/formpendaftaran_tahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');
@@ -61,9 +61,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+    Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+    Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
+    // Route::get('dashboard', 'PageController@Dashboard');
+    Route::get('/pages/individu/{id}', 'PageController@Showindividu');
 });

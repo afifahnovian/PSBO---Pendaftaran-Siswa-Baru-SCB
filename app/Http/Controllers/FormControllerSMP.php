@@ -20,7 +20,7 @@ class FormControllerSMP extends Controller
 {
     public function viewData(){
         $datasiswa      = DataSiswaUmum::all();
-        return view('/table', compact('datasiswa')); 
+        return view('pages.tables', compact('datasiswa')); 
     }
     
     public function createForm(){
@@ -314,8 +314,5 @@ class FormControllerSMP extends Controller
         $calonsiswa1->save();
         return redirect('/formpendaftaran_smp');
     }
-
-    
-
 
 }

@@ -7,14 +7,14 @@
             
             <!-- Portfolio Grid Items-->
             <div class="row">
+                @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <p class="mb-0">{{session('success')}}</p>
+                </div>
+                @endif
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5" style = margin-top:10rem;>
-                        @if(session('success'))
-                            <div class="alert alert-success" role="alert">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <p class="mb-0">{{session('success')}}</p>
-                        </div>
-                        @endif
                     <div class="mx-auto">
                         <h2>Penerimaan <br>
                             Peserta Didik Baru <br> 
