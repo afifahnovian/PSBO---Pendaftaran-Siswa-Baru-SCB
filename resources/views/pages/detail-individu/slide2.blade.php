@@ -7,63 +7,63 @@
 
                 <div class="card-body">   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Nama Lengkap')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Nama Lengkap')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_lengkap')->first() }} </p>
                         </div>
                     </div>  
                     
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Nama Panggilan')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Nama Panggilan')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_panggilan')->first() }} </p>
                         </div>
                     </div>
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Jenis Kelamin')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Jenis Kelamin')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('jenis_kelamin')->first() }} </p>
                         </div>
                     </div>   
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Tempat Lahir')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tempat Lahir')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tempat_lahir')->first() }}</p>
                         </div>
                     </div>   
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Tanggal Lahir')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggal Lahir')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggal_lahir')->first() }} </p>
                         </div>
                     </div>   
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Alamat')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Alamat')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('alamat')->first() }} </p>
                         </div>
                     </div>  
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Kota/Kabupaten')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kota/Kabupaten')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('kota_kabupaten')->first() }} </p>
                         </div>
                     </div>  
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Provinsi')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Provinsi')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('provinsi')->first() }} </p>
                         </div>
                     </div>   
 
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('NISN')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('NISN')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('NISN')->first() }} </p>
                         </div>

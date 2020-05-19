@@ -8,20 +8,20 @@
             @foreach($prestasis as $prestasi)
                 <div class="card-body">   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Jenis Lomba')}} </label>
-                        <div class="col-md-9">
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Jenis Lomba')}} </label>
+                        <div class="col-md-9" style="width: 60%; float:right">
                             <p >: {{$prestasi->jenis_lomba}} </p>
                         </div>
                     </div>   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Tingkat Lomba')}} </label>
-                        <div class="col-md-9">
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tingkat Lomba')}} </label>
+                        <div class="col-md-9" style="width: 60%; float:right">
                             <p >: {{$prestasi->tingkat_lomba}}  </p>
                         </div>
                     </div>   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Peringkat')}} </label>
-                        <div class="col-md-9">
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Peringkat')}} </label>
+                        <div class="col-md-9" style="width: 60%; float:right">
                             <p >:{{$prestasi->peringkat}} </p>
                         </div>
                     </div>   

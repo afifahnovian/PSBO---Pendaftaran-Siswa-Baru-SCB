@@ -6,49 +6,49 @@
             </div>
             <div class="card-body">   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Kebutuhan Hidup')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kebutuhan Hidup')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('kebutuhan_hidup')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Kebutuhan Rumah Tangga')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kebutuhan Rumah Tangga')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('Kebutuhan_RT')->first() }}  </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tanggungan Pendidikan')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggungan Pendidikan')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_pendidikan')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tanggungan Kesehatan')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggungan Kesehatan')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_kesehatan')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tanggungan Hutang')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggungan Hutang')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_hutang')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tanggungan Listrik')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggungan Listrik')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_listrik')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tanggungan Telepon')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tanggungan Telepon')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tanggungan_telepon')->first() }} </p>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Total Pengeluaran')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Total Pengeluaran')}} </label>
                     <div class="col-md-9">
                         <p >: {{ App\DataPengeluaran::where(['calonsiswa_id' => $calonsiswa->id])->pluck('total_pengeluaran')->first() }} </p>
                     </div>

@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="{{  asset('paper') }}/css/chart.css">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <!-- <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" /> -->
+    <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" />
    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

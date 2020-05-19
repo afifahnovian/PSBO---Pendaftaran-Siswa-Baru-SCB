@@ -7,36 +7,36 @@
 
             <div class="card-body">   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Tinggi Badan')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-5" style="padding-bottom: 5%"> {{__('Tinggi Badan')}} </label>
+                    <div class="col-md-5">
                         <p >: {{ App\DataKesehatanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tinggi_badan')->first() }} </p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Berat Badan')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-5" style="padding-bottom: 5%"> {{__('Berat Badan')}} </label>
+                    <div class="col-md-5">
                         <p >: {{ App\DataKesehatanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('berat_badan')->first() }} </p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Penyakit yang pernah diderita/alergi')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-5" style="padding-bottom: 5%"> {{__('Riwayat penyakit/ alergi')}} </label>
+                    <div class="col-md-5">
                         <p >: {{ App\DataKesehatanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('riwayat_penyakit')->first() }} </p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Golongan Darah')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-5" style="padding-bottom: 5%"> {{__('Golongan Darah')}} </label>
+                    <div class="col-md-5">
                         <p >: {{ App\DataKesehatanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('golongan_darah')->first() }}</p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('BPJS')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-5" style="padding-bottom: 5%"> {{__('BPJS')}} </label>
+                    <div class="col-md-5">
                         <p >: {{ App\DataKesehatanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('BPJS')->first() }} </p>
                     </div>
                 </div>   

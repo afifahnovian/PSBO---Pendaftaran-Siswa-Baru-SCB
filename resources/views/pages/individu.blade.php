@@ -55,13 +55,13 @@
 
                                 <div class="card-body">
                                     <div class="row">
-                                        <label class="col-md-3"> {{__('Status')}}</label>
-                                        <div class="col-md-7">
-                                            <a>: {{$calonsiswa->status_siswa}} </a>
+                                        <label class="col-md-4" style="padding-bottom: 3%"> {{__('Status')}}</label>
+                                        <div class="col-md-5">
+                                            <a> : {{$calonsiswa->status_siswa}} </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <hr>
                             <div class="card-footer">
                                 <td class="text-right">

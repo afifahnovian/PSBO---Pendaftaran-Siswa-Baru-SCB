@@ -7,29 +7,29 @@
 
             <div class="card-body">   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Hal-hal khusus (keunikan, passion, kebiasaan)')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-4" style="padding-bottom: 5%"> {{__('Hal-hal khusus')}} </label>
+                    <div class="col-md-6" style="float: right">
                         <p >: {{ App\DataKeunikanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('hal_khusus')->first() }} </p>
                     </div>
                 </div> 
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Cita-cita')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-4" style="padding-bottom: 5%"> {{__('Cita-cita')}} </label>
+                    <div class="col-md-6" style="float: right">
                         <p >: {{ App\DataKeunikanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('citacita')->first() }} </p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Hobi')}} </label>
-                    <div class="col-md-9">
-                        <p >: {{ App\DataKeunikanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('hobi')->first() }} </p>
+                    <label class="col-md-4" style="padding-bottom: 5%"> {{__('Hobi')}} </label>
+                    <div class="col-md-6" style="float: right">
+                        <p>: {{ App\DataKeunikanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('hobi')->first() }} </p>
                     </div>
                 </div>   
 
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Harapan Orang Tua')}} </label>
-                    <div class="col-md-9">
+                    <label class="col-md-4" style="padding-bottom: 5%"> {{__('Harapan Orang Tua')}} </label>
+                    <div class="col-md-6" style="float: right">
                         <p >: {{ App\DataKeunikanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('harapan_orgtua')->first() }} </p>
                     </div>
                 </div>

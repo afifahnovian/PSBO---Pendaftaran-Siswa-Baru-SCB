@@ -7,30 +7,30 @@
             
             <div class="card-body">   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Kartu Keluarga')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kartu Keluarga')}} </label>
                     <div class="col-md-9">
                         <!-- <p >: Fulan </p> -->
                         <a href="http://www.unhas.ac.id/rhiza/arsip/arsip-macam2/Ade_Muti/Kartu-Keluarga.pdf" >: kartu keluarga</a>
                     </div>
                 </div>   
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Rapor')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Rapor')}} </label>
                     <div class="col-md-9">
                         <a >: Rapor  </a>
                     </div>
-                    <label class="col-md-3 col-form-label"> {{__('Ijazah')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Ijazah')}} </label>
                     <div class="col-md-9">
                         <a >: ijazah  </a>
                     </div>
                 </div>
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Pas Foto')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Pas Foto')}} </label>
                     <div class="col-md-9">
                         <a >: pas foto </a>
                     </div>
                 </div>
                 <div class="row">
-                    <label class="col-md-3 col-form-label"> {{__('Sertifikat')}} </label>
+                    <label class="col-md-3" style="padding-bottom: 5%"> {{__('Sertifikat')}} </label>
                     <div class="col-md-9">
                         <p >: Sertifikat </p>
                     </div>

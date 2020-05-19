@@ -7,35 +7,35 @@
             <div>
                 <div class="card-body">   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Status Kepemilikan Rumah')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Status Kepemilikan Rumah')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('status_kepemilikan_rumah')->first() }} </p>
                         </div>
                     </div>   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Tahun Peroleh')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Tahun Peroleh')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('tahun_perolehan')->first() }} </p>
                         </div>
-                        <label class="col-md-3 col-form-label"> {{__('Kualitas')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kualitas')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('kualitas_rumah')->first() }}  </p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Luas (m2)')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Luas (m2)')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('luas_tanah')->first() }} m^2</p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Mandi, cuci, kakus')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Mandi, cuci, kakus')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('MCK')->first() }} </p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Sumber Air')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Sumber Air')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('sumber_air')->first() }} </p>
                         </div>
@@ -45,29 +45,29 @@
             <div>
                 <div class="card-body">   
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Daya Listrik (KWh)')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Daya Listrik (KWh)')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('daya_listrik')->first() }}  </p>
                         </div>
-                        <label class="col-md-3 col-form-label"> {{__('Harta Tidak Bergerak')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Harta Tidak Bergerak')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('harta')->first() }}  </p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Status Kepemilikan Harta')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Status Kepemilikan Harta')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('status_kepemilikan_harta')->first() }} </p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Kendaraan yang Dimiliki')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kendaraan yang Dimiliki')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('kendaraan')->first() }} </p>
                         </div>
                     </div>
                     <div class="row">
-                        <label class="col-md-3 col-form-label"> {{__('Status Kepemilikan Kendaraan')}} </label>
+                        <label class="col-md-3" style="padding-bottom: 5%"> {{__('Status Kepemilikan Kendaraan')}} </label>
                         <div class="col-md-9">
                             <p >: {{ App\DataRumah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('status_kepemilikan_kendaraan')->first() }} </p>
                         </div>

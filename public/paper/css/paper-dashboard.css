@@ -1,4 +1,3 @@
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2429,9 +2428,9 @@ textarea.form-control {
   border-radius: 0;
 }
 
+
 .form-horizontal .col-form-label,
 .form-horizontal .label-on-right {
-  padding: 10px 5px 0 15px;
   text-align: right;
   max-width: 180px;
 }
