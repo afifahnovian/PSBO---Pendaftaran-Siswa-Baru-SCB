@@ -23,9 +23,11 @@ adalah halaman web yang dapat terlihat oleh public (pengunjung) yaitu  berupa  t
 * *Usecase*
 
 ![ ](/img/UseCase.jpg)
+
 * *Activity*
 
-![ ](/img/Activity-diag.jpg)
+![ ](/img/Activity(2).jpg)
+
 * *Class*
 
 ![ ](/img/class-diagram.jpg)
