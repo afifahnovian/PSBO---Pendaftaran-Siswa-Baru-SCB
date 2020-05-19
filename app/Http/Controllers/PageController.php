@@ -74,10 +74,11 @@ class PageController extends Controller
         ]);
         $calonsiswa = CalonSiswa::find($id);
         $calonsiswa->status_siswa = $request->status;
+        $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
         // $calonsiswa->update($request->status_siswa);
 
         $calonsiswa->save();
-        return view('/pages/individu', compact('calonsiswa'))->with('info','Data berhasil di perbaharui');
+        return view('/pages/individu', compact('calonsiswa', 'prestasis'))->with('info','Data berhasil di perbaharui');
     }
 
      //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz

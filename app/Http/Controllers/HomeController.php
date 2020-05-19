@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
+use App\CalonSiswa;
 
 class HomeController extends Controller
 {
@@ -34,8 +35,15 @@ class HomeController extends Controller
         foreach($data as $key => $value){
             $array[++$key] = [$value->provinsi, $value->number];
         }
-        
-        return view('pages.dashboard')->with('provinsi', json_encode($array));
+
+        $belum_diseleksi = CalonSiswa::where('status_siswa', 'Pertimbangan')->count();
+        $sudah_diseleksi = CalonSiswa::where('status_siswa', 'Lolos') ->orWhere('status_siswa', 'Tidak Lolos')->count();
+
+        return view('pages.dashboard')->with([
+            'provinsi'=> json_encode($array),
+            'belum_diseleksi' => $belum_diseleksi,
+            'sudah_diseleksi' => $sudah_diseleksi 
+            ]);
         // return view('pages.dashboard');
     }
 

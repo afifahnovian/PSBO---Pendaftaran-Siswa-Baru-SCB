@@ -18,7 +18,7 @@
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
                                     <p class="card-category">Total Calon Siswa</p>
-                                    <p class="card-title">300
+                                    <p class="card-title">{{  App\CalonSiswa::all()->count()}}
                                         <p>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
                                     <p class="card-category">Sudah Diseleksi</p>
-                                    <p class="card-title">100
+                                    <p class="card-title">{{  $sudah_diseleksi ?? '' }}
                                         <p>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
                                     <p class="card-category">Belum Diseleksi</p>
-                                    <p class="card-title">200
+                                    <p class="card-title">{{ $belum_diseleksi ?? '' }}
                                         <p>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                             <div class="col-7 col-md-8">
                                 <div class="numbers">
                                     <p class="card-category">Jumlah Admin PPDB</p>
-                                    <p class="card-title">10
+                                    <p class="card-title">{{  App\User::all()->count() }}
                                         <p>
                                 </div>
                             </div>
