@@ -82,7 +82,7 @@
                                             </div>
                                         </div>  
                                         <div class="row">
-                                            <label class="col-md-3 col-form-label"> {{__('Alamat')}} </label>
+                                            <label class="col-md-3 col-form-label"> {{__('Provinsi')}} </label>
                                             <div class="col-md-9">
                                                 <p >: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('provinsi')->first() }} </p>
                                             </div>
@@ -527,24 +527,25 @@
             <div class="col-md-4">
                 <form id="editstatus">
                     <div class="card">
-                        {{ csrf_field() }}
-                        {{ method_field('PUT') }}
                         <div class="slide-content">
                             <div class="card-header">
-                                <h4 class="card-title"> {{__('Penentuan Status Siswa')}} </h4>
+                                <h4 class="card-title"> {{__(' Status Siswa')}} </h4>
                             </div>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="status">Status Siswa</label>
-                                    <select id="status" name="status" class="custom-select">
-                                            <option value="pertimbangkan">Pertimbangkan</option>
-                                            <option value="lolos">Lolos</option>
-                                            <option value="tidak lolos">Tidak Lolos</option>
-                                    </select>
+                                <div class="row">
+                                    <label class="col-md-3 col-form-label"> {{__('Status')}} </label>
+                                    <div class="col-md-9">
+                                        <a >: {{$calonsiswa->status_siswa}} </a>
+                                    </div>
                                 </div>
                             </div>
+                            <hr>
                             <div class="card-footer">
-                                <button type="submit">simpan</button>
+                                <td class="text-right">
+                                    <a href="/pages/individu/{{$calonsiswa->id}}/edit" class="btn btn-sm btn-primary">
+                                        ubah
+                                    </a>
+                                </td>
                             </div>
                         </div>
                     </div>

@@ -16,6 +16,7 @@ use App\CalonSiswa;
 use App\DataOrangtua;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use DB;
+use App\Status;
 
 class PageController extends Controller
 {
@@ -54,5 +55,27 @@ class PageController extends Controller
     public function ShowIndividu($id){
         $calonsiswa = CalonSiswa::find($id);
         return view('pages.individu')->with('calonsiswa', $calonsiswa);
+    }
+
+    public function  Editindividu($id){
+        $calonsiswa = CalonSiswa::find($id);
+        $status = status::all();
+        return view('pages.edit')->with([
+            'calonsiswa' => $calonsiswa,
+            'status'=> $status
+            ]);
+    }
+
+    public function Updateindividu(Request $request, $id){
+        $this->validate($request,[
+            'stauts_siswa'=>'required',
+            'tipe_siswa'=>'required' 
+        ]);
+        $calonsiswa = CalonSiswa::find($id);
+        $calonsiswa->status_siswa = $request->status_siswa;
+        // $calonsiswa->update($request->status_siswa);
+
+        $calonsiswa->save();
+        return redirect('/pages/individu/{id}')->with('success', 'Status Diubah');
     }
 }

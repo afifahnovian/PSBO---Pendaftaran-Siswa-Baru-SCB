@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class CalonSiswa extends Model
 {
+    protected $fillable = ['status_calon_siswa'];
+    
     public function DataSiswaUmum(){
         return $this->hasOne('App\DataSiswaUmum');
     }

@@ -10,7 +10,6 @@
     "require": {
         "php": "^7.2",
         "azishapidin/indoregion": "^2.2",
-        "consoletvs/charts": "6.*",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.5",
         "laravel-frontend-presets/paper": "^1.0",

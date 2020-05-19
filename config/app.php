@@ -178,7 +178,7 @@ return [
         Laravolt\Indonesia\ServiceProvider::class,
         App\Providers\Wilayah::class,
         App\Providers\ProvinsiIndo::class,
-        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        // ConsoleTVs\Charts\ChartsServiceProvider::class,
     ],
 
     /*

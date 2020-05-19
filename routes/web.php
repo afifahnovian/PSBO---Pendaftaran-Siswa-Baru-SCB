@@ -60,4 +60,6 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
+    Route::get('/pages/individu/{id}/edit', 'PageController@Editindividu');
+    Route::post('/pages/individu/{id}/update', 'PageController@Updateindividu');
 });
