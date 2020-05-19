@@ -101,6 +101,19 @@
                 </div>
             </div>
         </div>
+        <!-- button untuk download file excel -->
+        <div class="row">
+            <div class="float-right col-md-6">
+                <a href="pages/export" class="btn btn-block btn-success">
+                    Download Excel Calon Siswa SMP
+                </a>
+            </div>
+            <div class="float-right col-md-6">
+            <a href="pages/export" class="btn btn-block btn-success">
+                Download Excel Calon Siswa Tahfidz
+            </a>
+        </div>
+        </div>
 @endsection
 
 @push('scripts')
@@ -111,7 +124,7 @@
         // });
         
         // Pie Chart
-        var analytics = <?php echo $provinsi; ?>;
+        var analytics = <?php echo $prov_array; ?>;
 
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);

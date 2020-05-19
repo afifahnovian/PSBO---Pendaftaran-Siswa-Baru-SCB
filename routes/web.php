@@ -63,4 +63,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pages/individu/{id}/edit', 'PageController@Editindividu');
     Route::post('/pages/individu/{id}/update', 'PageController@Updateindividu');
     Route::get('pages/export', 'CalonSiswaController@export');
+    // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
+    // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
+    Route::get('/tables/SMP', 'PageController@tablesSMP');
+    Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
+    Route::get('/table', 'PageController@table');
 });
