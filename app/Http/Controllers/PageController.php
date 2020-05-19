@@ -54,7 +54,11 @@ class PageController extends Controller
     
     public function ShowIndividu($id){
         $calonsiswa = CalonSiswa::find($id);
-        return view('pages.individu')->with('calonsiswa', $calonsiswa);
+        $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
+        return view('pages.individu')->with([
+            'calonsiswa' => $calonsiswa,
+            'prestasis' => $prestasis
+            ]);
     }
 
     public function  Updateindividu($id){
@@ -74,7 +78,6 @@ class PageController extends Controller
 
         $calonsiswa->save();
         return view('/pages/individu', compact('calonsiswa'))->with('info','Data berhasil di perbaharui');
-        // return redirect ('pages/individu')->with('info','Data berhasil di perbaharui');
     }
 
      //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz

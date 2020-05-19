@@ -198,7 +198,6 @@
                                     <div class="card-header">
                                         <h4 class="card-title"> {{__('Data Prestasi Akademik')}} </h4>
                                     </div>
-                                    {{ $prestasis = App\DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get() }}
                                     @foreach($prestasis as $prestasi)
                                         <div class="card-body">   
                                             <div class="row">
