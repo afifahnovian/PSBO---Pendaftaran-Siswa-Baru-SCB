@@ -2,7 +2,7 @@
 
 
 [Sekilas Tentang](#sekilas-tentang) | [Ruang Lingkup](#ruang-lingkup-pengembangan) | [Diagram](#diagram) |[Fitur-fitur](#fitur-secara-umum) | [Konsep OOP](#konsep-oop-yang-digunakan) | [Tipe Design](#tipe-design) | [Developer](#developer)
-:---:|:---:|:---:|:---:|:---:|:---:
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
 
 
