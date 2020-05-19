@@ -36,8 +36,8 @@ class HomeController extends Controller
             $array[++$key] = [$value->provinsi, $value->number];
         }
 
-        $belum_diseleksi = CalonSiswa::where('status_siswa', 'Pertimbangan')->count();
-        $sudah_diseleksi = CalonSiswa::where('status_siswa', 'Lolos') ->orWhere('status_siswa', 'Tidak Lolos')->count();
+        $belum_diseleksi = CalonSiswa::where('status_siswa', 'Pertimbangan')->get()->count();
+        $sudah_diseleksi = CalonSiswa::where('status_siswa', 'Lolos') ->orWhere('status_siswa', 'Tidak Lolos')->get()->count();
 
         return view('pages.dashboard')->with([
             'provinsi'=> json_encode($array),
