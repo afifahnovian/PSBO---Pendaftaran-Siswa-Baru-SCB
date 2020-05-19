@@ -4,6 +4,12 @@
 ])
 
 @section('content')
+    @if(session('info'))
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p class="mb-0">{{session('info')}}</p>
+    </div>
+    @endif
     <div class="content">
         <div class="row ">
             <div class="col-md-8" id="slider">
@@ -542,7 +548,7 @@
                             <hr>
                             <div class="card-footer">
                                 <td class="text-right">
-                                    <a href="/pages/individu/{{$calonsiswa->id}}/edit" class="btn btn-sm btn-primary" type="submit" value="update">
+                                    <a href="{{url('/pages/update/'.$calonsiswa->id)}}" class="btn btn-sm btn-primary" role="button">
                                         Ubah
                                     </a>
                                 </td>

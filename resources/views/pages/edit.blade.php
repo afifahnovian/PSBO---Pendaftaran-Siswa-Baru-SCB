@@ -54,9 +54,9 @@
                         <div class="card-header">
                             <h4 class="card-title"> {{__(' Status Siswa')}} </h4>
                         </div>
-                        <form action="{{url('/form/edit/'.$calonsiswa->id)}}" method="POST">
+                        <form action="{{url('/pages/edit/'.$calonsiswa->id)}}" method="POST">
+                            @csrf
                             <div class="card-body">
-                                @csrf
                                 <select id="status" name="status" class="custom-select">
                                     <option value="Pertimbangan" @if($calonsiswa->status_siswa == 'Pertimbangan') selected @endif> Pertimbangan </option>
                                     <option value="Lolos" @if($calonsiswa->status_siswa == 'Lolos') selected @endif> Lolos </option>
