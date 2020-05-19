@@ -54,10 +54,10 @@
                         <div class="card-header">
                             <h4 class="card-title"> {{__(' Status Siswa')}} </h4>
                         </div>
-                        <form action="/pages/individu/{{$calonsiswa->id}}/update" method="post">
+                        <form action="{{url('/form/edit/'.$calonsiswa->id)}}" method="POST">
                             <div class="card-body">
-                                {{csrf_field()}}
-                                <select name="status" class="custom-select">
+                                @csrf
+                                <select id="status" name="status" class="custom-select">
                                     <option value="Pertimbangan" @if($calonsiswa->status_siswa == 'Pertimbangan') selected @endif> Pertimbangan </option>
                                     <option value="Lolos" @if($calonsiswa->status_siswa == 'Lolos') selected @endif> Lolos </option>
                                     <option value="Tidak Lolos" @if($calonsiswa->status_siswa == 'Tidak Lolos') selected @endif> Tidak Lolos </option>
@@ -66,7 +66,7 @@
                             <hr>
                             <div class="card-footer">
                                 <td class="text-right">
-                                    <button type="submit"  class="btn btn-sm btn-primary"> simpan </button>
+                                    <button type="submit"  class="btn btn-sm btn-primary" value="update"> simpan </button>
                                 </td>
                             </div>
                         </form>
