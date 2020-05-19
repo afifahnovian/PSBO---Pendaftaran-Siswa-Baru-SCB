@@ -52,9 +52,18 @@ class PageController extends Controller
     }
     
     
+    // public function ShowIndividu($id){
+    //     $calonsiswa = CalonSiswa::find($id);
+    //     return view('pages.individu')->with('calonsiswa', $calonsiswa);
+    // }
+
     public function ShowIndividu($id){
         $calonsiswa = CalonSiswa::find($id);
-        return view('pages.individu')->with('calonsiswa', $calonsiswa);
+        $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
+        return view('pages.individu')->with([
+            'calonsiswa' => $calonsiswa,
+            'prestasis' => $prestasis
+            ]);
     }
 
     public function  Editindividu($id){

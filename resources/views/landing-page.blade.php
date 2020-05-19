@@ -8,7 +8,7 @@
                  @if(session('success'))
                     <div class="alert alert-success" role="alert">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p class="mb-0">{{session('success')}}</p>
+                    <p>{{session('success')}}</p>
                      </div>
                 @endif
             </div>

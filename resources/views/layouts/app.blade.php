@@ -30,15 +30,6 @@
     <meta name="twitter:creator" content="@creativetim">
     <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/209/opt_pd_laravel_thumbnail.jpg">
 
-    <!-- Open Graph data -->
-    <meta property="fb:app_id" content="655968634437471">
-    <meta property="og:title" content="Paper Dashboard Laravel by Creative Tim" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.creative-tim.com/live/paper-dashboard-laravel" />
-    <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/209/opt_pd_laravel_thumbnail.jpg"/>
-    <meta property="og:description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up." />
-    <meta property="og:site_name" content="Creative Tim" />
-    
     <title>
         {{ __('PPDB Online SMP Cendikia BAZNAS') }}
     </title>
@@ -47,11 +38,12 @@
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    
     <!-- CSS Files -->
-    <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
-
+    <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet"/>
     <link rel="stylesheet" href="{{  asset('paper') }}/css/chart.css">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <!-- <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" /> -->
    
@@ -92,6 +84,8 @@
     <script src="{{ asset('paper') }}/js/plugins/bootstrap-notify.js"></script>
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('paper') }}/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+    <script src="{{ asset('paper') }}/js/pagination.js" type="text/javascript"></script>
+
     <!-- Paper Dashboard DEMO methods, don't include it in your project!
     buat gambar background login -->
     <script src="{{ asset('paper') }}/demo/demo.js"></script> 

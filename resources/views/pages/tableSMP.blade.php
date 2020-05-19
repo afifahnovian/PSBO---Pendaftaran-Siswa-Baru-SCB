@@ -15,21 +15,11 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
-                                    <th>
-                                        Nama
-                                    </th>
-                                    <th>
-                                        Jenis Kelamin
-                                    </th>
-                                    <th>
-                                        Asal Sekolah
-                                    </th>
-                                    <th>
-                                        Provinsi
-                                    </th>
-                                    <th>
-                                        Status
-                                    </th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Asal Sekolah</th>
+                                    <th>Provinsi</th>
+                                    <th>Status</th>
                                 </thead>
                                 <tbody>
                                     @foreach($calonsiswas as $calonsiswa)
