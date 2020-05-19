@@ -5,11 +5,11 @@
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <div class="row" style="margin-top: 100px">
-            @if(session('success'))
+                 @if(session('success'))
                     <div class="alert alert-success" role="alert">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <p class="mb-0">{{session('success')}}</p>
-                </div>
+                     </div>
                 @endif
             </div>
             <!-- Portfolio Grid Items-->
@@ -54,15 +54,14 @@
         </div>
     </section>
 
+
     <!-- persyaratan pendaftaran-->
     <h3 class="page-section-heading1 text-center text-secondary">Persyaratan Pendaftaran</h3>
-
-   
-        <div class="container">
+        <div class="container" style="margin-right:20%;margin-left:20%">
             <!-- Portfolio Grid Items-->
             <div class="row" style="align-content: center; padding-top:25px">
                     <!-- Portfolio Item 1-->
-                    <div class="col-md-5 col-lg-3.5 mb-4" style="margin-left: 105px">
+                    <div class="col-md-4 col-lg-3.5 mb-4" style="align-items: center">
                         <div class="portfolio-item mx-auto" >
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"></i></div>
@@ -71,7 +70,7 @@
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
-                    <div class="col-md-5 col-lg-3.5 mb-4" >
+                    <div class="col-md-4 col-lg-3.5 mb-4" style="align-items: center">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"></i></div>
@@ -83,6 +82,7 @@
         </div>
     
 
+        
     <!-- Alur dan Timeline -->
     <h3 class="page-section-heading1 text-center text-secondary mb-0" style="padding-top: 45px">Alur dan Timeline</h3>
     <br><br>
@@ -142,9 +142,9 @@
     <section class="page-section portfolio" id="portfolio" >
         <div class="container">
             <!-- Portfolio Grid Items-->
-            <div class="row">
+            <div class="row" style="padding-right: 2%; padding-left:2%">
                 <!-- Portfolio Item 1-->
-                <div class="col-md-6-1 col-lg-4-3 container-1 mb-5 bg-kotak-kuning" style="border-radius: 15px;">
+                <div class="col-md-6-1 col-lg-4-3 container-1 mb-5 bg-kotak-kuning" style="border-radius: 15px; ">
                     <div class="mx-auto-1">
                         <div class="row-1">
                             <img class="img-fluid2" src="assets/img/alert 2.png" alt="" />
@@ -155,6 +155,12 @@
             </div>
         </div>
     </section>
+    
+       <!-- FAQ -->
+       @include('content.faq')
+    
+
+    
 
     <!-- Footer -->
     @include('layouts.footer-upfront')

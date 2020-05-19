@@ -18,6 +18,5 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
 
 <!-- Form -->
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
 <script src="{{asset('js/form.js')}}"></script>
 <script src="{{asset('js/scripts.js')}}"></script>

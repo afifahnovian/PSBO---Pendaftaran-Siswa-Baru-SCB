@@ -504,6 +504,7 @@ mark,
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .img-thumbnail {
@@ -604,7 +605,7 @@ pre code {
     max-width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 100px) {
   .container {
     max-width: 1140px;
   }
@@ -4446,6 +4447,12 @@ input[type=button].btn-block {
   color: #fff;
 }
 
+
+.myaccordion{
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+
 .card {
   position: relative;
   display: flex;
@@ -4453,9 +4460,11 @@ input[type=button].btn-block {
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
-  background-clip: border-box;
-  border: 0.125rem solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.5rem;
+  
+  border-radius: 0.6rem;
+  border-bottom-color: #EDEFF0;
+  background: transparent;
+
 }
 .card > hr {
   margin-right: 0;
@@ -10084,7 +10093,7 @@ h3 {
   }
 }
 .page-section {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10162,8 +10171,8 @@ h3 {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
@@ -10187,13 +10196,13 @@ h3 {
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.8rem;
+  padding: 0.6rem;
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {

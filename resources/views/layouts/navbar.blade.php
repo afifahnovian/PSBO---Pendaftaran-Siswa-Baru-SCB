@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand js-scroll-trigger" href="{{url('/')}}">
         <img class="img-responsive" src="assets/img/logo-putih.png" alt="logo" style="width:200px;" /></a>
         <button class="navbar-toggler navbar-toggler-right bg-primary rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="color: #004445 fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">

@@ -542,8 +542,8 @@
                             <hr>
                             <div class="card-footer">
                                 <td class="text-right">
-                                    <a href="/pages/individu/{{$calonsiswa->id}}/edit" class="btn btn-sm btn-primary">
-                                        ubah
+                                    <a href="/pages/individu/{{$calonsiswa->id}}/edit" class="btn btn-sm btn-primary" type="submit" value="update">
+                                        Ubah
                                     </a>
                                 </td>
                             </div>

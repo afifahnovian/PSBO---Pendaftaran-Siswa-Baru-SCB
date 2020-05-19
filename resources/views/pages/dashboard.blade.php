@@ -24,11 +24,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card-footer ">
-                        <div class="stats">
-                            <i class="fa fa-refresh"></i> Update Now
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -49,12 +44,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-calendar-o"></i> Last day
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -75,12 +64,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-clock-o"></i> In the last hour
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -101,12 +84,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-refresh"></i> Update now
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -114,41 +91,16 @@
             <div class="col-md-12">
                 <div class="card ">
                     <div class="card-header ">
-                        <h5 class="card-title">Persebaran Siswa Cendekia Basnaz</h5>
+                        <h5 class="card-title"> Persebaran Daerah Asal Siswa SCB </h5>
                         <p class="card-category">Berdasarkan Provinsi</p>
                     </div>
-                    <div class="card-body ">
-                        <canvas>
-                            <div class="piechart" id="piechart" style="width: 750px; height: 450px"></div>
-                        </canvas>
-                         <!-- <div id="pie_chart" style width="750" height="450"></div> -->
+                    <div class="card-body">
+                        <div class="piechart" id="piechart" style="width: 750px; height: 400px; margin-left:14%;margin-right:14%;"></div>
                     </div>
-                    <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Chart -->
-       <!-- <div class="row">
-           <div class="col-md-12">
-               <div class="card">
-                   <div class="card-header">
-                       <h5 class="card-title"> Persebaran Siswa Cendekia Basnaz</h5>
-                       <p class="card-category"> Berdasarkan Provinsi</p>
-                   </div>
-                   <div class="card-body">
-                        <figure class="highcharts-figure">
-                        <div id="ChartProvinsi"></div>
-                        </figure>
-                   </div>
-               </div>
-           </div>
-       </div> -->
-    </div>
 @endsection
 
 @push('scripts')
@@ -158,7 +110,7 @@
         //     // demo.initChartsPages();
         // });
         
-        // var analytics = @json($provinsi);
+        // Pie Chart
         var analytics = <?php echo $provinsi; ?>;
 
             google.charts.load('current', {'packages':['corechart']});
@@ -168,12 +120,12 @@
             {
                 var data = google.visualization.arrayToDataTable(analytics);
                 var options = {
-                title : 'Persebaran Siswa Sekolah Cendekia Basnaz'
+                title : '',
+                is3D: true,
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);
             }
-
     </script>
 @endpush
