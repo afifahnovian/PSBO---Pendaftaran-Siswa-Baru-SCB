@@ -4,6 +4,7 @@
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
     */
    (function($) {
+
     "use strict"; // Start of use strict
   
     // Smooth scrolling using jQuery easing
@@ -64,6 +65,8 @@
         $(this).removeClass("floating-label-form-group-with-focus");
       });
     });
+
+    
   
   })(jQuery); // End of use strict
   

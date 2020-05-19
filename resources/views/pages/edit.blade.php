@@ -66,7 +66,7 @@
                             <hr>
                             <div class="card-footer">
                                 <td class="text-right">
-                                    <button type="submit"  class="btn btn-sm btn-primary"> simpan </button>
+                                    <input type="submit" class="btn btn-sm btn-primary" value="Update">
                                 </td>
                             </div>
                         </form>

@@ -27,7 +27,6 @@ class ProfileController extends Controller
     public function update(ProfileRequest $request)
     {
         auth()->user()->update($request->all());
-
         return back()->withStatus(__('Profile successfully updated.'));
     }
 
