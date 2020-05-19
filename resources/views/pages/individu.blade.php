@@ -192,7 +192,6 @@
                                     <div class="card-header">
                                         <h4 class="card-title"> {{__('Data Prestasi Akademik')}} </h4>
                                     </div>
-                                    {{ $prestasis = App\DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get() }}
                                     @foreach($prestasis as $prestasi)
                                         <div class="card-body">   
                                             <div class="row">
@@ -215,6 +214,25 @@
                                             </div>   
                                         </div>
                                     @endforeach
+                                    @if( $calonsiswa->tipe_siswa == 'Tahfidz')
+                                        <div class="card-header">
+                                            <h4 class="card-title"> {{__('Data Hafalan Siswa')}} </h4>
+                                        </div>
+                                        <div class="card-body">   
+                                            <div class="row">
+                                                <label class="col-md-3 col-form-label"> {{__('Jumlah Hafalan')}} </label>
+                                                <div class="col-md-9">
+                                                    <p >: {{ App\DataHafalanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('jumlah_hafalan')->first() }} </p>
+                                                </div>
+                                            </div>   
+                                            <div class="row">
+                                                <label class="col-md-3 col-form-label"> {{__('Nama Juz')}} </label>
+                                                <div class="col-md-9">
+                                                    <p >: {{ App\DataHafalanSiswa::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_juz')->first() }}  </p>
+                                                </div>
+                                            </div>   
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="card slide slide_4">
@@ -517,6 +535,14 @@
                                                 <p >: Sertifikat </p>
                                             </div>
                                         </div>
+                                        @if( $calonsiswa->tipe_siswa == 'Tahfidz')
+                                            <div class="row">
+                                                <label class="col-md-3 col-form-label"> {{__('Pernyataan Tahfidz')}} </label>
+                                                <div class="col-md-9">
+                                                    <p >: Sertifikat </p>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

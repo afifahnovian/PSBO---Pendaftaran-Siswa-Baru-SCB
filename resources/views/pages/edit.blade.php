@@ -54,7 +54,7 @@
                         <div class="card-header">
                             <h4 class="card-title"> {{__(' Status Siswa')}} </h4>
                         </div>
-                        <form action="/pages/individu/{{$calonsiswa->id}}/update" method="post">
+                        <form action="{{url('/')}" method="POST">
                             <div class="card-body">
                                 {{csrf_field()}}
                                 <select name="status" class="custom-select">

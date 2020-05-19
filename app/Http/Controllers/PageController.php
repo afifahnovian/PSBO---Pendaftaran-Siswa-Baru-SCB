@@ -37,26 +37,24 @@ class PageController extends Controller
      * @return \Illuminate\View\View
      */
     public function index(string $page)
-    {
+    {   
+        // load page tanpa parsing data
         if (view()->exists("pages.{$page}")) {
-
-            if ($page == "tables") {
-                $calonsiswas = CalonSiswa::all();
-                return view('pages.tables')->with('calonsiswas', $calonsiswas);
-            }
-            // elseif($page ==! "individu") {
             return view("pages.{$page}");
-            // }
         }
         return abort(404);
     }
-    
-    
+    //lihat informasi calon siswa secara individu
     public function ShowIndividu($id){
         $calonsiswa = CalonSiswa::find($id);
-        return view('pages.individu')->with('calonsiswa', $calonsiswa);
+        $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
+        return view('pages.individu')->with([
+            'calonsiswa' => $calonsiswa,
+            'prestasis' => $prestasis
+            ]);
     }
 
+    //edit status calon siswa
     public function  Editindividu($id){
         $calonsiswa = CalonSiswa::find($id);
         $status = status::all();
@@ -65,17 +63,49 @@ class PageController extends Controller
             'status'=> $status
             ]);
     }
-
     public function Updateindividu(Request $request, $id){
         $this->validate($request,[
             'stauts_siswa'=>'required',
             'tipe_siswa'=>'required' 
-        ]);
+            ]);
         $calonsiswa = CalonSiswa::find($id);
         $calonsiswa->status_siswa = $request->status_siswa;
         // $calonsiswa->update($request->status_siswa);
 
         $calonsiswa->save();
         return redirect('/pages/individu/{id}');
+    }
+
+    //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz
+    public function tablesSMP(){ 
+        $calonsiswas = CalonSiswa::Orderby('id')->where('tipe_siswa', 'SMP')->get();
+        $tipe_siswa = 'SMP';
+        return view('/pages/tableSMP')->with([
+            'calonsiswas' => $calonsiswas,
+            'tipe_siswa'=> $tipe_siswa
+        ]);
+    }
+    public function tablesTahfidz(){ 
+        $calonsiswas = CalonSiswa::Orderby('id')->where('tipe_siswa', 'Tahfidz')->get();
+        $tipe_siswa = 'Tahfidz';
+        return view('/pages/tableTahfidz')->with([
+            'calonsiswas' => $calonsiswas,
+            'tipe_siswa'=> $tipe_siswa
+        ]);
+    }
+    //menampilkan tabel hasil pencarian
+    public function table(Request $request){
+
+        $query = $request->input('query');
+        $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', "%$query%")->get();
+        // dd($data_umums);
+        return view('pages/table')->with('data_umums', $data_umums);
+        // if($request->has('cari')) {
+        //     $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', '%'.$request->cari.'%' )->get();
+        //     return view('/pages/table', ['data_umums'=> $data_umums]);
+        // }
+        // else{
+        //     return view('/pages/pencarian');
+        // }
     }
 }

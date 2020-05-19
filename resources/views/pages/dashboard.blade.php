@@ -101,12 +101,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-refresh"></i> Update now
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -131,6 +125,19 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- button untuk download file excel -->
+        <div class="row">
+            <div class="float-right col-md-6">
+                <a href="pages/export" class="btn btn-block btn-success">
+                    Download Excel Calon Siswa SMP
+                </a>
+            </div>
+            <div class="float-right col-md-6">
+            <a href="pages/export" class="btn btn-block btn-success">
+                Download Excel Calon Siswa Tahfidz
+            </a>
+        </div>
         </div>
         <!-- Chart -->
        <!-- <div class="row">
@@ -158,8 +165,8 @@
         //     // demo.initChartsPages();
         // });
         
-        // var analytics = @json($provinsi);
-        var analytics = <?php echo $provinsi; ?>;
+        // var analytics = @json($provinsi ?? '');
+        var analytics = <?php echo $provinsi ?? ''; ?>;
 
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);
