@@ -76,6 +76,6 @@ class PageController extends Controller
         // $calonsiswa->update($request->status_siswa);
 
         $calonsiswa->save();
-        return redirect('/pages/individu/{id}')->with('success', 'Status Diubah');
+        return redirect('/pages/individu/{id}');
     }
 }

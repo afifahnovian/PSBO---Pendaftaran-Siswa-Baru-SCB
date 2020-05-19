@@ -10,6 +10,11 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Semua Calon Siswa</h4>
+                        <div class="float-right">
+                            <a href="pages/export" class="btn btn-sm btn-succes">
+                                download excel
+                            </a>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

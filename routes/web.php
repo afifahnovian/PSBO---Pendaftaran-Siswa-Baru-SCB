@@ -62,4 +62,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
     Route::get('/pages/individu/{id}/edit', 'PageController@Editindividu');
     Route::post('/pages/individu/{id}/update', 'PageController@Updateindividu');
+    Route::get('pages/export', 'CalonSiswaController@export');
 });
