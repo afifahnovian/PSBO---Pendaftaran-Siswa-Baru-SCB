@@ -78,4 +78,37 @@ class PageController extends Controller
         $calonsiswa->save();
         return redirect('/pages/individu/{id}');
     }
+
+     //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz
+     public function tablesSMP(){ 
+        $calonsiswas = CalonSiswa::Orderby('id')->where('tipe_siswa', 'SMP')->get();
+        $tipe_siswa = 'SMP';
+        return view('/pages/tableSMP')->with([
+            'calonsiswas' => $calonsiswas,
+            'tipe_siswa'=> $tipe_siswa
+        ]);
+    }
+    public function tablesTahfidz(){ 
+        $calonsiswas = CalonSiswa::Orderby('id')->where('tipe_siswa', 'Tahfidz')->get();
+        $tipe_siswa = 'Tahfidz';
+        return view('/pages/tableTahfidz')->with([
+            'calonsiswas' => $calonsiswas,
+            'tipe_siswa'=> $tipe_siswa
+        ]);
+    }
+    //menampilkan tabel hasil pencarian
+    public function table(Request $request){
+
+        $query = $request->input('query');
+        $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', "%$query%")->get();
+        // dd($data_umums);
+        return view('pages/table')->with('data_umums', $data_umums);
+        // if($request->has('cari')) {
+        //     $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', '%'.$request->cari.'%' )->get();
+        //     return view('/pages/table', ['data_umums'=> $data_umums]);
+        // }
+        // else{
+        //     return view('/pages/pencarian');
+        // }
+    }
 }
