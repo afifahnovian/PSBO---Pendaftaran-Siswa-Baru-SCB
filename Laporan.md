@@ -58,8 +58,9 @@ Pada Web PPDB SCB, kelompok kami menggunakan design pattern MVC (Model View cont
 
 ## Developer 
 
-Afifah Noviani - FullStack
-Yasmin Lukman - FullStack
+1. Afifah Noviani - FullStack, Designer
+2. Yasmin Lukman - FullStack
+3. Arih Ghina W - Frontend
 
 
 
