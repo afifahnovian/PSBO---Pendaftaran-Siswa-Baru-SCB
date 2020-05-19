@@ -95,7 +95,7 @@
                         <p class="card-category">Berdasarkan Provinsi</p>
                     </div>
                     <div class="card-body">
-                        <div class="piechart" id="piechart" style="width: 750px; height: 400px; align-content:center"></div>
+                        <div class="piechart" id="piechart" style="width: 750px; height: 400px; margin-left:14%;margin-right:14%;"></div>
                     </div>
                     </div>
                 </div>
