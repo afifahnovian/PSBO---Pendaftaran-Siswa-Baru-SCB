@@ -178,7 +178,6 @@ return [
         Laravolt\Indonesia\ServiceProvider::class,
         App\Providers\Wilayah::class,
         App\Providers\ProvinsiIndo::class,
-        // ConsoleTVs\Charts\ChartsServiceProvider::class,
     ],
 
     /*
@@ -230,7 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Indonesia' => Laravolt\Indonesia\Facade::class,
-
+        
     ],
 
 ];

@@ -178,5 +178,4 @@ function hexToRGB(hex, alpha) {
   }
 }
 
-// chart
 
