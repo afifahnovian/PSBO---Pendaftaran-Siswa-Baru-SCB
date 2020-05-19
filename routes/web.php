@@ -60,8 +60,9 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
-    Route::get('/pages/individu/{id}/edit', 'PageController@Editindividu');
-    Route::post('/pages/individu/{id}/update', 'PageController@Updateindividu');
+    //Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
+    Route::post('/pages/edit/{id}', 'PageController@Editindividu');
+    Route::get('/pages/update/{id}', 'PageController@Updateindividu');
     Route::get('pages/export', 'CalonSiswaController@export');
     // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');

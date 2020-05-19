@@ -12,7 +12,7 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="{{ $elementActive == 'dashboard' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'dashboard') }}">
+                <a href="{{ route('admin') }}">
                     <i class="nc-icon nc-istanbul"></i>
                     <p>{{ __('Dashboard') }}</p>
                 </a>

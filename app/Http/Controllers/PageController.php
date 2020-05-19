@@ -66,26 +66,24 @@ class PageController extends Controller
             ]);
     }
 
-    public function  Editindividu($id){
+    public function  Updateindividu($id){
         $calonsiswa = CalonSiswa::find($id);
-        $status = status::all();
-        return view('pages.edit')->with([
-            'calonsiswa' => $calonsiswa,
-            'status'=> $status
-            ]);
+        // $status = status::all();
+        return view('pages.edit')->with('calonsiswa', $calonsiswa);
     }
 
-    public function Updateindividu(Request $request, $id){
+    public function Editindividu(Request $request, $id){
         $this->validate($request,[
-            'stauts_siswa'=>'required',
-            'tipe_siswa'=>'required' 
+            'status'=>'required'
+            // 'tipe_siswa'=>'required' 
         ]);
         $calonsiswa = CalonSiswa::find($id);
-        $calonsiswa->status_siswa = $request->status_siswa;
+        $calonsiswa->status_siswa = $request->status;
+        $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
         // $calonsiswa->update($request->status_siswa);
 
         $calonsiswa->save();
-        return redirect('/pages/individu/{id}');
+        return view('/pages/individu', compact('calonsiswa', 'prestasis'))->with('info','Data berhasil di perbaharui');
     }
 
      //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz
