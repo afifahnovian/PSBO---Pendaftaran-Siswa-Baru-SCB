@@ -18,6 +18,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use DB;
 use App\Status;
 use Response;
+use App\DataPost;
 
 class PageController extends Controller
 {
@@ -130,5 +131,10 @@ class PageController extends Controller
             'Content-Type' => 'application/pdf',
             'Content-Disposition' => 'inline; filename="'.$filename.'"'
         ]);
+    }
+
+    public function AllPost(){
+        $data_posts = DataPost::all();
+        return view('pages.post',compact('data_posts'));
     }
 }

@@ -1,3 +1,23 @@
+
+/*Pagination CSS*/
+#page_navigation{
+  clear:both;
+  margin: 20px 0;
+}
+
+#page_navigation a{
+	padding:8px;
+	border-radius: 30px;
+	margin:6px;
+  color:black;
+  background-color :#51cbce;
+	text-decoration:none
+}
+.active_page{
+	background:#344e86;
+	color:white !important;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

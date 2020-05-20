@@ -80,8 +80,6 @@
                     </div>
                 </div>
         </div>
-    
-
         
     <!-- Alur dan Timeline -->
     <h3 class="page-section-heading1 text-center text-secondary mb-0" style="padding-top: 45px">Alur dan Timeline</h3>

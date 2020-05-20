@@ -44,7 +44,7 @@ class HomeController extends Controller
             'belum_diseleksi' => $belum_diseleksi,
             'sudah_diseleksi' => $sudah_diseleksi 
             ]);
-        // return view('pages.dashboard');
+        // /return view('pages.dashboard');
     }
 
     

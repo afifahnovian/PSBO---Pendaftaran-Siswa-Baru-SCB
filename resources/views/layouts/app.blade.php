@@ -42,10 +42,8 @@
     <!-- CSS Files -->
     <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{  asset('paper') }}/css/chart.css">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" />
+    <!-- <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" /> -->
    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -54,7 +52,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
     <!-- End Google Tag Manager -->
-    
     @include('layouts.activation-chart')
 
 </head>
@@ -88,9 +85,10 @@
 
     <!-- Paper Dashboard DEMO methods, don't include it in your project!
     buat gambar background login -->
-    <script src="{{ asset('paper') }}/demo/demo.js"></script> 
+    <!-- <script src="{{ asset('paper') }}/demo/demo.js"></script>  -->
     <!-- Sharrre libray -->
     <script src="../assets/demo/jquery.sharrre.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
     @stack('scripts')
 
