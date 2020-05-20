@@ -10,7 +10,7 @@
                     <label class="col-md-3" style="padding-bottom: 5%"> {{__('Kartu Keluarga')}} </label>
                     <div class="col-md-9">
                         <!-- <p >: Fulan </p> -->
-                        <a href="http://www.unhas.ac.id/rhiza/arsip/arsip-macam2/Ade_Muti/Kartu-Keluarga.pdf" >: kartu keluarga</a>
+                        <a href="/KK" >: kartu keluarga</a>
                     </div>
                 </div>   
                 <div class="row">
