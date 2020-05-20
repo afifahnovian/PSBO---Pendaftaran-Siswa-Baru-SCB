@@ -1,78 +1,76 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# PPDB SMP Cendikia Baznas
+![ ](https://github.com/afifahnovian/PSBO---Pendaftaran-Siswa-Baru-SCB/blob/master/img/ppdb.png)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[Sekilas Tentang](#sekilas-tentang) | [Ruang Lingkup](#ruang-lingkup-pengembangan) | [Diagram](#diagram) |[Fitur-fitur](#fitur-secara-umum) | [Konsep OOP](#konsep-oop-yang-digunakan) | [Tipe Design](#tipe-design) | [Developer](#developer)
+:---:|:---:|:---:|:---:|:---:|:---:|:---:
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Sekilas Tentang 
+Sistem Penerimaan Peserta Didik Baru (PPDB) secara online melalui website resmi SMP Cendekia Baznas adalah sebagai penghubung antara calon siswa dan pihak SMP Cendekia Baznas. Melalui sistem ini dapat mempermudah calon siswa untuk mendaftarkan dirinya tanpa perlu bersusah payah untuk mengunjungi sekolah secara langsung. Sistem ini terbagi menjadi 2 yaitu untuk pendaftar dan admin SMP Cendekia Baznas dengan tugas yang berbeda. Pada sisi pendaftar dapat mendaftarkan diri/calon siswa dengan mengisi form yang sudah disediakan dan mengupload berkas-berkas yang diminta untuk memenuhi pendaftaran.  Untuk admin berisikan informasi mengenai data dan berkas dari calon siswa, dapat menampilkan daftar siswa yang lulus maupun tidak lulus, mengupdate data, dan menghapus data yang masuk. Dengan adanya sistem ini diharapkan lebih mempermudah dan memberikan dampak yang lebih baik untuk penerimaan peserta didik baru SMP Cendekia Baznas. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Ruang Lingkup Pengembangan
+Ruang lingkup pengembangan dari sistem ppdb ini sebagai berikut:  
+    1. Hanya dapat digunakan atau berjalan pada web browser                                                                                                                               
+    2. Proses pelampiran hasil seleksi dilakukan oleh admin scb                                                                                                                                     
+    3. Tidak perlu login untuk pendaftar
+    
+**Front End**
+adalah halaman web yang dapat terlihat oleh public (pengunjung) yaitu  berupa  tampilan  depan website meliputi pendaftaran,  dan melihat hasil seleksi.                                                                                    
+**Back   End** adalah   bagian   yang   khusus diperuntukan   para   admin untuk mengelola website berupa  tampilan  Admin,login  admin, menampilkan daftar siswa yang lulus maupun tidak lulus, mengupdate data, dan menghapus data yang masuk.
 
-## Learning Laravel
+## Diagram 
+* *Usecase*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![ ](/img/UseCase.jpg)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* *Activity*
 
-## Laravel Sponsors
+![ ](/img/Activity(2).jpg)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+* *Class*
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+![ ](/img/class-diagram.jpg)
 
-## Contributing
+## Fitur Secara Umum
+* Calon Siswa
+    * Pendaftaran calon siswa dengan mengisi form 
+    * Upload berkas
+    * Melihat hasil seleksi
+* Admin Scb
+    * Menampilkan hasil seleksi, mengupdate data, dan menghapus data yang masuk
+    * Melihat persebaran pendaftar
+    
+## Konsep OOP 
+**Data Abstraction** adalah konsep yang menyembunyikan detail latar belakang dan hanya mewakili informasi yang diperlukan untuk dunia luar. 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Enkapsulasi (encapsulation)** adalah sebuah metoda untuk mengatur struktur class dengan cara menyembunyikan alur kerja dari class tersebut. Struktur class yang dimaksud adalah property dan method. Dengan enkapsulasi, kita bisa membuat pembatasan akses kepada property dan method, sehingga hanya property dan method tertentu saja yang bisa diakses dari luar class. Enkapsulasi juga dikenal dengan istilah ‘information hiding’. Dengan enkapsulasi, kita bisa memilih property dan method apa saja yang boleh diakses, dan mana yang tidak boleh diakses. Dengan menghalangi kode program lain untuk mengubah property tertentu, class menjadi lebih terintegrasi, dan menghindari kesalahan ketika seseorang ‘mencoba’ mengubahnya.
 
-## Code of Conduct
+**Inheritance**
+Warisan juga merupakan karakteristik penting dari OOP. Ini pada dasarnya adalah metode yang menyediakan cara yang kemampuan dan properti dari satu kelas untuk datang ke kelas lain. Teknik ini memberikan penggunaan kembali kode untuk programmer. Kita bisa membentuk kelas baru dari kelas yang ada, di mana kelas yang ada berisi beberapa properti atau metode yang juga ada di kelas baru. Di sini kelas baru disebut sebagai kelas turunan. Sedangkan kelas yang ada yaitu kelas dari mana kelas baru diturunkan disebut sebagai kelas dasar.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**Polymorphism**
+Pada dasarnya polimorfisme adalah kemampuan suatu pesan atau data untuk diproses lebih dari satu bentuk. Ini adalah konsep penting dari pemrograman berorientasi objek yang mendukung kemampuan suatu objek kelas untuk berperilaku berbeda dalam menanggapi pesan atau tindakan.
 
-## Security Vulnerabilities
+## Tipe Design 
+Pada Web PPDB SCB, kelompok kami menggunakan design pattern MVC (Model View controller). MVC memecah sebuah aplikasi menjadi tiga bagian, yaitu model yang berhubungan dengan database, view yang berurusan dengan tampilan, dan controller yang mengatur alur jalannya aplikasi. Untuk itu, framework yang digunakan yaitu Laravel. Database yang digunakan yaitu mysql.![ ](/img/mysql.png)
+![](/img/MVC.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Developer 
 
-## License
+1. Afifah Noviani - FullStack, Designer
+2. Yasmin Lukman - FullStack
+3. Arih Ghina W - Frontend
+4. Najemi Purtrianti - Frontend
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+
+
+
