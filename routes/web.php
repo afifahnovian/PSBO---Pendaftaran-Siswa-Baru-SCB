@@ -7,11 +7,12 @@
 
 //update data tabel data umum siswa
 //Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data
-
+use App\DataPost;
 
 Route::get('/', function () {
-    return view('landing-page');
-});
+    $data_posts = DataPost::first();
+    // return view('landing-page');
+})->name('landing-page');
 
 Route::get('/syarat-smp', function () {
     return view('syarat-smp');
@@ -48,7 +49,7 @@ Route::get('/admin', 'HomeController@index')->name('admin');
 Auth::routes();
 
 Route::get('/pages/dashboard', 'HomeController@index')->name('admin');
-// Route::get('/dashboard', 'HomeController@index')->name('admin');
+Route::get('/dashboard', 'HomeController@index')->name('admin');
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'UserController', ['except' => ['show']]);
@@ -66,6 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('pages/export', 'CalonSiswaController@export');
     // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
+    Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
     Route::get('/tables/SMP', 'PageController@tablesSMP');
     Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
     Route::get('/table', 'PageController@table');

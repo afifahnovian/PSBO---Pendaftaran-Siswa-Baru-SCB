@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatusesTable extends Migration
+class CreateDataPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('statuses', function (Blueprint $table) {
+        Schema::create('data_posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('status_calon_siswa');
-            $table->timestamps();
-           
-            
+            $table->string('tipe_post');
+            $table->longtext('isi_post');
+            // $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ class CreateStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('statuses');
+        Schema::dropIfExists('data_posts');
     }
 }

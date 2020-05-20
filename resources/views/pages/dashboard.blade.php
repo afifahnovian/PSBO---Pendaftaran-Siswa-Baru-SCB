@@ -87,6 +87,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="card ">
@@ -118,13 +119,7 @@
 
 @push('scripts')
     <script>
-        // $(document).ready(function() {
-        //     // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
-        //     // demo.initChartsPages();
-        // });
-        
-        // Pie Chart
-        var analytics = <?php echo $prov_array; ?>;
+        var analytics = <?php echo $provinsi; ?>;
 
             google.charts.load('current', {'packages':['corechart']});
             google.charts.setOnLoadCallback(drawChart);

@@ -178,6 +178,7 @@ return [
         Laravolt\Indonesia\ServiceProvider::class,
         App\Providers\Wilayah::class,
         App\Providers\ProvinsiIndo::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Indonesia' => Laravolt\Indonesia\Facade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         
     ],
 

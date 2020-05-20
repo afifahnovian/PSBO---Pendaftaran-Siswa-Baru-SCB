@@ -17,6 +17,7 @@ use App\DataOrangtua;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use DB;
 use App\Status;
+use App\DataPost;
 
 class PageController extends Controller
 {
@@ -117,5 +118,10 @@ class PageController extends Controller
         // else{
         //     return view('/pages/pencarian');
         // }
+    }
+
+    public function AllPost(){
+        $data_posts = DataPost::all();
+        return view('pages.post',compact('data_posts'));
     }
 }
