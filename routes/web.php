@@ -10,9 +10,9 @@
 use App\DataPost;
 
 Route::get('/', function () {
-    $data_posts = DataPost::first();
-    // return view('landing-page');
-})->name('landing-page');
+    // $data_posts = DataPost::first();
+    return view('landing-page');
+});
 
 Route::get('/syarat-smp', function () {
     return view('syarat-smp');
@@ -67,7 +67,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('pages/export', 'CalonSiswaController@export');
     // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
-    Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
+    // Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
     Route::get('/tables/SMP', 'PageController@tablesSMP');
     Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
     Route::get('/table', 'PageController@table');
