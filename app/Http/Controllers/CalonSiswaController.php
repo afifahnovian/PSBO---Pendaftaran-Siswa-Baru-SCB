@@ -9,8 +9,12 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class CalonSiswaController extends Controller
 {
-    public function export() 
+    public function exportSMP() 
     {
-        return Excel::download(new CalonSiswaExport, 'calonsiswa.xlsx');
+        return Excel::download(new SMPExport, 'calonsiswa.xlsx');
+    }
+    public function exportTahfidz() 
+    {
+        return Excel::download(new TahfidzExport, 'calonsiswa.xlsx');
     }
 }

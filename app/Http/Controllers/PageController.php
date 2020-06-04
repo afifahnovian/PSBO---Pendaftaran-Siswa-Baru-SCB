@@ -17,6 +17,7 @@ use App\DataOrangtua;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use DB;
 use App\Status;
+use Response;
 use App\DataPost;
 
 class PageController extends Controller
@@ -53,10 +54,6 @@ class PageController extends Controller
     }
     
     
-    // public function ShowIndividu($id){
-    //     $calonsiswa = CalonSiswa::find($id);
-    //     return view('pages.individu')->with('calonsiswa', $calonsiswa);
-    // }
 
     public function ShowIndividu($id){
         $calonsiswa = CalonSiswa::find($id);
@@ -105,8 +102,8 @@ class PageController extends Controller
         ]);
     }
     //menampilkan tabel hasil pencarian
+    //masi gagal hue
     public function table(Request $request){
-
         $query = $request->input('query');
         $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', "%$query%")->get();
         // dd($data_umums);
@@ -118,6 +115,22 @@ class PageController extends Controller
         // else{
         //     return view('/pages/pencarian');
         // }
+    }
+
+    //menampilkan berkas
+    public function berkas(){
+        // if ($tipe == "KK") {
+        // $pathToFile = 'berkassmp/KK/logo.png';
+        // return response()->file($pathToFile);
+        // }
+
+        $filename = 'LKP13_P1_G64170023.pdf';
+        $path = storage_path($filename);
+
+        return Response::make(file_get_contents($path), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="'.$filename.'"'
+        ]);
     }
 
     public function AllPost(){

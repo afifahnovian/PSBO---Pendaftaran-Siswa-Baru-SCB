@@ -61,14 +61,17 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{page}', ['as' => 'page.index', 'uses' => 'PageController@index']);
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
-    //Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
     Route::post('/pages/edit/{id}', 'PageController@Editindividu');
     Route::get('/pages/update/{id}', 'PageController@Updateindividu');
     Route::get('pages/export', 'CalonSiswaController@export');
     // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
     // Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
+    Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
+    Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
+    Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
     Route::get('/tables/SMP', 'PageController@tablesSMP');
     Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
     Route::get('/table', 'PageController@table');
+    Route::get('/KK', 'PageController@berkas');
 });
