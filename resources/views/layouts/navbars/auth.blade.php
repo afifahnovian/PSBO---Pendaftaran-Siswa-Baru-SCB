@@ -43,7 +43,7 @@
                 </div>
             </li>
             <li class="{{ $elementActive == 'post' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'post') }}">
+                <a href="{{ route('all_post') }}">
                     <i class="nc-icon nc-tile-56"></i>
                     <p>{{__('Post Management')}}</p>
                 </a>

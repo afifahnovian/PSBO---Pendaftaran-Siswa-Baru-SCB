@@ -12,6 +12,7 @@
                      </div>
                 @endif
             </div>
+            
             <!-- Portfolio Grid Items-->
             <div class="row">
                 <!-- Portfolio Item 1-->
@@ -22,7 +23,7 @@
                             SMP Cendekia BAZNAS</h2>
                     </div>
                     <!--Button-->
-                    <div class="text-left mt-4">
+                    <div class="text-left mt-4" id="buttonDaftar">
                     <a class="btn btn-xl btn-outline-light1" href="{{url('/kategorisiswa')}}">Daftar Sekarang</a>
                 </div>
                 </div>
@@ -41,10 +42,10 @@
                 <!-- Portfolio Item 4-->
                 <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
                     <div class="mx-auto">
-                        <h3>Penerimaan Peserta Didik Baru Tahun Pelajaran 2019/2020</h3><br>
-                        <p>SEKOLAH CENDEKIA BAZNAS (SCB) merupakan sekolah bebas biaya dan berasrama bagi dhuafa untuk putra dan putri Indonesia, yang berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS). <br><br>
-                            SCB memiliki motto membangun karakter-mengoptimalkan potensi. Setiap siswa menempuh pendidikan formal (kurikulum dinas pendidikan), pembinaan karakter islam, qur’an hadist serta pengembangan potensi sesuai minat dan bakat. <br><br>
-                            SCB membuka pendaftaran calon Peserta Didik Baru Angkatan III Tahun Pelajaran 2019/2020. Masa pendaftaran dimulai 31 Oktober – 28 Desember 2019</p>
+                        @if(!empty($data_posts))
+                            <h3>{{$data_posts->where('tipe_post','headline-1')->first()->isi_post}}</h3><br>
+                            <p>{{$data_posts->where('tipe_post','headline-p')->first()->isi_post}}</p>
+                        @endif
                     </div>
                 </div>
                 <br>
@@ -93,43 +94,55 @@
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4-1">
                     <div class="mx-auto" >
-                    <h5 class="text-center" style ="color:#004445;">Pendaftaran & Seleksi Berkas</h5>
-                    <p class ="text-center">31 Okt – 28 Des 2019</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_1')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-1')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
                 <div class="col-md-6 col-lg-4-1">
                     <div class="mx-auto" >
-                    <h5 class="text-center" style ="color:#004445;">Pengumuman Seleksi Berkas</h5>
-                    <p class ="text-center">31 Okt – 28 Des 2019</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_2')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-2')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
                 <div class="col-md-6 col-lg-4-1">
                     <div class="mx-auto" >
-                    <h5 class="text-center" style ="color:#004445;">Tes Akademik</h5>
-                    <p class ="text-center">19 Jan 2020</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_3')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-3')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
                 <!-- Portfolio Item 4-->
                 <div class="col-md-6 col-lg-4-1 mb-lg-0">
                     <div class="mx-auto">
-                    <h5 class="text-center" style ="color:#004445;">Survei Faktual</h5>
-                    <p class ="text-center">2 – 23 Februari 2020</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_4')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-4')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
                 <!-- Portfolio Item 5-->
                 <div class="col-md-6 col-lg-4-1 mb-md-0">
                     <div class="mx-auto">
-                    <h5 class="text-center" style ="color:#004445;">Psikotes & Tes Baca Alquran</h5>
-                    <p class ="text-center">14 – 23 Maret 2020</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_5')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-5')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
                 <!-- Portfolio Item 6-->
                 <div class="col-md-6 col-lg-4-1">
                     <div class="mx-auto">
-                    <h5 class="text-center" style ="color:#004445;">Pengumuman Hasil</h5>
-                    <p class ="text-center">13 April 2020</p>
+                    @if(!empty($data_posts))
+                        <h5 class="text-center" style ="color:#004445;">{{$data_posts->where('tipe_post','timeline_title_6')->first()->isi_post}}</h5>
+                        <p class ="text-center">{{$data_posts->where('tipe_post','timeline-6')->first()->isi_post}}</p>
+                    @endif
                     </div>
                 </div>
             </div>
@@ -157,9 +170,6 @@
        <!-- FAQ -->
        @include('content.faq')
     
-
-    
-
     <!-- Footer -->
     @include('layouts.footer-upfront')
 @endsection

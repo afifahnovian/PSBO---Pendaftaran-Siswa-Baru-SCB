@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+
 use App\BerkasDaftar;
 use App\DataPengisiForm;
 use App\DataSiswaUmum; 
@@ -40,6 +41,7 @@ class PageController extends Controller
      */
     public function index(string $page)
     {
+        
         if (view()->exists("pages.{$page}")) {
 
             if ($page == "tables") {
@@ -135,6 +137,6 @@ class PageController extends Controller
 
     public function AllPost(){
         $data_posts = DataPost::all();
-        return view('pages.post',compact('data_posts'));
+        return view('pages.post', compact('data_posts'));
     }
 }

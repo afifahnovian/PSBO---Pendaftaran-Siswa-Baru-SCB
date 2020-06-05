@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\DataPost;
 
-class DataPost extends Controller
+class DataPostController extends Controller
 {
     public function UpdateHeadline(Request $request){
 

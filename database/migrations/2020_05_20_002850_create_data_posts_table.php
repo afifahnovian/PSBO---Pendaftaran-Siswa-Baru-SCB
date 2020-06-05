@@ -17,7 +17,6 @@ class CreateDataPostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('tipe_post');
             $table->longtext('isi_post');
-            // $table->timestamps();
         });
     }
 
