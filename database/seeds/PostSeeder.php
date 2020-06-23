@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\DataPost;
-use DB;
+use Illuminate\Support\Facades\DB; 
 class PostSeeder extends Seeder
 {
     /**
@@ -12,7 +12,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('post')->delete();
+        DB::table('data_posts')->delete();
         DataPost::create([
             'tipe_post' => 'headline-1',
             'isi_post' => 'Penerimaan Peserta Didik Baru Tahun Pelajaran 2019/2020'
@@ -21,8 +21,7 @@ class PostSeeder extends Seeder
             'tipe_post' => 'headline-p',
             'isi_post' => 'SEKOLAH CENDEKIA BAZNAS (SCB) merupakan sekolah bebas biaya dan berasrama bagi dhuafa untuk putra dan putri Indonesia, yang berada di bawah pengelolaan Badan Amil Zakat Nasional (BAZNAS).
                            SCB memiliki motto membangun karakter-mengoptimalkan potensi. Setiap siswa menempuh pendidikan formal (kurikulum dinas pendidikan), pembinaan karakter islam, qur’an hadist serta pengembangan potensi sesuai minat dan bakat.
-                           SCB membuka pendaftaran calon Peserta Didik Baru Angkatan III Tahun Pelajaran 2019/2020. Masa pendaftaran dimulai 31 Oktober – 28 Desember 2019                          
-                           '
+                           SCB membuka pendaftaran calon Peserta Didik Baru Angkatan III Tahun Pelajaran 2019/2020. Masa pendaftaran dimulai 31 Oktober – 28 Desember 2019'
         ]);
         DataPost::create([
             'tipe_post' => 'timeline_title_1',
@@ -78,6 +77,5 @@ class PostSeeder extends Seeder
             'tipe_post' => 'timeline-6',
             'isi_post' => '13 April 2020'
         ]);
-       
     }
 }

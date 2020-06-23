@@ -1,18 +1,14 @@
 <?php
-//delete data tabel data umum siswa
-//Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
-
-//edit data tabel data umum siswa
-//Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
-
-//update data tabel data umum siswa
-//Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data
 use App\DataPost;
 
 Route::get('/', function () {
     $data_posts = DataPost::first();
-    // return view('landing-page');
-})->name('landing-page');
+    return view('landing-page',compact('data_posts'));
+});
+// Route::get('/', function () {
+//     // $data_posts = DataPost::first();
+//     return view('landing-page');
+// });
 
 Route::get('/syarat-smp', function () {
     return view('syarat-smp');
@@ -56,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+    
 });
 
 Route::group(['middleware' => 'auth'], function () {
@@ -64,11 +61,26 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/pages/edit/{id}', 'PageController@Editindividu');
     Route::get('/pages/update/{id}', 'PageController@Updateindividu');
     Route::get('pages/export', 'CalonSiswaController@export');
+
+    Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
+    Route::post('/pages/update-headline', 'DataPostController@UpdateHeadline');
+    Route::post('/pages/update-timeline', 'DataPostController@UpdateTimeline');
+    
+    // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
+    // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
     Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
-    Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
     Route::get('/tables/SMP', 'PageController@tablesSMP');
     Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
     Route::get('/table', 'PageController@table');
     Route::get('/KK', 'PageController@berkas');
 });
+
+//delete data tabel data umum siswa
+//Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
+
+//edit data tabel data umum siswa
+//Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
+
+//update data tabel data umum siswa
+//Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data
