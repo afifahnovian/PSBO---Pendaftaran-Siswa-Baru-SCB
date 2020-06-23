@@ -171,7 +171,6 @@ class FormControllerSMP extends Controller
             $berkassmp->pasfoto             = 'berkassmp/pasfoto/'.$filefoto->getClientOriginalName();
         }
 
-
         $berkassmp->save();
         
         // /* data pengisi form */

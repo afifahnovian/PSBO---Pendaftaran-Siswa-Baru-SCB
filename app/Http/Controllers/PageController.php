@@ -64,12 +64,13 @@ class PageController extends Controller
             ]);
     }
 
+    //fungsi untuk melakukan update status
     public function  Updateindividu($id){
         $calonsiswa = CalonSiswa::find($id);
-        // $status = status::all();
         return view('pages.edit')->with('calonsiswa', $calonsiswa);
     }
 
+    // melakukan perubahan status individu
     public function Editindividu(Request $request, $id){
         $this->validate($request,[
             'status'=>'required'
