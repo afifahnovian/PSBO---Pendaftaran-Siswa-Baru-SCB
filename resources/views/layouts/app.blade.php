@@ -21,14 +21,6 @@
 
     <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/209/opt_pd_laravel_thumbnail.jpg">
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@creativetim">
-    <meta name="twitter:title" content="Paper Dashboard Laravel by Creative Tim">
-
-    <meta name="twitter:description" content="Start your development with a Bootstrap 4 Admin Dashboard built for Laravel Framework 5.5 and Up.">
-    <meta name="twitter:creator" content="@creativetim">
-    <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/209/opt_pd_laravel_thumbnail.jpg">
 
     <title>
         {{ __('PPDB Online SMP Cendikia BAZNAS') }}
@@ -85,7 +77,7 @@
 
     <!-- Paper Dashboard DEMO methods, don't include it in your project!
     buat gambar background login -->
-    <!-- <script src="{{ asset('paper') }}/demo/demo.js"></script>  -->
+    <script src="{{ asset('paper') }}/demo/demo.js"></script> 
     <!-- Sharrre libray -->
     <script src="../assets/demo/jquery.sharrre.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

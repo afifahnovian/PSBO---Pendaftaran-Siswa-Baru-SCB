@@ -8,7 +8,7 @@
                     <span class="navbar-toggler-bar bar3"></span>
                 </button>
             </div>
-            <a class="navbar-brand" href="#pablo">{{ __('Admin PPCB SMP SCB') }}</a>
+            <a class="navbar-brand" href="#pablo">{{ __('Admin PPDB SMP SCB') }}</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>

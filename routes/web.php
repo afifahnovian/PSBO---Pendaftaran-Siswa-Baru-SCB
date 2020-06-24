@@ -25,8 +25,6 @@ Route::get('/kategorisiswa', function () {
 Route::get('/kontakppdb', function () {
     return view('kontakppdb');
 });
-// view table save data
-// Route::get('/table','FormControllerSMP@viewData');
 
 Route::get('/kategorisiswasmp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
 Route::get('/kategorisiswatahfidz/{tipesiswa2}','FormControllerTahfidz@storeTipeSiswaTahfidz');
@@ -60,14 +58,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pages/individu/{id}', 'PageController@Showindividu');
     Route::post('/pages/edit/{id}', 'PageController@Editindividu');
     Route::get('/pages/update/{id}', 'PageController@Updateindividu');
-    Route::get('pages/export', 'CalonSiswaController@export');
 
     Route::get('/pages/post', 'PageController@AllPost')->name('all_post');
     Route::post('/pages/update-headline', 'DataPostController@UpdateHeadline');
     Route::post('/pages/update-timeline', 'DataPostController@UpdateTimeline');
     
-    // Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
-    // Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
     Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
     Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
     Route::get('/tables/SMP', 'PageController@tablesSMP');
@@ -75,12 +70,3 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/table', 'PageController@table');
     Route::get('/KK', 'PageController@berkas');
 });
-
-//delete data tabel data umum siswa
-//Route::get('/form/delete/{id}','DataSiswaUmumController@deleteData');//utk mendelete data per id
-
-//edit data tabel data umum siswa
-//Route::post('/form/edit/{id}','DataSiswaUmumController@edit');//utk edit data per id
-
-//update data tabel data umum siswa
-//Route::get('/form/update/{id}','DataSiswaUmumController@update'); //update data

@@ -2,32 +2,31 @@
 
 namespace App\Exports;
 
-use App\CalonSiswa;
 use App\DataSiswaUmum;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class SMPExport implements FromCollection
+
+use Illuminate\Contracts\View\View;
+use Maatwebsite\Excel\Concerns\FromView;
+
+class SMPExport implements FromQuery
+
 {
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function collection()
+    public function query()
     {
-        return CalonSiswa::all();
+        return DataSiswaUmum::select('NISN', 'nama_lengkap', 'provinsi')->get();
     }
-    // public function collection(Collection $rows)
-    // {
-    //     foreach ($rows as $row) 
-    //     {
-            // EmployeeType::create([
-            //     'name' => $row[1],
-            // ]);
 
-            // Contact::create([
-            //     'institution' => $row[3],
-            //     'type' => $row[4],
-            //     'address' => $row[5],
-            // ]);
-    //     }
+    // public function headigs(): array
+    // {
+    //     return [
+    //         'NISN',
+    //         'Nama Lengkap',
+    //         'Provinsi',
+    //     ];
     // }
 }

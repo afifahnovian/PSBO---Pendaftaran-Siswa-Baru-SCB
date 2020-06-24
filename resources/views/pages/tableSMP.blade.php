@@ -7,6 +7,15 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12">
+                <!-- button untuk download file excel -->
+                <div class="row">
+                    <div class="col-md-8"></div>
+                    <div class="float-right col-md-4">
+                        <a href="/tables/pages/export/SMP" class="btn btn-block btn-success">
+                            Download Excel Calon Siswa SMP
+                        </a>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Semua Calon Siswa SMP</h4>
@@ -22,7 +31,7 @@
                                     <th>Status</th>
                                 </thead>
                                 <tbody>
-                                    @foreach($calonsiswas as $calonsiswa)
+                                    @foreach($calonsiswa as $calonsiswa)
                                         <tr>
                                             <td>
                                                 {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_lengkap')->first() }}

@@ -6027,6 +6027,7 @@ License - nucleoapp.com/license/
   .navbar .container-fluid {
     padding-right: 15px;
     padding-left: 15px;
+    background-color: #f4f3ef;
   }
   .navbar .navbar-collapse .input-group {
     margin: 0;
