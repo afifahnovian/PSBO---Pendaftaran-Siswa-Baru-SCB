@@ -15,6 +15,8 @@ class CreateDataSiswaUmumsTable extends Migration
     {
         Schema::create('data_siswa_umums', function (Blueprint $table) {
             $table->bigIncrements('id');//id table data siswa umum
+            $table->string('status_siswa')->default('Pertimbangan'); 
+            $table->string('tipe_siswa');// smp dan tahfidz
             $table->string('NISN');// atribut NISN
             $table->string('nama_lengkap'); //atribut nama lengkap
             $table->string('nama_panggilan');//atribut nama panggilan

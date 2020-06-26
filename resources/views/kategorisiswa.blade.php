@@ -11,7 +11,7 @@
                     <div class="portfolio-item-caption-content text-center text-white"></i></div>
                 </div>
                 <a href="/kategorisiswasmp/SMP"><img class="img-fluid" src="assets/img/siswa-smp.png" alt="" /></a>
-            
+                
             </div>
         </div>
         <!-- Portfolio Item 2-->

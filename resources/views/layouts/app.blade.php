@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" href="{{ asset('paper') }}/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+     <!-- App favicon -->
+     <link rel="shortcut icon" href="{{asset('images/icon-logo.png')}}">
+
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Canonical SEO -->
     <link rel="canonical" href="https://www.creative-tim.com/product/paper-dashboard-laravel" />

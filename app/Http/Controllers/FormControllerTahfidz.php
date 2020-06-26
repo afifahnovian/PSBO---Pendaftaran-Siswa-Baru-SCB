@@ -25,9 +25,9 @@ class FormControllerTahfidz extends Controller
         return view('/formpendaftaran_tahfidz');
     }
 
-    public function storeTipeSiswaTahfidz($tipesiswa2){
+    public function storeTipeSiswaTahfidz(){
         $calonsiswa2 = new CalonSiswa;
-        $calonsiswa2->tipe_siswa = $tipesiswa2;
+        // $calonsiswa2->tipe_siswa = $tipesiswa2;
         $calonsiswa2->save();
         return redirect('/formpendaftaran_tahfidz');
     }
@@ -202,6 +202,7 @@ class FormControllerTahfidz extends Controller
         /*data mahasiswa umum*/
         $datasiswa                      = new DataSiswaUmum(); //objek datasiswa
         $datasiswa->calonsiswa_id       = CalonSiswa::max('id');
+        $datasiswa->tipe_siswa          = $request->tipe_siswa;//
         $datasiswa->NISN                = $request->nisn;
         $datasiswa->nama_lengkap        = $request->namalengkap;
         $datasiswa->nama_panggilan      = $request->namapanggilan;

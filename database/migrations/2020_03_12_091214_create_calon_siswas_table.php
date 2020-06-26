@@ -17,8 +17,8 @@ class CreateCalonSiswasTable extends Migration
             //primary key
             $table->bigIncrements('id'); 
             // set default : pertimbangan , Lulus untuk siswa lulus, tidak lulus untuk siswa tak lulus
-            $table->string('status_siswa')->default('Pertimbangan'); 
-            $table->string('tipe_siswa');// smp dan tahfidz
+            // $table->string('status_siswa')->default('Pertimbangan'); 
+            // $table->string('tipe_siswa');// smp dan tahfidz
             $table->timestamps(); 
         });
     }

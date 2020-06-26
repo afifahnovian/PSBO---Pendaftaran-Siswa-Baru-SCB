@@ -1,6 +1,7 @@
 <fieldset id="fieldform1">
     <h2 class="fs-title">Data Pengisi Form</h2> 
     <hr>
+        <input type hidden name= "tipe_siswa" value = "SMP">
         <div class="form-group">
             <label for="pengisiform">Nama Lengkap</label>
             <input type="text" class="form-control" id="pengisiform" name="pengisiform" placeholder="Nama Lengkap" maxlength="30" required>
