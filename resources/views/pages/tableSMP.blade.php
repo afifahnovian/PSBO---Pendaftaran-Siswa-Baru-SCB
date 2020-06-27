@@ -31,25 +31,25 @@
                                     <th>Status</th>
                                 </thead>
                                 <tbody>
-                                    @foreach($calonsiswa as $calonsiswa)
+                                    @foreach($calonsiswas as $calonsiswas)
                                         <tr>
                                             <td>
-                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('nama_lengkap')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswas->id])->pluck('nama_lengkap')->first() }}
                                             </td>
                                             <td>
-                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('jenis_kelamin')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswas->id])->pluck('jenis_kelamin')->first() }}
                                             </td>
                                             <td>
-                                                {{ App\DataSekolah::where(['calonsiswa_id' => $calonsiswa->id])->pluck('asal_sekolah')->first() }}
+                                                {{ App\DataSekolah::where(['calonsiswa_id' => $calonsiswas->id])->pluck('asal_sekolah')->first() }}
                                             </td>
                                             <td>
-                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('provinsi')->first() }}
+                                                {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswas->id])->pluck('provinsi')->first() }}
                                             </td>
                                             <td>
-                                                {{ $calonsiswa->status_siswa }}
+                                                {{ $calonsiswas->status_siswa }}
                                             </td>
                                             <td class="text-right">
-                                                <a href="/pages/individu/{{$calonsiswa->id}}" class="btn btn-sm btn-primary">
+                                                <a href="/pages/individu/{{$calonsiswas->id}}" class="btn btn-sm btn-primary">
                                                     detail
                                                 </a>
                                             </td>

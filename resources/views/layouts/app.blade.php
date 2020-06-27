@@ -78,10 +78,6 @@
     <!-- Paper Dashboard DEMO methods, don't include it in your project!
     buat gambar background login -->
     <script src="{{ asset('paper') }}/demo/demo.js"></script> 
-    <!-- Sharrre libray -->
-    <script src="../assets/demo/jquery.sharrre.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    
     @stack('scripts')
 
     @include('layouts.navbars.fixed-plugin-js')
