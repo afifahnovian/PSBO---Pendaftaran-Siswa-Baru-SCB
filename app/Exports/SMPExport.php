@@ -3,12 +3,9 @@
 namespace App\Exports;
 
 use App\DataSiswaUmum;
-use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-
-use Illuminate\Contracts\View\View;
-use Maatwebsite\Excel\Concerns\FromView;
 
 class SMPExport implements FromQuery
 
@@ -18,15 +15,21 @@ class SMPExport implements FromQuery
     */
     public function query()
     {
-        return DataSiswaUmum::select('NISN', 'nama_lengkap', 'provinsi')->get();
+        return DataSiswaUmum::select('NISN', 'nama_lengkap', 'tipe_siswa', 'jenis_kelamin', 'provinsi')->where([
+            ['tipe_siswa', 'SMP'],
+            ['status_siswa', 'Lolos'],
+            ['jenis_kelamin', 'Perempuan'],
+        ])->get();
     }
 
-    // public function headigs(): array
-    // {
-    //     return [
-    //         'NISN',
-    //         'Nama Lengkap',
-    //         'Provinsi',
-    //     ];
-    // }
+    public function headigs(): array
+    {
+        return [
+            'NISN',
+            'Nama Lengkap',
+            'tipe',
+            'jenis kelamin',
+            'Provinsi',
+        ];
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\CalonSiswa;
+use App\DataSiswaUmum;
 
 class HomeController extends Controller
 {
@@ -36,8 +37,8 @@ class HomeController extends Controller
             $array[++$key] = [$value->provinsi, $value->number];
         }
 
-        $belum_diseleksi = CalonSiswa::where('status_siswa', 'Pertimbangan')->get()->count();
-        $sudah_diseleksi = CalonSiswa::where('status_siswa', 'Lolos') ->orWhere('status_siswa', 'Tidak Lolos')->get()->count();
+        $belum_diseleksi = DataSiswaUmum::where('status_siswa', 'Pertimbangan')->get()->count();
+        $sudah_diseleksi = DataSiswaUmum::where('status_siswa', 'Lolos') ->orWhere('status_siswa', 'Tidak Lolos')->get()->count();
 
         return view('pages.dashboard')->with([
             'provinsi'=> json_encode($array),

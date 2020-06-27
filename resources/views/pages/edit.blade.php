@@ -58,9 +58,9 @@
                             @csrf
                             <div class="card-body">
                                 <select id="status" name="status" class="custom-select">
-                                    <option value="Pertimbangan" @if($calonsiswa->status_siswa == 'Pertimbangan') selected @endif> Pertimbangan </option>
-                                    <option value="Lolos" @if($calonsiswa->status_siswa == 'Lolos') selected @endif> Lolos </option>
-                                    <option value="Tidak Lolos" @if($calonsiswa->status_siswa == 'Tidak Lolos') selected @endif> Tidak Lolos </option>
+                                    <option value="Pertimbangan" @if($status_siswa == 'Pertimbangan') selected @endif> Pertimbangan </option>
+                                    <option value="Lolos" @if($status_siswa == 'Lolos') selected @endif> Lolos </option>
+                                    <option value="Tidak Lolos" @if($status_siswa == 'Tidak Lolos') selected @endif> Tidak Lolos </option>
                                 </select>
                             </div>
                             <hr>

@@ -15,6 +15,10 @@ class TahfidzExport implements FromQuery
     */
     public function query()
     {
-        return DataSiswaUmum::select('NISN', 'nama_lengkap', 'provinsi')->get();
+        return DataSiswaUmum::where([
+        ['tipe_siswa', 'Tahfidz'],
+        ['status_siswa', 'Lolos'],
+        ['jenis_kelamin', 'Perempuan'],
+    ])->select('NISN', 'nama_lengkap', 'tipe_siswa', 'jenis_kelamin', 'provinsi')->get();
     }
 }

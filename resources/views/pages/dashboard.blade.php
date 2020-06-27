@@ -102,19 +102,7 @@
                 </div>
             </div>
         </div>
-        <!-- button untuk download file excel -->
-        <div class="row">
-            <div class="float-right col-md-6">
-                <a href="pages/export" class="btn btn-block btn-success">
-                    Download Excel Calon Siswa Perempuan
-                </a>
-            </div>
-            <div class="float-right col-md-6">
-            <a href="pages/export" class="btn btn-block btn-success">
-                Download Excel Calon Siswa Laki-laki
-            </a>
-        </div>
-        </div>
+    </div>
 @endsection
 
 @push('scripts')

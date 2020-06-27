@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\DataPost;
 use Illuminate\Support\Facades\DB; 
+
 class PostSeeder extends Seeder
 {
     /**

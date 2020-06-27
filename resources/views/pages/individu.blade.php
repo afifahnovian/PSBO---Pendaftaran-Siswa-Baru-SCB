@@ -43,7 +43,8 @@
                                     <div class="row">
                                         <label class="col-md-4" style="padding-bottom: 3%"> {{__('Status')}}</label>
                                         <div class="col">
-                                            <a>: {{$calonsiswa->status_siswa}} </a>
+                                            <a>: {{ App\DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('status_siswa')->first() }} </a>
+                                            <!-- <a>: {{$calonsiswa->status_siswa}} </a> -->
                                         </div>
                                     </div>
                                 </div>
