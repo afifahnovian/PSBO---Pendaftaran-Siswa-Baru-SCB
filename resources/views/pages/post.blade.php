@@ -14,7 +14,7 @@
         <div class="row">
             <!-- Headline -->
             <div class="card-box table-responsive" style="margin-left: 5%;margin-right: 5%">
-                <h4 class="header-title">Headline Pendaftaran adaosdojai</h4><br>                
+                <h4 class="header-title">Headline Pendaftaran</h4><br>                
                 <form role="form" action="{{url('/pages/update-headline')}}" method="post">
                     {{ csrf_field() }}
                     <!-- headline penerimaan siswa baru -->

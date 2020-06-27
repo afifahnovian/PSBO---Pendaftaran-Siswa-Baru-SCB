@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Pendaftaran Calon Siswa Baru Sekolah Cendekia Basnaz - @yield('title')</title>
         @include('activation.activation-css')
+         <!-- App favicon -->
+        <link rel="shortcut icon" href="{{asset('images/icon-logo.png')}}">
     </head>
 <body id="page-top">
     @include('layouts.navbar')

@@ -185,6 +185,7 @@ class FormControllerSMP extends Controller
         
         $datasiswa                      = new DataSiswaUmum(); //objek datasiswa
         $datasiswa->calonsiswa_id       = CalonSiswa::max('id');
+        $datasiswa->tipe_siswa          = $request->tipe_siswa;//
         $datasiswa->NISN                = $request->nisn;
         $datasiswa->nama_lengkap        = $request->namalengkap;
         $datasiswa->nama_panggilan      = $request->namapanggilan;
@@ -325,9 +326,9 @@ class FormControllerSMP extends Controller
         return redirect('/')->with('success', 'Pendaftaran Terkirim');
     }
 
-    public function storeTipeSiswaSMP($tipesiswa1){
+    public function storeTipeSiswaSMP(){
         $calonsiswa1                = new CalonSiswa;
-        $calonsiswa1->tipe_siswa    = $tipesiswa1;
+        // $calonsiswa1->tipe_siswa    = $tipesiswa1;
         $calonsiswa1->save();
         return redirect('/formpendaftaran_smp');
     }

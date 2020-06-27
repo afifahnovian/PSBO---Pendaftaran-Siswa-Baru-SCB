@@ -1,14 +1,12 @@
 <?php
 use App\DataPost;
+// use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Auth
 
 Route::get('/', function () {
     $data_posts = DataPost::first();
     return view('landing-page',compact('data_posts'));
 });
-// Route::get('/', function () {
-//     // $data_posts = DataPost::first();
-//     return view('landing-page');
-// });
 
 Route::get('/syarat-smp', function () {
     return view('syarat-smp');
