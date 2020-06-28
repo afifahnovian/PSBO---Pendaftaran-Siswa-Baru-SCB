@@ -20,6 +20,8 @@ use DB;
 use App\Status;
 use Response;
 use App\DataPost;
+use App\faqSCB;
+use App\SyaratPendaftaran;
 
 class PageController extends Controller
 {
@@ -146,6 +148,40 @@ class PageController extends Controller
 
     public function AllPost(){
         $data_posts = DataPost::all();
-        return view('pages.post', compact('data_posts'));
+        return view('pages.konten-utama', compact('data_posts'));
+    }
+
+    public function viewFAQ()
+    {
+        $faq = faqSCB::all();
+        $no          = 1;
+        return view('pages.faq',compact('faq','no'));
+    }
+    public function viewCreateFAQ()
+    {
+        return view('pages.create-faq');
+    }
+    
+    public function viewEditFAQ($id)
+    {
+        $faq = faqSCB::where('id',$id)->first();
+        return view('pages.edit-faq',compact('faq'));
+    }
+
+    public function viewSyaratSMP()
+    {
+        $syaratsmp = SyaratPendaftaran::all();
+        $no          = 1;
+        return view('pages.syaratpendaftaran-smp',compact('syaratsmp','no'));
+    }
+    public function viewCreateSyaratSMP()
+    {
+        return view('pages.create-syarat-smp');
+    }
+    
+    public function viewEditSyaratSMP($id)
+    {
+        $syaratsmp = SyaratPendaftaran::where('id',$id)->first();
+        return view('pages.edit-syarat-smp',compact('syaratsmp'));
     }
 }

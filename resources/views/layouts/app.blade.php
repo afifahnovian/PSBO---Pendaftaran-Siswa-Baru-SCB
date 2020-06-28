@@ -9,6 +9,9 @@
 
      <!-- App favicon -->
      <link rel="shortcut icon" href="{{asset('images/icon-logo.png')}}">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
 
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Canonical SEO -->
@@ -39,7 +42,13 @@
     <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet"/>
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <!-- <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" /> -->
-   
+    
+    <!-- Text editor : quilljs-->
+    <!-- Quilljs css -->
+    <link href="{{asset('highdmin/assets/libs/quill/quill.core.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('highdmin/assets/libs/quill/quill.bubble.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('highdmin/assets/libs/quill/quill.snow.css')}}" rel="stylesheet" type="text/css" />
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -70,19 +79,39 @@
     <script src="{{ asset('paper') }}/js/core/popper.min.js"></script>
     <script src="{{ asset('paper') }}/js/core/bootstrap.min.js"></script>
     <script src="{{ asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    
     <!-- Chart JS -->
     <script src="{{ asset('paper') }}/js/plugins/chartjs.min.js"></script>
+    
     <!--  Notifications Plugin    -->
     <script src="{{ asset('paper') }}/js/plugins/bootstrap-notify.js"></script>
+
     <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('paper') }}/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
     <script src="{{ asset('paper') }}/js/pagination.js" type="text/javascript"></script>
 
-    <!-- Paper Dashboard DEMO methods, don't include it in your project!
-    buat gambar background login -->
+   
+    <!-- Paper Dashboard : gambar background login -->
     <script src="{{ asset('paper') }}/demo/demo.js"></script> 
-    @stack('scripts')
 
+    <!-- Plugin JS :Highdmin -->
+    <script src="{{asset('highdmin/assets/libs/quill/quill.min.js')}}"></script>
+    <script src="{{asset('highdmin/assets/js/pages/form-quilljs.init.js')}}"></script>
+
+    <script>
+            $(document).ready(function () {
+            $("#create-faq").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('faq-answer').value = hvalue;
+            });
+            $("#edit-faq").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('faq-answer').value = hvalue;
+            });
+        });
+    </script>
+    @stack('scripts')
+    
     @include('layouts.navbars.fixed-plugin-js')
 </body>
 
