@@ -77,7 +77,9 @@
                 </div>
             </div>
         </header>
-    </div>      
+    </div>
+    
+    
     @include('layouts.footer-upfront')
 
 @endsection

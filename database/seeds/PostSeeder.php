@@ -78,5 +78,52 @@ class PostSeeder extends Seeder
             'tipe_post' => 'timeline-6',
             'isi_post' => '13 April 2020'
         ]);
+
+        //Footer Narahubung
+        DataPost::create([
+            'tipe_post' => 'narahubung-1',
+            'isi_post' => '(0521) 8591072'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'narahubung-2',
+            'isi_post' => '0857 8277 1555 (Norma)'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'narahubung-3',
+            'isi_post' => '0811 1372 017 (Aiman)'
+        ]);
+
+        //Footer Sosmed
+        DataPost::create([
+            'tipe_post' => 'website-scb',
+            'isi_post' => 'https://www.cendekiabaznas.sch.id/'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'twitter-scb',
+            'isi_post' => 'https://twitter.com/edu_baznas'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'facebook-scb',
+            'isi_post' => 'https://www.facebook.com/pendidikanbaznas'
+        ]);
+        DataPost::create([
+            'tipe_post' => 'email-scb',
+            'isi_post' => 'humas.scb@gmail.com'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'instagram-scb',
+            'isi_post' => 'https://www.instagram.com/pendidikanbaznas/'
+        ]);
+
+        //Footer Alamat
+        DataPost::create([
+            'tipe_post' => 'alamat-scb',
+            'isi_post' => 'Jln. K.H. Umar Cirangkong, RT. 18 RW. 07, Ds. Cemplang, Kec. Cibungbulang, Kab. Bogor 16630'
+        ]);
     }
 }

@@ -62,11 +62,39 @@
                     </ul>
                 </div>
             </li>
-            <li class="{{ $elementActive == 'post' ? 'active' : '' }}">
-                <a href="{{ route('all_post') }}">
+
+            <li class="{{ $elementActive == 'Konten' || $elementActive == 'FAQ' || $elementActive == 'Syarat' ? 'active' : '' }}">
+                <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples2">
                     <i class="nc-icon nc-tile-56"></i>
-                    <p>{{__('Post Management')}}</p>
+                    <p>
+                        {{__('Post Management')}}
+                        <b class="caret"></b>
+                    </p>
                 </a>
+                <div class="collapse show" id="laravelExamples2">
+                    <ul class="nav">
+                        <li class="{{ $elementActive == 'Konten' ? 'active' : '' }}">
+                            <a href="{{ route('all_post') }}">
+                                <span class="sidebar-mini-icon">{{ __('L') }}</span>
+                                <span class="sidebar-normal">{{ __('Konten Landing Page') }}</span>
+                                
+                            </a>
+                        </li>
+                        <li class="{{ $elementActive == 'FAQ' ? 'active' : '' }}">
+                            <a href="{{ route('all_faq') }}">
+                                <span class="sidebar-mini-icon">{{ __('F') }}</span>
+                                <span class="sidebar-normal">{{ __(' FAQ ') }}</span>
+                            </a>
+                        </li>
+                        <li class="{{ $elementActive == 'Syarat' ? 'active' : '' }}">
+                            <a href="#">
+                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
+                                <span class="sidebar-normal">{{ __(' Syarat Pendaftaran ') }}</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
             
             <li class="{{ $elementActive == 'user' ? 'active' : '' }}">

@@ -24,7 +24,7 @@
                     </div>
                     <!--Button-->
                     <div class="text-left mt-4" id="buttonDaftar">
-                    <a class="btn btn-xl btn-outline-light1" href="{{url('/kategorisiswa')}}">Daftar Sekarang</a>
+                    <button class="btn btn-xl btn-outline-light1" href="{{url('/kategorisiswa')}}">Daftar Sekarang</button>
                 </div>
                 </div>
                 <!-- Portfolio Item 2-->
@@ -172,5 +172,6 @@
     
     <!-- Footer -->
     @include('layouts.footer-upfront')
+    
 @endsection
    <!-- Navigation-->
