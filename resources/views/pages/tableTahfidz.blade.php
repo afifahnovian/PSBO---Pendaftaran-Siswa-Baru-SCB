@@ -7,15 +7,6 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12">
-                <!-- button untuk download file excel -->
-                <div class="row">
-                        <div class="col-md-8"></div>
-                        <div class="float-right col-md-4">
-                            <a href="/tables/pages/export/Tahfidz" class="btn btn-block btn-success">
-                                Download Excel Calon Siswa Tahfidz
-                            </a>
-                        </div>
-                    </div>
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Semua Calon Siswa Tahfidz</h4>

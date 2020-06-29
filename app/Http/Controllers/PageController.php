@@ -39,7 +39,7 @@ class PageController extends Controller
      * @param string $page
      * @return \Illuminate\View\View
      */
-    public function index(string $page)
+    public function index(string $page) 
     {
         
         if (view()->exists("pages.{$page}")) {
@@ -55,20 +55,17 @@ class PageController extends Controller
         return abort(404);
     }
     
-    
-
-    public function ShowIndividu($id){
+    public function ShowIndividu($id) {
         $calonsiswa = CalonSiswa::find($id);
         $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
         return view('pages.individu')->with([
             'calonsiswa' => $calonsiswa,
-            'data_umum' => $data_umum,
             'prestasis' => $prestasis
             ]);
     }
 
     //fungsi untuk melakukan update status
-    public function  Updateindividu($id){
+    public function  Updateindividu($id) {
         $calonsiswa = CalonSiswa::find($id);
         $status = DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->pluck('status_siswa')->first();
         return view('pages.edit')->with([
@@ -78,40 +75,76 @@ class PageController extends Controller
     }
 
     // melakukan perubahan status individu
-    public function Editindividu(Request $request, $id){
-        $this->validate($request,[
-            'status'=>'required'
-            // 'tipe_siswa'=>'required' 
+    public function Editindividu(Request $request, $id) {
+        $this->validate( $request,[
+            'status'=>'required' 
         ]);
+
         $calonsiswa = CalonSiswa::find($id);
         $data_umums = DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->first();
         $data_umums->status_siswa = $request->status;
         $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
-        // $calonsiswa->update($request->status_siswa);
 
         $data_umums->save();
         return view('/pages/individu', compact('calonsiswa', 'data_umums', 'prestasis'))->with('info','Data berhasil di perbaharui');
-        // return dd($data_umums);
     }
 
      //menampilkan daftar calon siswa sesuai tipe calon siswa, yaitu SMP atau tahfidz
-     public function tablesSMP(){ 
-        $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where('tipe_siswa', 'SMP')->get();
-        $tipe_siswa = 'SMP';
-        return view('/pages/tableSMP')->with([
-            'data_umums' => $data_umums,
-            'tipe_siswa'=> $tipe_siswa
-        ]);
+     public function tablesSMP( $status ) { 
+        if ($status  == "belum"){
+            $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where([
+                ['tipe_siswa', 'SMP'], 
+                ['status_siswa', 'Pertimbangan'],
+                ])->get();
+            $tipe_siswa = 'SMP';
+            return view('/pages/tableSMP')->with([
+                'data_umums' => $data_umums,
+                'tipe_siswa'=> $tipe_siswa
+            ]);
+        }
+        else {
+            $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where([
+                ['tipe_siswa', 'SMP'], 
+                ['status_siswa', 'Lolos'],
+                ])->orWhere([
+                    ['tipe_siswa', 'SMP'], ['status_siswa', 'Tidak Lolos']
+                    ])->get();
+            $tipe_siswa = 'SMP';
+            return view('/pages/tableSMP_sudah')->with([
+                'data_umums' => $data_umums,
+                'tipe_siswa'=> $tipe_siswa
+            ]);
+        }
     }
-    public function tablesTahfidz(){ 
-        $calonsiswas = CalonSiswa::all();
-        $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where('tipe_siswa', 'Tahfidz')->get();
-        $tipe_siswa = 'Tahfidz';
-        return view('/pages/tableTahfidz')->with([
-            'data_umums' => $data_umums,
-            'tipe_siswa'=> $tipe_siswa
-        ]);
+
+    public function tablesTahfidz($status) {
+        if ($status  == "belum"){
+            $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where([
+                ['tipe_siswa', 'Tahfidz'], 
+                ['status_siswa', 'Pertimbangan']
+                ])->get();
+            $tipe_siswa = 'Tahfidz';
+            return view('/pages/tableTahfidz')->with([
+                'data_umums' => $data_umums,
+                'tipe_siswa'=> $tipe_siswa
+            ]);
+        }
+        else {
+            $data_umums = DataSiswaUmum::Orderby('calonsiswa_id')->where([
+                ['tipe_siswa', 'Tahfidz'], 
+                ['status_siswa', 'Lolos'],
+                ])->orWhere([
+                    ['tipe_siswa', 'SMP'], 
+                    ['status_siswa', 'Tidak Lolos'],
+                    ])->get();
+            $tipe_siswa = 'Tahfidz';
+            return view('/pages/tableTahfidz_sudah')->with([
+                'data_umums' => $data_umums,
+                'tipe_siswa'=> $tipe_siswa
+            ]);
+        }
     }
+
     //menampilkan tabel hasil pencarian
     //masi gagal hue
     public function table(Request $request){

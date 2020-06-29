@@ -1,10 +1,5 @@
 <div class="sidebar" data-color="white" data-active-color="success">
     <div class="logo">
-        <a  class="simple-text logo-mini">
-            <div class="logo-image-small">
-                <img src="{{ asset('paper') }}/img/logo-small.png">
-            </div>
-        </a>
         <a href="#" class="simple-text logo-normal">
             {{ Auth::user()->name}}
         </a>
@@ -21,20 +16,45 @@
                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples1">
                     <i class="nc-icon nc-single-02"></i>
                     <p>
-                            {{ __('Daftar Calon Siswa') }}
+                            {{ __('Belum Diseleksi') }}
                         <b class="caret"></b>
                     </p>
                 </a>
                 <div class="collapse show" id="laravelExamples1">
                     <ul class="nav">
                         <li class="{{ $elementActive == 'SMP' ? 'active' : '' }}">
-                            <a href="/tables/SMP">
+                            <a href="/tables/SMP/belum">
                                 <span class="sidebar-mini-icon">{{ __('R') }}</span>
-                                <span class="sidebar-normal">{{ __(' Calon Siswa Reguler ') }}</span>
+                                <span class="sidebar-normal">{{ __(' Calon Siswa SMP ') }}</span>
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'Tahfidz' ? 'active' : '' }}">
-                            <a href="/tables/Tahfidz">
+                            <a href="/tables/Tahfidz/belum">
+                                <span class="sidebar-mini-icon">{{ __('T') }}</span>
+                                <span class="sidebar-normal">{{ __(' Calon Siswa Tahfidz ') }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="{{ $elementActive == 'SMP_sudah' || $elementActive == 'Tahfidz_sudah' ? 'active' : '' }}">
+                <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples1">
+                    <i class="nc-icon nc-single-02"></i>
+                    <p>
+                            {{ __('Sudah Diseleksi') }}
+                        <b class="caret"></b>
+                    </p>
+                </a>
+                <div class="collapse show" id="laravelExamples1">
+                    <ul class="nav">
+                        <li class="{{ $elementActive == 'SMP_sudah' ? 'active' : '' }}">
+                            <a href="/tables/SMP/sudah">
+                                <span class="sidebar-mini-icon">{{ __('R') }}</span>
+                                <span class="sidebar-normal">{{ __(' Calon Siswa SMP ') }}</span>
+                            </a>
+                        </li>
+                        <li class="{{ $elementActive == 'Tahfidz_sudah' ? 'active' : '' }}">
+                            <a href="/tables/Tahfidz/sudah">
                                 <span class="sidebar-mini-icon">{{ __('T') }}</span>
                                 <span class="sidebar-normal">{{ __(' Calon Siswa Tahfidz ') }}</span>
                             </a>

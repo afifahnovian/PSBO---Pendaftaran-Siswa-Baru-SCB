@@ -61,10 +61,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/pages/update-headline', 'DataPostController@UpdateHeadline');
     Route::post('/pages/update-timeline', 'DataPostController@UpdateTimeline');
     
-    Route::get('/tables/pages/export/SMP', 'CalonSiswaController@exportSMP');
-    Route::get('/tables/pages/export/Tahfidz', 'CalonSiswaController@exportTahfidz');
-    Route::get('/tables/SMP', 'PageController@tablesSMP');
-    Route::get('/tables/Tahfidz', 'PageController@tablesTahfidz');
-    Route::get('/table', 'PageController@table');
+    Route::get('/tables/pages/export/SMP/Perempuan', 'CalonSiswaController@exportSMPPR');
+    Route::get('/tables/pages/export/SMP/laki', 'CalonSiswaController@exportSMPLK');
+    Route::get('/tables/pages/export/Tahfidz/Perempuan', 'CalonSiswaController@exportTahfidzPR');
+    Route::get('/tables/pages/export/Tahfidz/laki', 'CalonSiswaController@exportTahfidzLK');
+    
+    Route::get('/tables/SMP/{status}', 'PageController@tablesSMP');
+    Route::get('/tables/Tahfidz/{status}', 'PageController@tablesTahfidz');
     Route::get('/KK', 'PageController@berkas');
 });
