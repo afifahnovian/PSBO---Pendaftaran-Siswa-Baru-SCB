@@ -15,6 +15,10 @@ class PostSeeder extends Seeder
     {
         DB::table('data_posts')->delete();
         DataPost::create([
+            'tipe_post' => 'status_ppdb',
+            'isi_post' => '1'
+        ]);
+        DataPost::create([
             'tipe_post' => 'headline-1',
             'isi_post' => 'Penerimaan Peserta Didik Baru Tahun Pelajaran 2019/2020'
         ]);
@@ -125,5 +129,17 @@ class PostSeeder extends Seeder
             'tipe_post' => 'alamat-scb',
             'isi_post' => 'Jln. K.H. Umar Cirangkong, RT. 18 RW. 07, Ds. Cemplang, Kec. Cibungbulang, Kab. Bogor 16630'
         ]);
+
+        //Update Kontak PPDB
+        DataPost::create([
+            'tipe_post' => 'kontak1',
+            'isi_post' => '+6285281428912'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'kontak2',
+            'isi_post' => '+6285782507617'
+        ]);
+
     }
 }
