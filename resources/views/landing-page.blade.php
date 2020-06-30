@@ -3,17 +3,16 @@
 @section('content')
     <!-- bagian atas Section-->
     <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <div class="row" style="margin-top: 100px; width:auto" >
-                 @if(session('success'))
-                    <div class="alert alert-success" role="alert">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p>{{session('success')}}</p>
-                     </div>
-                @endif
-            </div>
-            
+        <div class="container"> 
             <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center" style="margin-top: 100px;" >
+                    @if(session('success'))
+                        <div class="alert alert-success" role="alert" style="width: 100%">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <p>{{session('success')}}</p>
+                        </div>
+                    @endif
+            </div>
             <div class="row">
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5" style = margin-top:10rem;>

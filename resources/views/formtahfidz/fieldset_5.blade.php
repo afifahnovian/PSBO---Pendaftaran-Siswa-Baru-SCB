@@ -157,5 +157,4 @@
     <button type="button" name="previous" class="previous action-button-previous">Prev</button>
     <button id="5" type="button" class="next action-button" name="next">Next</button>
 
-
 </fieldset>

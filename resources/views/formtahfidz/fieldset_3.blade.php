@@ -32,12 +32,12 @@
 
             <div class="form-group">
                 <label for="jumlahhafalan">Jumlah Hafalan (Juz)</label>
-                <input type="text" class="form-control"  name="jumlahhafalan" placeholder="Jumlah Hafalan">
+                <input type="number" class="form-control"  name="jumlahhafalan" placeholder="Jumlah Hafalan (contoh : 3)" required>
             </div>
 
             <div class="form-group">
                 <label for="nama_juz">Juz yang telah dihafal</label>
-                <input type="text" class="form-control"  name="namajuz" placeholder="Nama juz yang dihafal">
+                <input type="text" class="form-control"  name="namajuz" placeholder="Nama juz yang dihafal" required>
             </div>
         </div>    
 
