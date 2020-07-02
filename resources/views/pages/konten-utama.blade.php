@@ -11,6 +11,31 @@
                      </div>
                 @endif
         <div class="row">
+        <div class="col-sm-12">
+                <div class="card ml-3 mr-3">
+                    <div class="card-header">
+                        <h4 class="header-title mt-0">Tombol Pendaftaran</h4> 
+                    </div>
+                    
+                    <div class="card-body">
+                        <form role="form" action="{{url('/pages/update-tombol-daftar')}}" method="post">
+                            {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label for="status_ppdb" class="control-label mb-1">Tombol Pendataran PPDB</label>
+                                    <!-- <input id="status_ppdb" name="status_ppdb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$status_ppdb->isi_post}}"> -->
+                                    <select id="status_ppdb" name="status_ppdb" class="custom-select">
+                                        <option value="1" @if($status_ppdb->isi_post=='1') selected='selected' @endif >Buka</option>
+                                        <option value="0" @if($status_ppdb->isi_post=='0') selected='selected' @endif >Tutup</option>
+                                    </select>
+                                </div>   
+                                <div>
+                                    <button type="submit" class="btn btn-lg btn-primary btn-block">Update Tombol Pendaftaran</button>
+                                </div>
+                        </form>
+                    </div>
+                              
+                </div>
+            </div>
             <!-- Headline -->
             <div class="col-sm-12">
                 <div class="card ml-3 mr-3">
@@ -127,18 +152,18 @@
                         <form role="form" action="{{url('/pages/update-narahubung')}}" method="post">
                             {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="narahubung_1" class="control-label mb-1">Narahubung 1</label>
-                                    <input id="narahubung_1" name="narahubung_1" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-1')->first()->isi_post}}">
+                                    <label for="narahubung-1" class="control-label mb-1">Narahubung 1</label>
+                                    <input id="narahubung-1" name="narahubung_1" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-1')->first()->isi_post}}">
                                 </div>   
 
                                 <div class="form-group">
-                                    <label for="narahubung_2" class="control-label mb-1">Narahubung 2</label>
-                                    <input id="narahubung_2" name="narahubung_2" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-2')->first()->isi_post}}">
+                                    <label for="narahubung-2" class="control-label mb-1">Narahubung 2</label>
+                                    <input id="narahubung-2" name="narahubung_2" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-2')->first()->isi_post}}">
                                 </div>   
 
                                 <div class="form-group">
-                                    <label for="narahubung_3" class="control-label mb-1">Narahubung 3</label>
-                                    <input id="narahubung_3" name="narahubung_2" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-3')->first()->isi_post}}">
+                                    <label for="narahubung-3" class="control-label mb-1">Narahubung 3</label>
+                                    <input id="narahubung-3" name="narahubung_3" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','narahubung-3')->first()->isi_post}}">
                                 </div>   
 
                                 <div>
@@ -161,28 +186,28 @@
                         <form role="form" action="{{url('/pages/update-sosmed')}}" method="post">
                             {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="website_scb" class="control-label mb-1">Website</label>
-                                    <input id="website_scb" name="website_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','website-scb')->first()->isi_post}}">
+                                    <label for="website-scb" class="control-label mb-1">Website</label>
+                                    <input id="website-scb" name="website_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','website-scb')->first()->isi_post}}">
                                 </div>   
 
                                 <div class="form-group">
-                                    <label for="twitter_scb" class="control-label mb-1">Twitter</label>
-                                    <input id="twitter_scb" name="twitter_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','twitter-scb')->first()->isi_post}}">
+                                    <label for="twitter-scb" class="control-label mb-1">Twitter</label>
+                                    <input id="twitter-scb" name="twitter_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','twitter-scb')->first()->isi_post}}">
                                 </div>   
 
                                 <div class="form-group">
-                                    <label for="email_scb" class="control-label mb-1">Email</label>
-                                    <input id="email_scb" name="email_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','email-scb')->first()->isi_post}}">
+                                    <label for="email-scb" class="control-label mb-1">Email</label>
+                                    <input id="email-scb" name="email_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','email-scb')->first()->isi_post}}">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="facebook_scb" class="control-label mb-1">Facebook</label>
-                                    <input id="facebook_scb" name="facebook_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','facebook-scb')->first()->isi_post}}">
+                                    <label for="facebook-scb" class="control-label mb-1">Facebook</label>
+                                    <input id="facebook-scb" name="facebook_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','facebook-scb')->first()->isi_post}}">
                                 </div>   
 
                                 <div class="form-group">
-                                    <label for="instagram_scb" class="control-label mb-1">Instagram</label>
-                                    <input id="instagram_scb" name="instagram_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','instagram-scb')->first()->isi_post}}">
+                                    <label for="instagram-scb" class="control-label mb-1">Instagram</label>
+                                    <input id="instagram-scb" name="instagram_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','instagram-scb')->first()->isi_post}}">
                                 </div>   
 
                                 <div>
@@ -202,11 +227,11 @@
                     </div>
                     
                     <div class="card-body">
-                        <form role="form" action="{{url('/pages/update-sosmed')}}" method="post">
+                        <form role="form" action="{{url('/pages/update-alamat')}}" method="post">
                             {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="alamat_scb" class="control-label mb-1">Website</label>
-                                    <input id="alamat_scb" name="alamat_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','alamat-scb')->first()->isi_post}}">
+                                    <label for="alamat-scb" class="control-label mb-1">Website</label>
+                                    <input id="alamat-scb" name="alamat_scb" type="text" class="form-control" aria-required="true" aria-invalid="false" value= "{{$data_posts->where('tipe_post','alamat-scb')->first()->isi_post}}">
                                 </div>   
 
                                 <div>
@@ -217,6 +242,38 @@
                               
                 </div>
             </div>
+
+             <!-- Footer : Kontak Admin PPDB -->
+             <div class="col-sm-12">
+                <div class="card ml-3 mr-3">
+                    <div class="card-header">
+                        <h4 class="header-title mt-0">Kontak : Kontak Admin PPDB</h4> 
+                    </div>
+                    
+                    <div class="card-body">
+                        <form role="form" action="{{url('/pages/update-kontak-ppdb')}}" method="post">
+                            {{ csrf_field() }}
+                                <div class="form-group">
+                                    <label for="kontak1" class="control-label mb-1">Kontak Narahubung PPDB 1</label>
+                                    <input id="kontak1" name="kontak1" type="text" class="form-control" aria-required="true" aria-invalid="false" value="{{$kontak1->isi_post}}">
+                                    <span class="help-block text-muted"><mdall>Harap sertakan kode negara (contoh: +6281000000000)</mdall></span>
+                                </div> 
+                                
+                                <div class="form-group">
+                                    <label for="kontak2" class="control-label mb-1">Kontak Narahubung PPDB 2</label>
+                                    <input id="kontak2" name="kontak2" type="text" class="form-control" aria-required="true" aria-invalid="false" value="{{$kontak2->isi_post}}">
+                                    <span class="help-block text-muted"><mdall>Harap sertakan kode negara (contoh: +6281000000000)</mdall></span>
+                                </div> 
+
+                                <div>
+                                    <button type="submit" class="btn btn-lg btn-primary btn-block">Update Kontak PPDB</button>
+                                </div>
+                        </form>
+                    </div>
+                              
+                </div>
+            </div>
+            
             
                 
         </div>

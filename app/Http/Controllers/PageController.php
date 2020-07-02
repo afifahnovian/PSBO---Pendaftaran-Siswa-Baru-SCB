@@ -81,12 +81,10 @@ class PageController extends Controller
         $this->validate( $request,[
             'status'=>'required' 
         ]);
-
         $calonsiswa = CalonSiswa::find($id);
         $data_umums = DataSiswaUmum::where(['calonsiswa_id' => $calonsiswa->id])->first();
         $data_umums->status_siswa = $request->status;
         $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
-
         $data_umums->save();
         return view('/pages/individu', compact('calonsiswa', 'data_umums', 'prestasis'))->with('info','Data berhasil di perbaharui');
     }
@@ -180,8 +178,11 @@ class PageController extends Controller
     }
 
     public function AllPost(){
-        $data_posts = DataPost::all();
-        return view('pages.konten-utama', compact('data_posts'));
+        $data_posts       = DataPost::all();
+        $kontak1          = DataPost::where('tipe_post','kontak1')->first();
+        $kontak2          = DataPost::where('tipe_post','kontak2')->first();
+        $status_ppdb      = DataPost::where('tipe_post','status_ppdb')->first();
+        return view('pages.konten-utama', compact('data_posts','kontak1','kontak2','status_ppdb'));
     }
 
     public function viewFAQ()

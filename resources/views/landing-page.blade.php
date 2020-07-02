@@ -3,17 +3,16 @@
 @section('content')
     <!-- bagian atas Section-->
     <section class="page-section portfolio" id="portfolio">
-        <div class="container">
-            <div class="row" style="margin-top: 100px">
-                 @if(session('success'))
-                    <div class="alert alert-success" role="alert">
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
-                    <p>{{session('success')}}</p>
-                     </div>
-                @endif
-            </div>
-            
+        <div class="container"> 
             <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center" style="margin-top: 100px;" >
+                    @if(session('success'))
+                        <div class="alert alert-success" role="alert" style="width: 100%">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <p>{{session('success')}}</p>
+                        </div>
+                    @endif
+            </div>
             <div class="row">
                 <!-- Portfolio Item 1-->
                 <div class="col-md-6 col-lg-4 mb-5" style = margin-top:10rem;>
@@ -22,10 +21,21 @@
                             Peserta Didik Baru <br> 
                             SMP Cendekia BAZNAS</h2>
                     </div>
-                    <!--Button-->
+                    <!-- @if(!empty($data_posts))
+                    <input id="status_ppdb" type="text" name="status_ppdb" value="{{$data_posts->where('tipe_post','status_ppdb')->first()->isi_post}}" hidden>
+                    @endif -->
+                    <?php $status = $data_posts->where('tipe_post','status_ppdb')->first()->isi_post ?>
+                    @if($status == 1)
                     <div class="text-left mt-4" id="buttonDaftar">
-                    <button class="btn btn-xl btn-outline-light1" href="{{url('/kategorisiswa')}}">Daftar Sekarang</button>
-                </div>
+                        <a class="btn btn-xl btn-btn-primary" style="color: white" href="{{url('/kategorisiswa')}}"> Daftar Sekarang </a>
+                    </div>
+                    @endif
+
+                    @if($status == 0)
+                    <div class="text-left mt-4">
+                        <button class="btn btn-xl btn btn-secondary" style="color: white; " href="{{url('/kategorisiswa')}} disabled">Pendaftaran Ditutup</button>
+                    </div>
+                    @endif
                 </div>
                 <!-- Portfolio Item 2-->
                 <div class="col-md-6 col-lg-4 mb-5" style = margin-top:5rem;>

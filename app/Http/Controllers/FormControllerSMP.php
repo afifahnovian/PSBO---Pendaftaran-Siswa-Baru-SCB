@@ -114,6 +114,21 @@ class FormControllerSMP extends Controller
             
         ]);
 
+        // /*data mahasiswa umum*/
+        
+        $datasiswa                      = new DataSiswaUmum(); //objek datasiswa
+        $datasiswa->calonsiswa_id       = CalonSiswa::max('id');
+        $datasiswa->tipe_siswa          = $request->tipe_siswa;//
+        $datasiswa->NISN                = $request->nisn;
+        $datasiswa->nama_lengkap        = $request->namalengkap;
+        $datasiswa->nama_panggilan      = $request->namapanggilan;
+        $datasiswa->jenis_kelamin       = $request->jeniskelamin;
+        $datasiswa->tempat_lahir        = $request->tempatlahir;
+        $datasiswa->tanggal_lahir       = $request->tanggallahir;
+        $datasiswa->alamat              = $request->alamat;
+        $datasiswa->kota_kabupaten      = $request->kota_kabupaten;
+        $datasiswa->provinsi            = $request->provinsi;
+        $datasiswa->save();
         /*Berkas */
         $berkassmp                      = new BerkasDaftar();
         $berkassmp->calonsiswa_id       = CalonSiswa::max('id');//manggil id calonsiswa
@@ -123,7 +138,7 @@ class FormControllerSMP extends Controller
         if ($request->hasFile('rapor_sd')) //name di form
         {
             $file = $request->rapor_sd;
-            $filename = $file->getClientOriginalName();
+            $filename = 'SMP - ' . $datasiswa->NISN . ' - ' . $file->getClientOriginalName();
             $path = "berkassmp/raporSD/";
 
             Storage::disk('local')->put($path.$filename,file_get_contents($file));
@@ -133,7 +148,7 @@ class FormControllerSMP extends Controller
         if ($request->hasFile('ijazah_STTB_STK')) //name di form
         {
             $file = $request->ijazah_STTB_STK;
-            $filename = $file->getClientOriginalName();
+            $filename = 'SMP - ' . $datasiswa->NISN . ' - ' . $file->getClientOriginalName();
             $path = "berkassmp/ijazah/";
 
             Storage::disk('local')->put($path.$filename,file_get_contents($file));
@@ -144,7 +159,7 @@ class FormControllerSMP extends Controller
         if ($request->hasFile('sertifikat')) //name di form
         {
             $file = $request->sertifikat;
-            $filename = $file->getClientOriginalName();
+            $filename = 'SMP - ' . $datasiswa->NISN . ' - ' . $file->getClientOriginalName();
             $path = "berkassmp/sertifikat/";
 
             Storage::disk('local')->put($path.$filename,file_get_contents($file));
@@ -155,7 +170,7 @@ class FormControllerSMP extends Controller
         if ($request->hasFile('kartu_keluarga'))
         {
             $file = $request->kartu_keluarga;
-            $filename = $file->getClientOriginalName();
+            $filename = 'SMP - ' . $datasiswa->NISN . ' - ' . $file->getClientOriginalName();
             $path = "berkassmp/KK/";
 
             Storage::disk('local')->put($path.$filename,file_get_contents($file));
@@ -166,7 +181,7 @@ class FormControllerSMP extends Controller
         if ($request->hasFile('pasfoto'))
         {
             $file = $request->pasfoto;
-            $filename = $file->getClientOriginalName();
+            $filename = 'SMP - ' . $datasiswa->NISN . ' - ' . $file->getClientOriginalName();
             $path = "berkassmp/pasfoto/";
 
             Storage::disk('local')->put($path.$filename,file_get_contents($file));
@@ -184,21 +199,7 @@ class FormControllerSMP extends Controller
         $datapengisiform->email             = $request->email;
         $datapengisiform->save();
     
-        // /*data mahasiswa umum*/
         
-        $datasiswa                      = new DataSiswaUmum(); //objek datasiswa
-        $datasiswa->calonsiswa_id       = CalonSiswa::max('id');
-        $datasiswa->tipe_siswa          = $request->tipe_siswa;//
-        $datasiswa->NISN                = $request->nisn;
-        $datasiswa->nama_lengkap        = $request->namalengkap;
-        $datasiswa->nama_panggilan      = $request->namapanggilan;
-        $datasiswa->jenis_kelamin       = $request->jeniskelamin;
-        $datasiswa->tempat_lahir        = $request->tempatlahir;
-        $datasiswa->tanggal_lahir       = $request->tanggallahir;
-        $datasiswa->alamat              = $request->alamat;
-        $datasiswa->kota_kabupaten      = $request->kota_kabupaten;
-        $datasiswa->provinsi            = $request->provinsi;
-        $datasiswa->save();
         
         // // Data keunikan siswa
         $datakeunikan                   = new DataKeunikanSiswa();

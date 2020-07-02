@@ -4936,6 +4936,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   margin-bottom: 1rem;
   border: 0.125rem solid transparent;
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 .alert-heading {

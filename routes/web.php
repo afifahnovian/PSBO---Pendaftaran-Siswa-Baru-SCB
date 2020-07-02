@@ -11,11 +11,13 @@ Route::get('/', function () {
 });
 
 Route::get('/syarat-smp', function () {
-    return view('syarat-smp');
+    $data_posts = DataPost::first();
+    return view('syarat-smp',compact('data_posts'));
 });
 
 Route::get('/syarat-tahfidz', function () {
-    return view('syarat-tahfidz');
+    $data_posts = DataPost::first();
+    return view('syarat-tahfidz',compact('data_posts'));
 });
 
 Route::get('/kategorisiswa', function () {
@@ -23,7 +25,8 @@ Route::get('/kategorisiswa', function () {
 });
 
 Route::get('/kontakppdb', function () {
-    return view('kontakppdb');
+    $data_posts = DataPost::first();
+    return view('kontakppdb',compact('data_posts'));
 });
 
 Route::get('/kategorisiswasmp/{tipesiswa1}','FormControllerSMP@storeTipeSiswaSMP');
@@ -62,6 +65,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pages/post/Konten', 'PageController@AllPost')->name('all_post');
     Route::post('/pages/update-headline', 'DataPostController@UpdateHeadline');
     Route::post('/pages/update-timeline', 'DataPostController@UpdateTimeline');
+    Route::post('/pages/update-narahubung', 'DataPostController@UpdateFooterNarahubung');
+    Route::post('/pages/update-sosmed', 'DataPostController@UpdateFooterSosmed');
+    Route::post('/pages/update-alamat', 'DataPostController@UpdateFooterAlamat');
+    Route::post('/pages/update-kontak-ppdb', 'DataPostController@UpdateKontakPPDB');
+    Route::post('/pages/update-tombol-daftar', 'DataPostController@UpdateTombolDaftar');
     
     Route::get('/tables/pages/export/SMP/Perempuan', 'CalonSiswaController@exportSMPPR');
     Route::get('/tables/pages/export/SMP/laki', 'CalonSiswaController@exportSMPLK');

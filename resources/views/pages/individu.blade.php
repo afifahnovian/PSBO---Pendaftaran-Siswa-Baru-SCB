@@ -13,8 +13,8 @@
         <div class="row">
             <div class="col-md-8" id="slider" style="width: 70%; float:left">
                 <div class="DetailInfo">
-                    <input type='hidden' id='current_page' />
-                        <input type='hidden' id='show_per_page' />
+                    <input type='hidden' id='current_page'/>
+                        <input type='hidden' id='show_per_page'/>
                             <ul id="pagingBox">
                                 <li> <div class="slide"> @include('pages.detail-individu.slide1') </div> </li>
                                 <li> <div class="slide"> @include('pages.detail-individu.slide2')</div> </li>
@@ -66,9 +66,9 @@
 @endsection
 
 @push('scripts')
+
 <script>
         jQuery(document).ready(function () {
-
             //Pagination JS
             //how much items per page to show
             var show_per_page = 1; 
@@ -139,8 +139,7 @@
 
             //update the current page input field
             $('#current_page').val(page_num);
-        }
-            
+        }   
 
 </script>
 @endpush
