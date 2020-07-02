@@ -24,7 +24,7 @@
                     <ul class="nav">
                         <li class="{{ $elementActive == 'SMP' ? 'active' : '' }}">
                             <a href="/tables/SMP/belum">
-                                <span class="sidebar-mini-icon">{{ __('R') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
                                 <span class="sidebar-normal">{{ __(' Calon Siswa SMP ') }}</span>
                             </a>
                         </li>
@@ -49,7 +49,7 @@
                     <ul class="nav">
                         <li class="{{ $elementActive == 'SMP_sudah' ? 'active' : '' }}">
                             <a href="/tables/SMP/sudah">
-                                <span class="sidebar-mini-icon">{{ __('R') }}</span>
+                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
                                 <span class="sidebar-normal">{{ __(' Calon Siswa SMP ') }}</span>
                             </a>
                         </li>

@@ -113,9 +113,12 @@ class FormControllerSMP extends Controller
             'pasfoto'                   =>'required|image|max : 2048'
             
         ]);
+
         /*Berkas */
         $berkassmp                      = new BerkasDaftar();
         $berkassmp->calonsiswa_id       = CalonSiswa::max('id');//manggil id calonsiswa
+        $NISN                           = DataSiswaUmum::max('NISN'); //Ambil value dari kolom NISN di table data_siswa_umum
+        
         //Validasi and request
         if ($request->hasFile('rapor_sd')) //name di form
         {
