@@ -11,7 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/syarat-smp', function () {
-    $data_posts = DataPost::first();
+    $data_posts = DataPost::where('tipe_post','syaratsmp')->first();
     return view('syarat-smp',compact('data_posts'));
 });
 
@@ -87,13 +87,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/pages/post/FAQ/edit', 'FAQController@EditFAQ')->name('edit-faq');
     Route::get('/pages/post/FAQ/delete/{id}', 'FAQController@DeleteFAQ')->name('delete-faq');
     // SyaratPendaftaran SMP
-    Route::get('/pages/post/SyaratSMP', 'PageController@viewSyaratSMP')->name('all_syarat_smp');
-    Route::get('/pages/post/SyaratSMP/create', 'PageController@viewCreateSyaratSMP')->name('admin-view-create-syarat-smp');
-    Route::get('/pages/post/SyaratSMP/edit/{id}', 'PageController@viewEditSyaratSMP')->name('admin-view-edit-syarat-smp');
-
-    Route::post('/pages/post/SyaratSMP/create', 'FAQController@CreateFAQ')->name('create-faq');
-    Route::post('/pages/post/SyaratSMP/edit', 'FAQController@EditFAQ')->name('edit-faq');
+    Route::get('/pages/post/SyaratSMP', 'PageController@syaratSMP')->name('all_syarat_smp');
+    Route::get('/pages/post/SyaratSMP/edit', 'PageController@viewEditSyaratSMP')->name('admin-view-edit-syarat-smp');
+    Route::post('/pages/update-syarat-smp', 'DataPostController@UpdateSyaratSMP');
+    Route::post('/pages/update-narahubung-smp', 'DataPostController@UpdateNarahubungSMP');
 
     //SyaratPendaftaran Tahfidz
+    Route::get('/pages/post/SyaratTahfidz', 'PageController@syaratTahfidz')->name('all_syarat_tahfidz');
+    Route::get('/pages/post/SyaratTahfidz/edit', 'PageController@viewEditSyaratTahfidz')->name('admin-view-edit-syarat-tahfidz');
+    Route::post('/pages/update-syarat-tahfidz', 'DataPostController@UpdateSyaratTahfidz');
+    Route::post('/pages/update-narahubung-tahfidz', 'DataPostController@UpdateNarahubungTahfidz');
     
 });

@@ -134,6 +134,7 @@ class DataPostController extends Controller
     }
 
     public function UpdateKontakPPDB(Request $request){
+        
     	$this->validate($request,[
             'kontak1'   => 'required',
             'kontak2'   => 'required',
@@ -147,5 +148,65 @@ class DataPostController extends Controller
         return redirect('/pages/post/Konten')->with('success', 'Kontak Admin PPDB berhasil diubah!');
     }
 
+    #Update Syarat SMP
+    public function UpdateSyaratSMP(Request $request){
+        $article_stripped   = strip_tags($request->syaratsmp);
+    	$this->validate($request,[
+            'syaratsmp'   => 'required',
+        ]);
 
+        if (strlen($article_stripped) == 0) {
+            return redirect()->back()->withErrors('Kamu perlu mengisi form ini');
+        }
+        $syaratsmp                    = DataPost::where('tipe_post','syaratsmp')->first();
+        $syaratsmp->isi_post          = $request->syaratsmp;
+        $syaratsmp->save();  
+        return redirect('/pages/post/SyaratSMP')->with('success', 'Syarat Pendaftaran SMP berhasil diubah!');
+    }
+    public function UpdateNarahubungSMP(Request $request){
+    	$this->validate($request,[
+            'kontaksmp1'   => 'required',
+            'kontaksmp2'   => 'required',
+        ]);
+        $kontaksmp1            = DataPost::where('tipe_post','kontaksmp1')->first();
+        $kontaksmp2            = DataPost::where('tipe_post','kontaksmp2')->first();
+        $kontaksmp1->isi_post     = $request->kontaksmp1;
+        $kontaksmp2->isi_post     = $request->kontaksmp2;
+        $kontaksmp1->save();
+        $kontaksmp2->save();
+        return redirect('/pages/post/SyaratSMP')->with('success', 'Narahubung SMP berhasil diubah!');
+    }
+
+     #Update Syarat Tahfidz
+     public function UpdateSyaratTahfidz(Request $request){
+        $article_stripped   = strip_tags($request->syarattahfidz);
+    	$this->validate($request,[
+            'syarattahfidz'   => 'required',
+        ]);
+
+        if (strlen($article_stripped) == 0) {
+            return redirect()->back()->withErrors('Kamu perlu mengisi form ini');
+        }
+        $syarattahfidz                    = DataPost::where('tipe_post','syarattahfidz')->first();
+        $syarattahfidz->isi_post          = $request->syarattahfidz;
+        $syarattahfidz->save();  
+        return redirect('/pages/post/SyaratTahfidz')->with('success', 'Syarat Pendaftaran Tahfidz berhasil diubah!');
+    }
+
+    public function UpdateNarahubungTahfidz(Request $request){
+    	$this->validate($request,[
+            'kontaktahfidz1'   => 'required',
+            'kontaktahfidz2'   => 'required',
+        ]);
+        $kontaktahfidz1            = DataPost::where('tipe_post','kontaktahfidz1')->first();
+        $kontaktahfidz2            = DataPost::where('tipe_post','kontaktahfidz2')->first();
+        $kontaktahfidz1->isi_post     = $request->kontaktahfidz1;
+        $kontaktahfidz2->isi_post     = $request->kontaktahfidz2;
+        $kontaktahfidz1->save();
+        $kontaktahfidz2->save();
+        return redirect('/pages/post/SyaratTahfidz')->with('success', 'Narahubung Tahfidz berhasil diubah!');
+    }
+
+
+   
 }

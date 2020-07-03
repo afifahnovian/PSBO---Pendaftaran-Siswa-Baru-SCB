@@ -87,9 +87,15 @@
                             </a>
                         </li>
                         <li class="{{ $elementActive == 'Syarat' ? 'active' : '' }}">
-                            <a href="#">
-                                <span class="sidebar-mini-icon">{{ __('S') }}</span>
-                                <span class="sidebar-normal">{{ __(' Syarat Pendaftaran ') }}</span>
+                            <a href="{{ route('all_syarat_smp') }} ">
+                                <span class="sidebar-mini-icon">{{ __('SS') }}</span>
+                                <span class="sidebar-normal">{{ __(' Syarat Pendaftaran SMP ') }}</span>
+                            </a>
+                        </li>
+                        <li class="{{ $elementActive == 'Syarat_T' ? 'active' : '' }}">
+                            <a href="{{ route('all_syarat_tahfidz') }} ">
+                                <span class="sidebar-mini-icon">{{ __('ST') }}</span>
+                                <span class="sidebar-normal">{{ __(' Syarat Pendaftaran Tahfidz ') }}</span>
                             </a>
                         </li>
 

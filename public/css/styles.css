@@ -52,7 +52,8 @@ html {
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
+  display: flex;
+  width: 100%;
 }
 
 body {
@@ -592,22 +593,22 @@ pre code {
 }
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: auto;
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: auto;
   }
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: auto;
   }
 }
 @media (min-width: 100px) {
   .container {
-    max-width: 1140px;
+    max-width: auto;
   }
 }
 
@@ -621,22 +622,22 @@ pre code {
 
 @media (min-width: 576px) {
   .container-sm, .container {
-    max-width: 540px;
+    max-width: auto;
   }
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: auto;
   }
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    max-width: auto;
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1140px;
+    max-width: auto;
   }
 }
 .row {
@@ -5681,7 +5682,7 @@ a.close.disabled {
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    max-width: 1140px;
+    max-width: auto;
   }
 }
 .tooltip {

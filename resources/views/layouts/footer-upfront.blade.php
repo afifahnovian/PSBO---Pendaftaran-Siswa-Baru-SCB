@@ -6,7 +6,7 @@
                 <div class="col-lg-4-2 mb-5 mb-lg-0 container">
                     <h4 style ="color:#f8b400;">Narahubung</h4><br>
                     <footer class="text-left">
-                        <ul style="list-style-type:none;">
+                        <ul style=" list-style-type:none;" id="narahubung-footer">
                         @if(!empty($data_posts))
                             <li><a class="btn1 btn-social mx-3 mb-2"><i class="fas fa-fw fa-phone-alt" style ="color:#004445;" ></i></a><span class="lead mb-0" style="font-size:110%;">{{$data_posts->where('tipe_post','narahubung-1')->first()->isi_post}}</span></li>
                             <li><a class="btn1 btn-social mx-3 mb-2"><i class="fas fa-fw fa-phone-alt" style ="color:#004445;"></i></a><span class="lead mb-0" style="font-size:110%;">{{$data_posts->where('tipe_post','narahubung-2')->first()->isi_post}}</span></li>

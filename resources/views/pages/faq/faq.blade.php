@@ -6,7 +6,6 @@
 @section('content')
 <div class="row">
     <div class="col-md-12 mt-5">
-    
         <div class="card mt-4 ml-3 mr-3">
             <div class="message mt-2 ml-2 mr-2" >
                 @if (session()->has('success'))

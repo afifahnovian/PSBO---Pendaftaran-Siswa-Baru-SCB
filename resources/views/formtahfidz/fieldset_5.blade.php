@@ -54,6 +54,7 @@
         <div class="form-group">
             <label for="sumber_air">Sumber Air</label>
             <select id="sumber_air" name="sumber_air" class="custom-select" required>
+                <option value="">Pilih...</option>
                 <option value="Sumur">Sumur</option>
                 <option value="PDAM">PDAM</option>
             </select>

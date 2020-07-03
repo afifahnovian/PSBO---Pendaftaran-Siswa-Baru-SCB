@@ -4,7 +4,6 @@
     <div class="row" style="align-content: center; padding-top:5%; padding-bottom:5%">   
         <!-- Portfolio Item 2-->
         <div class="col" style="padding-right: 5%; padding-left:5%" >
-        
             <div class="accordion" class="myaccordion">
             @if($faq->count() > 0)
                 @foreach($faq as $index => $faqs)

@@ -39,8 +39,6 @@
     <!-- CSS Files -->
     <link href="{{ asset('paper') }}/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="{{ asset('paper') }}/css/paper-dashboard.css?v=2.0.0" rel="stylesheet"/>
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <!-- <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" /> -->
     
     <!-- Text editor : quilljs-->
     <!-- Quilljs css -->
@@ -97,7 +95,7 @@
     <!-- Plugin JS :Highdmin -->
     <script src="{{asset('highdmin/assets/libs/quill/quill.min.js')}}"></script>
     <script src="{{asset('highdmin/assets/js/pages/form-quilljs.init.js')}}"></script>
-
+    
     <script>
             $(document).ready(function () {
             $("#create-faq").on("submit", function () {
@@ -107,6 +105,15 @@
             $("#edit-faq").on("submit", function () {
                 var hvalue = $('.ql-editor').html();
                 document.getElementById('faq-answer').value = hvalue;
+            });
+
+            $("#edit-syarat-smp").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('syaratsmp').value = hvalue;
+            });
+            $("#edit-syarat-tahfidz").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('syarattahfidz').value = hvalue;
             });
         });
     </script>

@@ -21,9 +21,7 @@
                             Peserta Didik Baru <br> 
                             SMP Cendekia BAZNAS</h2>
                     </div>
-                    <!-- @if(!empty($data_posts))
-                    <input id="status_ppdb" type="text" name="status_ppdb" value="{{$data_posts->where('tipe_post','status_ppdb')->first()->isi_post}}" hidden>
-                    @endif -->
+                  
                     <?php $status = $data_posts->where('tipe_post','status_ppdb')->first()->isi_post ?>
                     @if($status == 1)
                     <div class="text-left mt-4" id="buttonDaftar">

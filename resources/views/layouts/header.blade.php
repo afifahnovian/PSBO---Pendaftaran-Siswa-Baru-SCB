@@ -7,24 +7,25 @@
          <!-- App favicon -->
         <link rel="shortcut icon" href="{{asset('images/icon-logo.png')}}">
     </head>
-<body id="page-top">
-    @include('layouts.navbar')
-    <div class="wrapper">
+<body>
+    
+  
+   
     <!--Page Content-->
-    <div class="main-content">
-        <div class="header">
-    
+        <div class="main-content">
+            <div class="header">
+        
+                </div>
             </div>
+            <div class="content">
+            @include('layouts.navbar')
+            
+                @yield('content')
+            
+            </div>
+            @yield('scripts')
         </div>
-        <div class="content">
-       
-        @yield('content')
-         
-        </div>
-        @yield('scripts')
-    </div>
     
-    </div>
 
     @include('activation.activation-js')
 </body>

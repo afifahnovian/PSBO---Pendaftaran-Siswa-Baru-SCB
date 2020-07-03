@@ -1,5 +1,7 @@
 @extends('layouts.header')
 @section('content')
+
+<section class="page-section portfolio" id="portfolio">
 <div class="container" style="align-content: center">
 <h3 class="page-section-heading1 text-center text-secondary" style="padding-top: 15% ; padding-bottom:3%">Kategori Siswa</h3>
     <!-- Portfolio Grid Items-->
@@ -25,6 +27,6 @@
         </div>
     </div> 
 </div>
-    
+</section>
 
 @endsection
