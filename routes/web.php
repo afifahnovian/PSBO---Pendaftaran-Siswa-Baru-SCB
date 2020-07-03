@@ -10,6 +10,12 @@ Route::get('/', function () {
     return view('landing-page',compact('data_posts','faq'));
 });
 
+Route::get('/home', function () {
+    $data_posts = DataPost::first();
+    $faq = faqSCB::all();
+    return view('landing-page',compact('data_posts','faq'));
+});
+
 Route::get('/syarat-smp', function () {
     $data_posts = DataPost::where('tipe_post','syaratsmp')->first();
     return view('syarat-smp',compact('data_posts'));
@@ -78,6 +84,11 @@ Route::group(['middleware' => 'auth'], function () {
     
     Route::get('/tables/SMP/{status}', 'PageController@tablesSMP');
     Route::get('/tables/Tahfidz/{status}', 'PageController@tablesTahfidz');
+
+    //lihat dan download berkas
+    Route::get('/berkas/view/{detail}/{id}', 'PageController@berkasView');
+    Route::get('/berkas/download/{detail}/{id}', 'PageController@berkasDownload');
+
     // FAQ
     Route::get('/pages/post/FAQ', 'PageController@viewFAQ')->name('all_faq');
     Route::get('/pages/post/FAQ/create', 'PageController@viewCreateFAQ')->name('admin-view-create-faq');

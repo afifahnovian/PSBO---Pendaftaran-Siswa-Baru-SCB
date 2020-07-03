@@ -60,10 +60,16 @@ class PageController extends Controller
     public function ShowIndividu($id) {
         $calonsiswa = CalonSiswa::find($id);
         $prestasis = DataPrestasi::where(['calonsiswa_id' => $calonsiswa->id])->get();
+        $berkas = BerkasDaftar::where(['calonsiswa_id' => $calonsiswa->id])->get();
+        $sertif = BerkasDaftar::where(['calonsiswa_id' => $calonsiswa->id])->select('sertifikat')->get();
         return view('pages.individu')->with([
             'calonsiswa' => $calonsiswa,
-            'prestasis' => $prestasis
+            'prestasis' => $prestasis,
+            'berkas' => $berkas, 
+            'sertif' => $sertif
             ]);
+
+        // return dd($sertif);
     }
 
     //fungsi untuk melakukan update status
@@ -145,37 +151,45 @@ class PageController extends Controller
         }
     }
 
-    //menampilkan tabel hasil pencarian
-    //masi gagal hue
-    public function table(Request $request){
-        $query = $request->input('query');
-        $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', "%$query%")->get();
-        // dd($data_umums);
-        return view('pages/table')->with('data_umums', $data_umums);
-        // if($request->has('cari')) {
-        //     $data_umums = DataSiswaUmum::where('nama_lengkap', 'like', '%'.$request->cari.'%' )->get();
-        //     return view('/pages/table', ['data_umums'=> $data_umums]);
-        // }
-        // else{
-        //     return view('/pages/pencarian');
-        // }
+    //melihat berkas
+    public function berkasView($detail, $id){
+        $berkas = BerkasDaftar::find($id);
+        $berkas_detail = $berkas->$detail;
+        if ($berkas_detail === null){
+            return redirect("/pages/individu/{$id}")->with('info', 'File tidak ditemukan');
+        } else {
+            return view('/pages/show', compact('berkas_detail'));
+        }
+        // return dd($berkas_detail);
+    }
+
+    //download berkas
+    public function berkasDownload($detail, $id){
+        $berkas = BerkasDaftar::find($id);
+        $berkas_detail = $berkas->$detail;
+        if ($berkas_detail === null){
+            return redirect("/pages/individu/{$id}")->with('info', 'File tidak ditemukan');
+        } else {
+            return response()->download($berkas_detail);
+        }
+        // return dd($berkas_detail);
     }
 
     //menampilkan berkas
-    public function berkas(){
+    // public function berkas(){
         // if ($tipe == "KK") {
         // $pathToFile = 'berkassmp/KK/logo.png';
         // return response()->file($pathToFile);
         // }
 
-        $filename = 'LKP13_P1_G64170023.pdf';
-        $path = storage_path($filename);
+    //     $filename = 'LKP13_P1_G64170023.pdf';
+    //     $path = storage_path($filename);
 
-        return Response::make(file_get_contents($path), 200, [
-            'Content-Type' => 'application/pdf',
-            'Content-Disposition' => 'inline; filename="'.$filename.'"'
-        ]);
-    }
+    //     return Response::make(file_get_contents($path), 200, [
+    //         'Content-Type' => 'application/pdf',
+    //         'Content-Disposition' => 'inline; filename="'.$filename.'"'
+    //     ]);
+    // }
 
     public function AllPost(){
         $data_posts       = DataPost::all();
