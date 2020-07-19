@@ -16,29 +16,26 @@
             </div>
         @endif
         <div class="row">
-            <div class="col-md-4">
-                <div class="card card-user">
-                    <div class="image">
-                        <!-- <img src="{{ asset('paper/img/damir-bosnjak.jpg') }}" alt="..."> -->
-                    </div>
-                    <div class="card-body">
-                        <div class="author">
-                            <a href="#">
-                                <!-- <img class="avatar border-gray" src="{{ asset('paper/img/mike.jpg') }}" alt="..."> -->
-
-                                <h5 class="title">{{ __(auth()->user()->name)}}</h5>
-                            </a>
-                            <p class="description">
-                            @ {{ __(auth()->user()->name)}}
-                            </p>
-                        </div>
-                    </div>
-                </div> 
+            <div class="col-md-2">
             </div>
             <div class="col-md-8 text-center">
                 <form class="col-md-12" action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+                    <div class="card card-user">
+                        <div class="image">
+                            <!-- <img src="{{ asset('paper/img/damir-bosnjak.jpg') }}" alt="..."> -->
+                        </div>
+                        <div class="author">
+                            <a href="#">
+                                <h5 class="title">Nama: {{ __(auth()->user()->name)}}</h5>
+                            </a>
+                            <p class="description">
+                            Username: 
+                            @ {{ __(auth()->user()->name)}}
+                            </p>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-header">
                             <h5 class="title">{{ __('Edit Profile') }}</h5>
@@ -137,6 +134,8 @@
                         </div>
                     </div>
                 </form>
+            </div>
+            <div class="col-md-2">
             </div>
         </div>
     </div>

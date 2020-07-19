@@ -13,14 +13,14 @@
                 </a>
             </li>
             <li class="{{ $elementActive == 'SMP' || $elementActive == 'Tahfidz' ? 'active' : '' }}">
-                <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples1">
+                <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
                     <i class="nc-icon nc-single-02"></i>
                     <p>
                             {{ __('Belum Diseleksi') }}
                         <b class="caret"></b>
                     </p>
                 </a>
-                <div class="collapse show" id="laravelExamples1">
+                <div class="collapse show" id="laravelExamples">
                     <ul class="nav">
                         <li class="{{ $elementActive == 'SMP' ? 'active' : '' }}">
                             <a href="/tables/SMP/belum">
