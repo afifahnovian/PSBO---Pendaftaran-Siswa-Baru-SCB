@@ -140,6 +140,84 @@ class PostSeeder extends Seeder
             'tipe_post' => 'kontak2',
             'isi_post' => '+6285782507617'
         ]);
+        
+        //Syarat SMP
+        DataPost::create([
+            'tipe_post' => 'syaratsmp',
+            'isi_post' => ' <h3>Persyaratan umum</h3>
+                            <ol>
+                                <li>Beragama Islam. </li>
+                                <li>Berasal dari keluarga dhuafa atau tidak mampu. </li>
+                                <li>Lulus SD/Sederajat, usia maksimal 14 tahun pada 31 Juli 2020. </li>
+                                <li>Berbadan sehat dan tidak memiliki penyakit menular dan melampirkan surat dari dokter. </li>
+                                <li>Bersedia mengikuti seluruh tahapan seleksi sesuai dengan ketentuan yang berlaku. </li>
+                                <li>Tidak memiliki anggota keluarga yang sedang atau pernah mendapatkan beasiswa di Sekolah Cendekia BAZNAS. </li>
+                                <li>Tidak mengundurkan diri saat dinyatakan lolos seleksi.</li>
+                            </ol>
+                            <br>
+                            <h3> Persyaratan Khusus </h3>
+                            <ol>
+                            <li>Memiliki prestasi akademik dengan rata-rata nilai rapor kelas IV-V minimal 7.5 pada mata 
+                            pelajaran; Bahasa Indonesia, Ilmu Pengetahuan Alam (IPA), Matematika.</li> 
+                            <li>Mengisi formulir pendaftaran. </li>
+                            <li>Siap bertempat tinggal di asrama. </li>
+                            <li>Mengumpulkan berkas: </li>
+                            <ul>
+                            <li>Fotokopi kartu keluarga. </li>
+                            <li>Fotokopi rapor kelas IV hingga V yang telah dilegalisasi oleh pihak sekolah asal. </li>
+                            <li>Fotokopi Surat Keterangan Tidak Mampu (SKTM), fotokopi piagam atau sertifikat prestasi yang pernah di raih (bila ada).</li>
+                            </ul>
+                            </ol>'
+        ]);
 
+        DataPost::create([
+            'tipe_post' => 'kontaksmp1',
+            'isi_post' => '+6285281428912'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'kontaksmp2',
+            'isi_post' => '+6285782507617'
+        ]);
+
+         //Syarat SMP
+         DataPost::create([
+            'tipe_post' => 'syarattahfidz',
+            'isi_post' => ' <h3>Persyaratan umum</h3>
+                            <ol>
+                                <li>Beragama Islam. </li>
+                                <li>Berasal dari keluarga dhuafa atau tidak mampu. </li>
+                                <li>Lulus SD/Sederajat, usia maksimal 14 tahun pada 31 Juli 2020. </li>
+                                <li>Berbadan sehat dan tidak memiliki penyakit menular dan melampirkan surat dari dokter. </li>
+                                <li>Bersedia mengikuti seluruh tahapan seleksi sesuai dengan ketentuan yang berlaku. </li>
+                                <li>Tidak memiliki anggota keluarga yang sedang atau pernah mendapatkan beasiswa di Sekolah Cendekia BAZNAS. </li>
+                                <li>Tidak mengundurkan diri saat dinyatakan lolos seleksi.</li>
+                            </ol>
+                            <br>
+                            <h3> Persyaratan Khusus </h3>
+                            <ol>
+                            <li>Memiliki prestasi akademik dengan rata-rata nilai rapor kelas IV-V minimal 7.5 pada mata 
+                            pelajaran; Bahasa Indonesia, Ilmu Pengetahuan Alam (IPA), Matematika.</li> 
+                            <li>Mengisi formulir pendaftaran. </li>
+                            <li>Siap bertempat tinggal di asrama. </li>
+                            <li>Mengumpulkan berkas: </li>
+                            <ul>
+                            <li>Fotokopi kartu keluarga. </li>
+                            <li>Fotokopi rapor kelas IV hingga V yang telah dilegalisasi oleh pihak sekolah asal. </li>
+                            <li>Fotokopi Surat Keterangan Tidak Mampu (SKTM), fotokopi piagam atau sertifikat prestasi yang pernah di raih (bila ada).</li>
+                            <li>Surat Pernyataan Tahfidz yang dapat di download <a href=" "> disini.</a>
+                            </ul>
+                            </ol>'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'kontaktahfidz1',
+            'isi_post' => '+6285281428912'
+        ]);
+
+        DataPost::create([
+            'tipe_post' => 'kontaktahfidz2',
+            'isi_post' => '+6285782507617'
+        ]);
     }
 }

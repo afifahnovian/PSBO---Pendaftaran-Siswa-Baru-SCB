@@ -15,7 +15,6 @@ class CreateSyaratPendaftaransTable extends Migration
     {
         Schema::create('syarat_pendaftarans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('headline');
             $table->string('description');
             $table->string('information');
             $table->timestamps();

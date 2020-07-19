@@ -77,7 +77,7 @@
     <!-- Plugin JS :Highdmin -->
     <script src="{{asset('highdmin/assets/libs/quill/quill.min.js')}}"></script>
     <script src="{{asset('highdmin/assets/js/pages/form-quilljs.init.js')}}"></script>
-
+    
     <script>
             $(document).ready(function () {
             $("#create-faq").on("submit", function () {
@@ -87,6 +87,15 @@
             $("#edit-faq").on("submit", function () {
                 var hvalue = $('.ql-editor').html();
                 document.getElementById('faq-answer').value = hvalue;
+            });
+
+            $("#edit-syarat-smp").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('syaratsmp').value = hvalue;
+            });
+            $("#edit-syarat-tahfidz").on("submit", function () {
+                var hvalue = $('.ql-editor').html();
+                document.getElementById('syarattahfidz').value = hvalue;
             });
         });
     </script>

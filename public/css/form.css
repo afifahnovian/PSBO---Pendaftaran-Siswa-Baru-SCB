@@ -1,8 +1,14 @@
 /*basic reset*/
 * {
     margin: 0;
-    padding: 0;
+    padding: 3;
 }
+#narahubung-footer{
+    padding-left: 0%;
+}
+  ul{
+    padding-left: 6%;
+  }
 .container{
     margin-left: 75px;
     margin-right: 75px;

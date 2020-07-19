@@ -4,10 +4,11 @@
  * Copyright (c) 2014, Jason Chen
  * Copyright (c) 2013, salesforce.com
  */
+
 .ql-container {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   height: 100%;
   margin: 0px;
   position: relative;
@@ -62,11 +63,12 @@
 }
 .ql-editor ol,
 .ql-editor ul {
-  padding-left: 1.5em;
+  padding-left: 2.5em;
 }
 .ql-editor ol > li,
-.ql-editor ul > li {
-  list-style-type: none;
+.ql-editor ul > li,
+.ql-editor ol > ul{
+  list-style-type: no;
 }
 .ql-editor ul > li::before {
   content: '\2022';

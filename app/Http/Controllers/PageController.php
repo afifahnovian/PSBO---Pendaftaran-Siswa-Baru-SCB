@@ -196,40 +196,50 @@ class PageController extends Controller
         $kontak1          = DataPost::where('tipe_post','kontak1')->first();
         $kontak2          = DataPost::where('tipe_post','kontak2')->first();
         $status_ppdb      = DataPost::where('tipe_post','status_ppdb')->first();
-        return view('pages.konten-utama', compact('data_posts','kontak1','kontak2','status_ppdb'));
+        return view('pages.kontenutama.konten-utama', compact('data_posts','kontak1','kontak2','status_ppdb'));
     }
 
     public function viewFAQ()
     {
         $faq = faqSCB::all();
         $no          = 1;
-        return view('pages.faq',compact('faq','no'));
+        return view('pages.faq.faq',compact('faq','no'));
     }
     public function viewCreateFAQ()
     {
-        return view('pages.create-faq');
+        return view('pages.faq.create-faq');
     }
     
     public function viewEditFAQ($id)
     {
         $faq = faqSCB::where('id',$id)->first();
-        return view('pages.edit-faq',compact('faq'));
+        return view('pages.faq.edit-faq',compact('faq'));
     }
 
-    public function viewSyaratSMP()
+    public function viewEditSyaratSMP()
     {
-        $syaratsmp = SyaratPendaftaran::all();
-        $no          = 1;
-        return view('pages.syaratpendaftaran-smp',compact('syaratsmp','no'));
+        $data_posts = DataPost::where('tipe_post','syaratsmp')->first();
+        return view('pages.syaratsmp.edit-syarat-pendaftaran-smp',compact('data_posts'));
     }
-    public function viewCreateSyaratSMP()
+
+    public function syaratSMP(){
+        $data_posts          = DataPost::where('tipe_post','syaratsmp')->first();
+        $kontaksmp1          = DataPost::where('tipe_post','kontaksmp1')->first();
+        $kontaksmp2          = DataPost::where('tipe_post','kontaksmp2')->first();
+        return view('pages.syaratsmp.syarat-pendaftaran-smp', compact('data_posts','kontaksmp1','kontaksmp2'));
+    }
+
+    public function viewEditSyaratTahfidz()
     {
-        return view('pages.create-syarat-smp');
+        $data_posts = DataPost::where('tipe_post','syarattahfidz')->first();
+        return view('pages.syarattahfidz.edit-syarat-pendaftaran-tahfidz',compact('data_posts'));
+    }
+
+    public function syaratTahfidz(){
+        $data_posts              = DataPost::where('tipe_post','syarattahfidz')->first();
+        $kontaktahfidz1          = DataPost::where('tipe_post','kontaktahfidz1')->first();
+        $kontaktahfidz2          = DataPost::where('tipe_post','kontaktahfidz2')->first();
+        return view('pages.syarattahfidz.syarat-pendaftaran-tahfidz', compact('data_posts','kontaktahfidz1','kontaktahfidz2'));
     }
     
-    public function viewEditSyaratSMP($id)
-    {
-        $syaratsmp = SyaratPendaftaran::where('id',$id)->first();
-        return view('pages.edit-syarat-smp',compact('syaratsmp'));
-    }
 }

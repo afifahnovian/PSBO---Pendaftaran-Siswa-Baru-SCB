@@ -40,7 +40,6 @@ class FAQController extends Controller
         if (strlen($article_stripped) == 0) {
             return redirect()->back()->withErrors('Kamu perlu mengisi jawaban dari pertanyaan');
         }
-
         $faq                    = faqSCB::where('id',$request->id)->first();
         $faq->question          = $request->question;
         $faq->answer            = $request->answer;
